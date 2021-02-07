@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-07T20:16:04 KST">
+<meta name="revised" content="2021-02-07T22:49:20 KST">
 <meta name="description" content="">
 
 
@@ -1202,7 +1202,7 @@
 
 
 
-<div id="dp-show-84d2c510b4ed6e04ed93c88ca7338e05" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;3rdpartycontent&#39;)">
+<div id="dp-show-280a8854b6edd3351c8ee44ed073c09c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;3rdpartycontent&#39;)">
 
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
@@ -1235,7 +1235,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-51708840d83ee43cb0c53e42d9ced8a6" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;xml&#39;)">
+<div id="dp-show-ee5125b4303cde90846d34ec8d788a0c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;xml&#39;)">
 
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
@@ -1308,7 +1308,7 @@ Unfortunately, XSS is one of the most common security issues in web applications
   <label class="custom-control-label" for="webvuln_xss_strategies-5">Part of the application deals with user-provided HTML that is sanitized and re-displayed to the user.</label>
 </div>
 </p>
-<div id="dp-show-91eb32aba767a2330ee3bf69ebf4bb33" class="baz" style="display:none" v-if="!(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;))">
+<div id="dp-show-ea3bfa4b2eebf39133e3b7790b62ba36" class="baz" style="display:none" v-if="!(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;))">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1323,21 +1323,21 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-7be1a4bab367b332eb603ebf93e9af32" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)">
+<div id="dp-show-faf3b1a076e93e42eb36bb9a273be33b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Using a templating system to escape user input is a good way to protect against XSS. But be careful with directives that disable automatic escaping, and watch for the direct display of user input (for example, in error messages). Additionally, be aware of the context in which user input is used in templates. Not all templating systems automatically understand that different escaping may be required, depending on where in the application the user input is displayed. For example, many templating systems would not correctly escape a construct such as <code>&amp;gt;a href=\&quot;{{ user_input }}\&quot;&amp;lt;</code>, where a user could supply <code>javascript:alert(/xss/)</code> as user_input. We recommend using a context-sensitive templating system.</p>
 </div>
 </div>
-<div id="dp-show-beaee33e46ab963bab702733bbf39f12" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)">
+<div id="dp-show-ba36b349a1739e0bb763feab2e3be32f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 A central choke point for validating and escaping user input is generally a good way to protect against XSS. But make sure your application identifies the context in which the user input is being used; otherwise, it might still be possible to smuggle in JavaScript through user input. You might also want to consider using a context-sensitive templating system, to address this issue automatically.</p>
 </div>
 </div>
-<div id="dp-show-b3be7eabfb2f6be0136a297b333943ae" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;))">
+<div id="dp-show-f21b3e3a66b3be942f3a3ae0ebb7b937" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;))">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1352,7 +1352,7 @@ Escaping user input on each page individually is a fairly dangerous strategy: it
 </ul>
 </div>
 </div>
-<div id="dp-show-72bb97b3e6e3a42aa9301bb3f36ebe3f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-13bf3ee7ba3a3bf3b7b0a6eb9622394e" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)">
 <p><strong>Describe your strategy for protecting against XSS vulnerabilities:</strong></p>
 <p><textarea 
 name="webvuln_xss_strategies_other_details" 
@@ -1361,7 +1361,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-a473b0a9fb23eeeb9736e3bbf33a261b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;)">
+<div id="dp-show-ba3eff33b92b93b3a7e7eb623e061ab4" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1394,7 +1394,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_xss_content_type-2">I&rsquo;m not sure all pages set an appropriate content type.</label>
 </div>
 </p>
-<div id="dp-show-ea3f0372eab63b4393eab372b6befb19" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_content_type&#39;) == &#39;no&#39;">
+<div id="dp-show-bb39a6ef3b3313432eebbaeb7706af92" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_content_type&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1409,7 +1409,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-3331aebeb6b393260b74fa9e32ebf7ab" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
+<div id="dp-show-9bbae3ba37be31eb3b603fea7f392426" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
 <p><strong>Earlier, you noted that the application has a file upload feature. Does the application allow other users (or administrators) to access the files that are uploaded?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1428,7 +1428,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_xss_fileupload-2">No, uploaded files are processed but can&rsquo;t be downloaded again.</label>
 </div>
 </div>
-<div id="dp-show-fbe973a332ba1e6babef03e763b3492b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_fileupload&#39;) == &#39;yes&#39;">
+<div id="dp-show-eebbfabb01336224e6333bbe997fa73a" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_fileupload&#39;) == &#39;yes&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1461,7 +1461,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_xss_dombased-2">It may be possible that something slipped through the cracks and our application has DOM-based XSS vulnerabilities.</label>
 </div>
 </p>
-<div id="dp-show-9b3eb3b0e3abf69f4b733bee1aa62372" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_dombased&#39;) == &#39;no&#39;">
+<div id="dp-show-e3336a927bf233a60bf4ee3bb79b1eab" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_dombased&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1485,7 +1485,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-824c8d8ab7ee160cde98053054334dce" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;db&#39;)">
+<div id="dp-show-d6c85e8381beedce30d973a0c4854402" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;db&#39;)">
 
 <h3 ref="persistence-back-ends-and-querying" >Persistence Back Ends and Querying</h3><a class="anchor" id="persistence-back-ends-and-querying"></a>
 <p>Because your application uses a database or a similar back end to persist data, we need to make sure it&rsquo;s not vulnerable to injection attacks, such as <a href="http://en.wikipedia.org/wiki/SQL_injection">SQL injection</a></p>
@@ -1530,7 +1530,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="webvuln_db_sql-5">We do something else.</label>
 </div>
-<div id="dp-show-1b0af36b2f1425cf8a171379b864b911" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-af0995f8bc663b4712b1b813f11a1247" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;other&#39;)">
 <p><strong>Describe the other mechanism you&rsquo;re using to protect against SQL injection:</strong></p>
 <p><textarea 
 name="webvuln_db_sql_other_details" 
@@ -1539,14 +1539,14 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-f18b141171329b2918abf74baf305c66" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
+<div id="dp-show-11fb83a7f976f823641b4120ba151cb9" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Using an ORM layer is generally a good way to protect against SQL injection. However, in most ORM frameworks, it&rsquo;s possible to directly specify parts of the SQL query. Some ORM frameworks also have a special querying language that makes it possible to set the <code>WHERE</code> part of the statement. In these cases, you still need to be sure to guard against injection vulnerabilities.</p>
 </div>
 </div>
-<div id="dp-show-66b311f9b492a0cf1ba211517848b73f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
+<div id="dp-show-f4ba1182308f61b71cfbab1129756394" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
 <p><strong>What ORM framework are you using ?</strong></p>
 <p><textarea 
 name="webvuln_sql_orm" 
@@ -1555,14 +1555,14 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-601641f997c7ab3281f1b854baf1312b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;stored&#39;)">
+<div id="dp-show-9ba24693731187b04ffb112bf15c6a18" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;stored&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Using stored procedures is generally a good way to protect against SQL injection. But this strategy must be used consistently. Make sure neither the stored procedures themselves nor the calls of the stored procedures are vulnerable to injection attacks.</p>
 </div>
 </div>
-<div id="dp-show-fa12116b9a113fc586b708273b4f4b19" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;prepared&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;))">
+<div id="dp-show-02fbb5fa811b316194271c1a78643fb9" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;prepared&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;))">
 <p><strong>Do you take special steps (policies, code reviews, audits, etc.) to ensure that prepared statements are used consistently, and that string concatenation is never used to construct database queries?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1581,7 +1581,7 @@ Using stored procedures is generally a good way to protect against SQL injection
   <label class="custom-control-label" for="webvuln_db_sql_prepared-2">We try to make our developers use prepared statements, but it may be possible for some string concatenation to slip through.</label>
 </div>
 </div>
-<div id="dp-show-51f13fb26b81a167b31c1fb29a804974" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;) || skwad.fValue(&#39;webvuln_db_sql_prepared&#39;) == &#39;no&#39;">
+<div id="dp-show-b851ff4741aa37cbb6b281969011f132" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;) || skwad.fValue(&#39;webvuln_db_sql_prepared&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1613,7 +1613,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-e18548443cbd3e0c0e307c8296ad5d8e" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;plugin&#39;)">
+<div id="dp-show-2a4ed35d9cbe8816c7de03e8c8404305" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;plugin&#39;)">
 
 <h3 ref="browser-plugins" >Browser Plugins</h3><a class="anchor" id="browser-plugins"></a>
 <p><strong>You mentioned that your application requires certain browser plugins to work correctly. Which of the following plugins are required?</strong>
@@ -1650,7 +1650,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_plugin-4">Other</label>
 </div>
 </p>
-<div id="dp-show-2036b533ee94b0cbe7392435fbc0925d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-93534942e33e622b70b50f3c0bcedb95" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
 <p><strong>What other plugins are required by your application?</strong></p>
 <p><input 
 name="webvuln_plugin_other" 
@@ -1658,7 +1658,7 @@ required="false"
 placeholder='' 
 type="text" class="form-control form-control-lg"></p>
 </div>
-<div id="dp-show-0b2ebb432353ced45096e09f372953bc" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-6bb0f4d35e90392c373bee522c935b04" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
 <p><strong>Explain what the plugin is used for, what technology it uses (e.g., ActiveX, NPAPI, Chrome plugin, etc.), how it is usually deployed to your users, and what privileges it requires:</strong></p>
 <p><textarea 
 name="webvuln_plugin_other_details" 
@@ -1667,7 +1667,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-3b222db4ec43f5e9c309e65b509b0337" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;java&#39;)">
+<div id="dp-show-4bd03ec6534c503bfe79be22b5032939" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;java&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1682,7 +1682,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-323e57cbb34c9432d29b090550ee36bf" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-4b6033cf09352b055bdbe979233e2ce4" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1709,7 +1709,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-b5e8c138c0927deed4c3a085e803446d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
+<div id="dp-show-c83450886ce4d7eebde0c43a5d012893" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
 
 <h3 ref="file-uploads" >File Uploads</h3><a class="anchor" id="file-uploads"></a>
 <p><strong>You mentioned previously that your application allows users to upload files. Where does the application store those files?</strong></p>
@@ -1737,7 +1737,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="webvuln_upload_storage-3">Somewhere else</label>
 </div>
-<div id="dp-show-c76243864d5545b98018a089c4da8a13" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
+<div id="dp-show-9ad7088c158382b54cd69484a5610a34" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
 <p><strong>Explain where the uploaded files are stored:</strong></p>
 <p><textarea 
 name="webvuln_upload_storage_other_details" 
@@ -1746,7 +1746,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-42ca14369dd55810ba9388764485a0c8" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
+<div id="dp-show-a8596cd884517429c6b0a5d38084413a" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1802,7 +1802,7 @@ type="text" class="form-control form-control-lg"></p>
   <label class="custom-control-label" for="webvuln_upload_storage_type-4">We employ another method to verify the file type.</label>
 </div>
 </p>
-<div id="dp-show-0839a5da5a4d46148508cc4b63718298" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
+<div id="dp-show-10c48a764b8a34552a4c8dd680538991" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
 <p><strong>Explain how you verify the file type and enforce the whitelist:</strong></p>
 <p><textarea 
 name="webvuln_upload_storage_type_other_details" 
@@ -1811,14 +1811,14 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-aa8611448008dd7ba9c554836348925c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;) &amp;&amp; skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
+<div id="dp-show-218c684d1a38a9b4504055d84938ca76" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;) &amp;&amp; skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
 Some web servers are configured by default to allow double file extensions. For example, if a user uploads a file called <code>malicious.php.gif</code>, it might actually be executed as PHP code upon retrieval. Because you store uploaded files on the file system, this issue may affect your application. Make sure your web server uses only the last extension (i.e., the part after the right-most dot in the file name) when determining how to process the file.\</p>
 </div>
 </div>
-<div id="dp-show-88451043a441239acd7db068689558ca" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)">
+<div id="dp-show-68d1334b6587ca2885a41089d950c4a4" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1835,7 +1835,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-b78dda2894c480615085454383aa91c6" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;contenttype&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;))">
+<div id="dp-show-358a48ab5a6cc44106588708d92d9134" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;contenttype&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;))">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1862,7 +1862,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-e2c0ebcedd8410cd50e838793544638a" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;crypto&#39;)">
+<div id="dp-show-3e5c780342e4c340a5e60e1c9bd88d8d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;crypto&#39;)">
 
 <h3 ref="use-of-cryptography" >Use of Cryptography</h3><a class="anchor" id="use-of-cryptography"></a>
 <p>You previously mentioned that your application uses cryptography to ensure the confidentiality and/or integrity of information. That&rsquo;s great! But we want to make sure you&rsquo;re using cryptography correctly.</p>
@@ -1888,10 +1888,10 @@ class="form-control" rows="3"></textarea></p>
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/content-and-customization/03-look-and-feel/colors/" title="Colors" style="margin-right: 0px;">
+		<a class="next" href="/content-and-customization/00-adding-content/page-images/" title="images" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>Colors</label>
+                <label>images</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>

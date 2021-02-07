@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-07T20:16:04 KST">
+<meta name="revised" content="2021-02-07T22:49:19 KST">
 <meta name="description" content="">
 
 
@@ -1125,7 +1125,7 @@
 
 
 
-<div id="dp-show-5b7031800012084895010adb090a1399" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_only&#39;">
+<div id="dp-show-d1902031b00708a01a549090951b3880" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_only&#39;">
 
 <input type="hidden" name="warn_https_exposition" value="Unencrypted application network traffic">
 <div class="notices danger">
@@ -1154,7 +1154,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-d90188a000090354782591ab9100b103" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39;">
+<div id="dp-show-1190a03890b900a87580b30d29401015" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39;">
 
 <h3 ref="configuring-ssltls" >Configuring SSL/TLS</h3><a class="anchor" id="configuring-ssltls"></a>
 <p><strong>Have you recently reviewed your SSL configuration to ensure that only secure protocols and ciphers are offered to clients?</strong></p>
@@ -1174,7 +1174,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="https_conf-2">We&rsquo;re not sure whether our SSL/TLS configuration is secure.</label>
 </div>
-<div id="dp-show-308102019900793081dabb5a51840900" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_conf&#39;) == &#39;not_sure&#39;">
+<div id="dp-show-b080115d1a39983a200b400190085709" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_conf&#39;) == &#39;not_sure&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -1198,7 +1198,7 @@ Detailed guidance on SSL/TLS and cipher suites is beyond the scope of this quest
   class="custom-control-input">
   <label class="custom-control-label" for="https_forward_secrecy-2">No, no ciphers providing forward secrecy are enabled.</label>
 </div>
-<div id="dp-show-980a031354ba1d2097b9800810900150" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_forward_secrecy&#39;) == &#39;no&#39;">
+<div id="dp-show-d213ab4078a00000b801001395951899" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_forward_secrecy&#39;) == &#39;no&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -1222,7 +1222,7 @@ In ciphers that support forward secrecy, an ephemeral key is negotiated for each
   class="custom-control-input">
   <label class="custom-control-label" for="https_private_keys-2">I&rsquo;m not sure how well protected they are.</label>
 </div>
-<div id="dp-show-0a2b40101809880990a00137b150395d" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_private_keys&#39;) == &#39;no&#39;">
+<div id="dp-show-9801907a513ab12040db019090588300" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_private_keys&#39;) == &#39;no&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -1254,7 +1254,7 @@ Make sure private SSL/TLS keys are, at a minimum, protected through file system 
   class="custom-control-input">
   <label class="custom-control-label" for="https_termination-3">Somewhere else</label>
 </div>
-<div id="dp-show-5001a2000a3b8009d95107108319984b" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;somewhere&#39;">
+<div id="dp-show-708053949ad01195a01b30108902080b" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;somewhere&#39;">
 <p><strong>Provide more details on the termination point:</strong></p>
 <p><textarea 
 name="https_termination_somewhere_details" 
@@ -1263,7 +1263,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-1181950daa0003700b23800519908b94" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;loadbalancer&#39;">
+<div id="dp-show-05030880257b109340180199ad00b91a" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;loadbalancer&#39;">
 <p><strong>How is traffic between the load balancer and the application servers protected?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1298,14 +1298,14 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="https_termination_lb_traffic-4">Through other means.</label>
 </div>
 </div>
-<div id="dp-show-348a78ba000290d90590080031151b91" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;unencrypted-untrusted&#39;">
+<div id="dp-show-8091b1100400d800925a0937985a301b" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;unencrypted-untrusted&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Because user traffic appears to transit networks behind your load balancer that are not fully owned and operated by you, we strongly recommend that you establish another SSL/TLS connection between the load balancer and the servers that actually serve the application. Otherwise, an attacker who can listen in on the traffic behind your load balancers will be able to see unencrypted user data.</p>
 </div>
 </div>
-<div id="dp-show-0a599b30100d072b81041980091305a8" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;other&#39;">
+<div id="dp-show-b59001340199b2873a00090a5081d018" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;other&#39;">
 <p><strong>Describe how the traffic is protected:</strong></p>
 <p><textarea 
 name="https_termination_lb_traffic_details" 
@@ -1332,7 +1332,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="https_mixedcontent-2">It wouldn&rsquo;t be too difficult for something to fall through the cracks and introduce mixed-content bugs.</label>
 </div>
-<div id="dp-show-13091491a0b0b702d0005a8589308901" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_mixedcontent&#39;) == &#39;no&#39;">
+<div id="dp-show-1b0099d0a530008057a99882b1103410" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_mixedcontent&#39;) == &#39;no&#39;">
 <input type="hidden" name="warn_https_mixedcontent" value="Mixed content issue">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
