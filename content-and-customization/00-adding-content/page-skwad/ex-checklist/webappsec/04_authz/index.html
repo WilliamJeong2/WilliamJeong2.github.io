@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-16T17:24:17 KST">
+<meta name="revised" content="2021-02-16T17:25:10 KST">
 <meta name="description" content="">
 
 
@@ -1110,7 +1110,7 @@
 
 
 
-<div id="dp-show-0c7dd0cbdb3edbc2c05c6acb7069cf32" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;rbac_model&#39;)">
+<div id="dp-show-c0accdbc7ecf6cdd309b0275cd36bb02" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;rbac_model&#39;)">
 
 <p><strong>Briefly describe the different roles your application provides. If your application also offers custom role definitions, be sure to mention that.</strong></p>
 <p><textarea 
@@ -1131,7 +1131,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-d0c0ccc3bb26b72deacf9dccd5b36007" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-2cc3fa3ddd0c7670b5ebb0d6c2cbc09c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 
 <p><strong>Is your application integrated with any of the following single sign-on (SSO) mechanisms?</strong></p>
 <div class="custom-control custom-checkbox">
@@ -1182,7 +1182,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_sso_mechanisms-6">None of the above</label>
 </div>
-<div id="dp-show-e5f03cccdcd3cc6200bc7d062bdba97b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-0fd05c73a9eccb0bcbd26c27c3b0cd6d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;other&#39;)">
 <p><strong>What other SSO mechanisms does the application support?</strong></p>
 <p><textarea 
 name="Auths_sso_other_details" 
@@ -1191,21 +1191,21 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-79b02b0cce6375cafb60b2cd0dcdcdc3" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenID2&#39;) &amp;&amp; !(skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;))">
+<div id="dp-show-5c3bd2cb6cfad709c006b7de30dbcc2c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenID2&#39;) &amp;&amp; !(skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;))">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
 OpenID 2.0 has been replaced by OpenID Connect (also called OAuth2 Login). We recommend updating your application&rsquo;s SSO integration to support OpenID Connect.</p>
 </div>
 </div>
-<div id="dp-show-d7b0fc0cc95d0b22debd03ccc6763bac" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;LDAP&#39;)">
+<div id="dp-show-037d0c6cb2cd0c6b0df7c9bdcac2b35e" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;LDAP&#39;)">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
 Integrating with LDAP and/or Active Directory has a significant downside: any application that integrates with it has to receive the user&rsquo;s SSO password. As a result, a vulnerability in any integrated application puts the password at risk for all other applications. We recommend using an SSO mechanism that does not require the password to be sent anywhere other than a central authentication system.</p>
 </div>
 </div>
-<div id="dp-show-6cc9072d3cc0c0bfeb70a56dc2bdbc3d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;)">
+<div id="dp-show-0b3ddb7c75cccb6d003dce0a62b2c9fc" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;)">
 <h3 ref="oauth2-login" >OAuth2 Login</h3><a class="anchor" id="oauth2-login"></a>
 <p><strong>Implementing OAuth2 Login / OpenID Connect from scratch is fairly complex and error-prone, and mistakes can result in security vulnerabilities. Select the option that best describes your implementation:</strong>
 <div class="custom-control custom-radio">
@@ -1233,14 +1233,14 @@ Integrating with LDAP and/or Active Directory has a significant downside: any ap
   <label class="custom-control-label" for="Auths_oauth2_impl-3">Not sure: We implemented OAuth2 on our own, and it seemed simple at the time. I&rsquo;m not sure about the security of our implementation</label>
 </div>
 </p>
-<div id="dp-show-359a2a68615afa2dc381d1f104cb0108" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;secure&#39;">
+<div id="dp-show-a92310a81bad86ad1cf418325c6f0150" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;secure&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 If your employees really are OAuth2 experts, you&rsquo;re probably fine. But note that even standard libraries have had vulnerabilities due to the intricacies of the standard. Be sure to ask your penetration testing provider to take a look at the OAuth2 implementation.</p>
 </div>
 </div>
-<div id="dp-show-a3b626d1f58a1308c04c1f195a12d8a0" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;own_impl&#39;">
+<div id="dp-show-911fbc260f45a65a311d88da031820ca" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;own_impl&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1273,7 +1273,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_handle_password-2">No, all authentication is based on single sign-on (SSO).</label>
 </div>
-<div id="dp-show-ccc020273dcedb6b3ddf5c7ac00cbb69" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password&#39;) == &#39;yes&#39;">
+<div id="dp-show-b7c2fcba02ec5cd7c3bd6600b3ccd90d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password&#39;) == &#39;yes&#39;">
 <h3 ref="usernamepassword-authentication" >Username/Password Authentication</h3><a class="anchor" id="usernamepassword-authentication"></a>
 <p><strong>What username/password-based logins does the application use? For example, if there&rsquo;s a separate administrator authentication, mention that.</strong>
 <p><textarea 
@@ -1300,7 +1300,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_handle_password_allowusechange-2">No</label>
 </div>
-<div id="dp-show-ce4f48d46e72374fb3437f0e26be5bb8" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_allowusechange&#39;) == &#39;no&#39;">
+<div id="dp-show-86b42d48ce4beb2b3757f473e03f4e6f" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_allowusechange&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1333,7 +1333,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_handle_password_policyenforced-2">No</label>
 </div>
-<div id="dp-show-e847bfbf3e4372e6fd374b6450e8c4b2" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_policyenforced&#39;) == &#39;no&#39;">
+<div id="dp-show-e8fd4eb054322e737e76b4b8ff446bc3" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_policyenforced&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1400,7 +1400,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="Auths_handle_password_storage-6">None of the above</label>
 </div>
 </p>
-<div id="dp-show-e0ef534bd2b4e2f38e74687634b47fcb" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;none&#39;">
+<div id="dp-show-f7674358becdf6e044428eb74fe23b3b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;none&#39;">
 <p><strong>Explain how your application stores passwords:</strong></p>
 <p><textarea 
 name="Auths_handle_password_storage_details" 
@@ -1409,7 +1409,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-434686cb3e4fe58e7724be4ffdb03b27" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;plaintext&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;reversible&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;hashnosalted&#39;">
+<div id="dp-show-b7d4ff8ef8be36654422ce37730b44be" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;plaintext&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;reversible&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;hashnosalted&#39;">
 <div class="alert danger" role="alert"><strong>Warning — possible critical-risk issue</strong></div>
 <div class="notices danger">
 	<p>Passwords should be stored in such a way that the original passwords cannot be easily recovered, even if an attacker manages to get access to the storage location (e.g., through a SQL injection vulnerability). At a minimum, passwords should be secured using a cryptographic one-way hash function and a salt. We strongly recommended using password-based key derivation function like bcrypt PBKDF2 or scrypt instead; they were specifically designed for this use case and make it significantly harder for attackers to crack password hashes.<br>
@@ -1458,7 +1458,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="Auths_handle_password_init_process-4">None of the above.</label>
 </div>
 </p>
-<div id="dp-show-7b0e434e62478ec6ff43f48e7d23b5bb" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;none&#39;">
+<div id="dp-show-f72452f6b3ebe4644707c3d88fb3eeb4" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;none&#39;">
 <p><strong>Explain how users get their initial passwords:</strong></p>
 <p><textarea 
 name="Auths_handle_password_init_process_details" 
@@ -1467,7 +1467,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-6f8025427e3deeb748eb337c4fb4fb46" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;linktoset&#39;">
+<div id="dp-show-334472fe0e6ce2b8fe75b84734b64fbd" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;linktoset&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -1527,7 +1527,7 @@ If passwords are sent by email, make sure users are required to change their ini
   <label class="custom-control-label" for="Auths_handle_password_recovery-4">None of the above.</label>
 </div>
 </p>
-<div id="dp-show-e7f4be85266444fb8c0d3ee7b74f233b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;none&#39;)">
+<div id="dp-show-483d7b0e343456fc77fbe44efb68e22b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;none&#39;)">
 <p><strong>Describe your password recovery mechanism:</strong></p>
 <p><textarea 
 name="Auths_handle_password_recovery_details" 
@@ -1536,7 +1536,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-f2e77bd437b54b64e4880bf4c63e23fe" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;questions&#39;) &amp;&amp;  !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;resetlink&#39;)) &amp;&amp; !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;))">
+<div id="dp-show-e2436fbd24ee483f73b07fe6b4784cb5" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;questions&#39;) &amp;&amp;  !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;resetlink&#39;)) &amp;&amp; !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;))">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1551,7 +1551,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-464eb47bf823b47f7e30d628ec5f34eb" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;)">
+<div id="dp-show-f4b735f274f86e6ce4b403bdee4b3827" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1580,7 +1580,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-a0bcccb056d327dcbcd3b79f26d00ecc" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-d6cc037f2bcddcb76cc00ac9bb02e53d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 
 <h3 ref="authentication-cookies-and-sessions" >Authentication Cookies and Sessions</h3><a class="anchor" id="authentication-cookies-and-sessions"></a>
 <p><strong>Cookies can be decorated with a special keyword, <code>HttpOnly</code>. If this keyword is set, the browser will not allow JavaScript to access the cookie. Even if the application has a cross-site scripting vulnerability, this keyword makes it much harder for an attacker to steal the session cookie.</strong></p>
@@ -1600,7 +1600,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_cookies_sessions_httponly-2">Our application does not make use of this defense-in-depth mechanism.</label>
 </div>
-<div id="dp-show-0e86a5bd0b17b983d7c4a8136c6d7e39" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_httponly&#39;) == &#39;no&#39;">
+<div id="dp-show-13783ac948bbd5ecd3de01869ba06767" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_httponly&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1649,7 +1649,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_cookies_sessions_id-4">We use some other mechanism.</label>
 </div>
 </p>
-<div id="dp-show-7a347d0918a81b9e5866bb336edc70dc" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-ecc71e6d73baa1d89d0463586b30b978" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;other&#39;)">
 <p><strong>Describe the mechanism you&rsquo;re using</strong></p>
 <p><textarea 
 name="auths_cookies_sessions_id_no_details" 
@@ -1658,7 +1658,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-6cae571379c361bd080968ba74db3ed8" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
+<div id="dp-show-8a198cdb00e467c68b67713b9e5da3d3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
 <p><strong>What&rsquo;s the name of the framework that generates your session IDs</strong></p>
 <p><input 
 name="auths_cookies_sessions_id_framework_name" 
@@ -1666,7 +1666,7 @@ required="false"
 placeholder='' 
 type="text" class="form-control form-control-lg"></p>
 </div>
-<div id="dp-show-638310e94e63961bbda78cdd0cb877a5" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;) || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;signedcookie&#39;)">
+<div id="dp-show-b16ab8396e0cddbc0164d7857e78a393" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;) || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;signedcookie&#39;)">
 <p><strong>Do sessions automatically time out after a specified period of inactivity</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1684,7 +1684,7 @@ type="text" class="form-control form-control-lg"></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_cookies_sessions_timeout-2">No</label>
 </div>
-<div id="dp-show-c1bb17a36758836debad37098e046c9d" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;yes&#39; || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
+<div id="dp-show-da7d8bb3006a16389e347b95ec87d16c" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;yes&#39; || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
 <p><strong>How long is the session timeout?</strong></p>
 <p><input 
 name="application_auth_cookies_timeout_length" 
@@ -1693,7 +1693,7 @@ placeholder=''
 type="text" class="form-control form-control-lg"></p>
 </div>
 </div>
-<div id="dp-show-b7d606b97c930d57a8e813ce1ad483b6" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;no&#39;">
+<div id="dp-show-7a6e6bcdb498de815b010938773d6ca3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1708,7 +1708,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-e36c878519b91cbde773a8da3d046b06" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;)">
+<div id="dp-show-0b451c139c6e88bd86397a6dd3b77e0a" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;)">
 <p><strong>Does the application use a secure <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator#Cryptographically_secure_pseudorandom_number_generators">cryptographic pseudo random number generator</a> (PRNG) to generate session IDs? The PRNG should not allow the state of the generator to be recalculated from its output, and the entropy of the session ID should be sufficient to make brute-forcing infeasible.</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1726,7 +1726,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_cookies_sessions_prng-2">No, we don&rsquo;t use a PRNG, or our PRNG doesn&rsquo;t meet these criteria.</label>
 </div>
-<div id="dp-show-78d68a8597601b6dbee3c3d4c0b3791a" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_prng&#39;) == &#39;no&#39;">
+<div id="dp-show-cb573a760be116bd8e0d78d893ca4396" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_prng&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1760,7 +1760,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_cookies_sessions_logoutexists-2">No</label>
 </div>
 </p>
-<div id="dp-show-bd760619c784139a0db8687ca5ed3eb3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_logoutexists&#39;) == &#39;no&#39;">
+<div id="dp-show-d8138c79e771b34bc6608baa950de6d3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_logoutexists&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1787,7 +1787,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-a0ce3db37d09670dbc0ccc2b2bfcc65d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-dc0607cccccb7fec3db302d0b6ba2d59" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 
 <h3 ref="authorization" >Authorization</h3><a class="anchor" id="authorization"></a>
 <p>In most applications, certain information should only be accessible to certain users. For example, in most applications that require authentication, only the currently logged-in user should be able to change master data (such as the username, the associated email address, or the account password). When an application has data that should not be available to other users or should be restricted to certain roles, authorization must be enforced on the server side.</p>
@@ -1809,7 +1809,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_isolation_data-2">It&rsquo;s possible that we missed checks like this in a few places.</label>
 </div>
 </p>
-<div id="dp-show-cd31bc57711e60fdbad03f7fd34c4809" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_data&#39;) == &#39;no&#39;">
+<div id="dp-show-f57fd0de4b76c01c301d4b3da83f197c" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_data&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1842,7 +1842,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_isolation_features-2">It&rsquo;s possible that we missed checks like this in a few places.</label>
 </div>
 </p>
-<div id="dp-show-b31bdf671c45a0fdd07183d37c9ec0f4" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_features&#39;) == &#39;no&#39;">
+<div id="dp-show-d7d4fd3393ccabf151e70db8c01740f6" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_features&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1869,7 +1869,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-c0d3d9bd00ceb6cfb657bd32cc7c0c2a" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-b2602cc093cbdbcc73df7cbde60d5a0c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 
 <h3 ref="authorization-related-web-vulnerabilities" >Authorization-Related Web Vulnerabilities</h3><a class="anchor" id="authorization-related-web-vulnerabilities"></a>
 <h4 ref="cross-site-request-forgery" >Cross Site Request Forgery</h4><a class="anchor" id="cross-site-request-forgery"></a>
@@ -1897,7 +1897,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_XSRF-2">Some actions might not be protected against XSRF.</label>
 </div>
 </p>
-<div id="dp-show-f484f96c42148b8f6fd7cd3c6bc781f3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;no&#39;">
+<div id="dp-show-c44f166fbf8bcc8c734f49688dd1723f" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1912,7 +1912,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-c6ffc183d9b44c468b3df8427f1c68f7" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;yes&#39;">
+<div id="dp-show-88b78f6b68c43dcc7f93f2c1df44416f" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;yes&#39;">
 <p><strong>What strategy do you use to protect against XSRF?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1939,14 +1939,14 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_XSRF_strategy-3">The application does one of the following: verifies the referrer header; requires all state-changing actions to be POST requests; employs another mechanism to protect against XSRF</label>
 </div>
 </div>
-<div id="dp-show-cd4bf6786d68c1bf44cff92c84f13837" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;header&#39;">
+<div id="dp-show-bff838c47fb8844d71f1d3c624c96cf6" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;header&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Various browser plugins (such as Flash and Java) have had security vulnerabilities that allowed an attacker to set arbitrary custom headers on cross-domain requests. We highly recommend the use of tokens instead of headers.</p>
 </div>
 </div>
-<div id="dp-show-fc487831474926c643fc8bfd6f8dfbc1" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;post&#39;">
+<div id="dp-show-7368f81ffd8c1fc64bfb943824d4cc76" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;post&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1985,7 +1985,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_XSSI-2">Our application uses another format that sets variables or calls functions with non-public information.</label>
 </div>
 </p>
-<div id="dp-show-c742466c73cbf88ffc116ffd8db44839" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSSI&#39;).includes(&#39;no&#39;)">
+<div id="dp-show-3cf84b121f94d7df884cb7fcc3648f66" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSSI&#39;).includes(&#39;no&#39;)">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -2020,7 +2020,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_authorization_clickjacking-2">Our application does not have such protections.</label>
 </div>
-<div id="dp-show-d46cf6417482883c987f614f3bffcdbc" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_clickjacking&#39;).includes(&#39;no&#39;)">
+<div id="dp-show-4b8b6ddfc317f4fc6c8932744168f8fc" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_clickjacking&#39;).includes(&#39;no&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -2060,10 +2060,10 @@ class="form-control" rows="3"></textarea></p>
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/content-and-customization/03-look-and-feel/colors/" title="Colors" style="margin-right: 0px;">
+		<a class="next" href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" title="page 1-1-1-1" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>Colors</label>
+                <label>page 1-1-1-1</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
