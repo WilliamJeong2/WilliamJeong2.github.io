@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://williamjeong2.github.io/bioinformatics/02-gene-expression-unit-explained/</loc>
+    <lastmod>2021-02-16T17:54:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://williamjeong2.github.io/bioinformatics/</loc>
     <lastmod>2021-02-16T17:38:54+09:00</lastmod>
   </url>
@@ -33,7 +38,17 @@
   </url>
   
   <url>
+    <loc>https://williamjeong2.github.io/bioinformatics/03-which-reference-genome-should-i-use/</loc>
+    <lastmod>2021-02-17T17:59:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://williamjeong2.github.io/blog/7-docker-out-of-disk-space/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/bioinformatics/4-fastq-format/</loc>
+    <lastmod>2021-02-16T18:25:31+09:00</lastmod>
   </url>
   
   <url>

@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등) :: Jeong&#39;s Blog
+	어떤 reference genome을 사용해야 할까? :: Jeong&#39;s Blog
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등) :: Jeong&#39;s Blog</title>
+<title>어떤 reference genome을 사용해야 할까? :: Jeong&#39;s Blog</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -63,7 +63,7 @@ if (!doNotTrack) {
     
   </head>
 
-  <body data-url="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/"
+  <body data-url="/bioinformatics/03-which-reference-genome-should-i-use/"
 
   class="">
 
@@ -171,14 +171,15 @@ if (!doNotTrack) {
     </li>
     
 <hr/>
-    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item haschildren
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
           <a href="/bioinformatics/">Bioinformatics&nbsp;🧬</a>
@@ -201,7 +202,7 @@ if (!doNotTrack) {
     </li>
               
 
-    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/03-which-reference-genome-should-i-use/" class="dd-item
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/03-which-reference-genome-should-i-use/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -233,7 +234,7 @@ if (!doNotTrack) {
     </li>
     
 
-    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item parent alwaysopen haschildren
+    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item alwaysopen haschildren
         item_level_$level
         ">
 
@@ -264,7 +265,7 @@ if (!doNotTrack) {
     </li>
               
 
-    <li data-nav-id="https://williamjeong2.github.io/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/" class="dd-item parent active
+    <li data-nav-id="https://williamjeong2.github.io/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/" class="dd-item
         item_level_$level
         ">
 
@@ -374,8 +375,8 @@ if (!doNotTrack) {
 	
   
     <li class="">
-      <a class="text-link" href="/blog/">
-        Devlog
+      <a class="text-link" href="/bioinformatics/">
+        Bioinformatics
       </a>
     </li>
 	
@@ -383,7 +384,7 @@ if (!doNotTrack) {
   
     <li class="active">
       
-        맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)
+        어떤 reference genome을 사용해야 할까?
       
     </li>
 
@@ -404,7 +405,7 @@ if (!doNotTrack) {
 		
 
 		
-			<h1>맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</h1>
+			<h1>어떤 reference genome을 사용해야 할까?</h1>
         
 
 		
@@ -424,14 +425,22 @@ if (!doNotTrack) {
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#어떻게-작동하는가">어떻게 작동하는가?</a></li>
-    <li><a href="#가상-드라이브-생성">가상 드라이브 생성</a></li>
-    <li><a href="#가상-드라이브-마운트">가상 드라이브 마운트</a></li>
-    <li><a href="#가상-드라이브를-인식하도록-타임머신-구성">가상 드라이브를 인식하도록 타임머신 구성</a></li>
-    <li><a href="#타임머신-설정">타임머신 설정</a></li>
-    <li><a href="#타임머신에서-onedrive-폴더-제외">타임머신에서 OneDrive 폴더 제외</a></li>
-    <li><a href="#그리고-당신은">그리고 당신은..</a></li>
-    <li><a href="#코멘트">📝코멘트</a></li>
+    <li>
+      <ul>
+        <li><a href="#들어가기-전에">들어가기 전에</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-이전-버전을-사용해야-하는-이유는-무엇인가">1. 이전 버전을 사용해야 하는 이유는 무엇인가?</a></li>
+    <li><a href="#2-reference-fasta-에는-어떤-서열정보가-포함되어-있는가">2. reference fasta 에는 어떤 서열정보가 포함되어 있는가?</a></li>
+    <li><a href="#3-최신-마이너-버전의-사용은-어떤가">3. 최신 마이너 버전의 사용은 어떤가?</a></li>
+    <li><a href="#4-정렬alignment을-위해-reference-패스트를-준비하려면-어떤-단계들이-필요한가">4. 정렬(alignment)을 위해 reference 패스트를 준비하려면 어떤 단계들이 필요한가?</a>
+      <ul>
+        <li><a href="#grc로부터-제공되는-서열들의-서브셋-구축">GRC로부터 제공되는 서열들의 서브셋 구축</a></li>
+        <li><a href="#염색체-y의-par을-표시">염색체 Y의 PAR을 표시</a></li>
+        <li><a href="#서열-이름-바꾸기">서열 이름 바꾸기</a></li>
+        <li><a href="#인덱싱">인덱싱</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 	</div>
@@ -444,83 +453,91 @@ if (!doNotTrack) {
 
 
 	<div class="content">
-	    
-
-<div class="notices dark">
-	<p>*이 글은 <a href="https://www.berserkcomputers.co.uk/author/lsumal">Lhyam Sumal</a>의 <a href="https://www.berserkcomputers.co.uk/how-to-save-apple-time-machine-backups-to-cloud-services-like-onedrive/">HOW TO SAVE APPLE TIME MACHINE BACKUPS TO CLOUD SERVICES LIKE ONEDRIVE</a> 를 번역한 글입니다. 모든 저작권과 권리는 Sumal에게 있습니다.<br>
-*This article is a translated version of  <a href="https://www.berserkcomputers.co.uk/author/lsumal">Lhyam Sumal</a>&rsquo;s article: <a href="https://www.berserkcomputers.co.uk/how-to-save-apple-time-machine-backups-to-cloud-services-like-onedrive/">HOW TO SAVE APPLE TIME MACHINE BACKUPS TO CLOUD SERVICES LIKE ONEDRIVE.</a> All rights goes back to him.<br>
-*제가 이해한 대로 번역하였기 때문에 완벽하지 않을 수 있습니다.</p>
-
-</div>
-
-<p>타임머신은 굉장한 기능이면서, 제 생각에는 macOS의 최고 기능입니다. 네, 윈도우에도 파일 히스토리가 있지만 타임머신만큼 포괄적인 것은 없습니다. 말 그대로 맥을 복원하고 프로그램을 다시 설치하거나 환경설정을 지정하거나 driver를 사용하지 않고도 이전에 중단한 위치를 정확하게 선택할 수 있습니다!</p>
-<p>그러나 백업하려면 외장하드가 연결되어야 합니다. 물론 2018년(원문이 쓰인 날)에는 클라우드 서비스에 백업할 수 있습니다. 저는 마이크로소프트 오피스 365를 구독해서 1TB의 공간을 가지고 있습니다.  문서, 사진, 음악, 비디오 및 데스크탑 폴더가 이미 원드라이브에 백업되는 반면에 내 프로그램들과 설정들은 어떤가요?</p>
-<p>놀랍게도 애플은 클라우드 서비스를 사용한 백업 옵션을 타임머신에서 제공하지 않습니다. 하지만 우리는 답을 찾을 것이다. 늘 그랬듯이..(의역)</p>
-<p>하지만 그렇게 열심히 찾아보지 않아도 되었습니다. 이전에 타임머신 백업을 네트워크 드라이브에 저장하는 방법을 약간의 수정을 통해서 할 수 있는 방법을 기사로 썼습니다. 다음은 타임머신을 원드라이브, 구글드라이브, 아이클라우드 또는 원하는 클라우드 서비스에 저장할 수 있는 방법입니다.</p>
-<h2 ref="어떻게-작동하는가" >어떻게 작동하는가?</h2><a class="anchor" id="어떻게-작동하는가"></a>
-<p>이 글의 목적상 원드라이브를 사용하고 있지만 다른 클라우드 서비스도 동일한 방식으로 작동합니다. 맥에서 이미 클라우드 동기화 서비스를 사용하고 있다고 가정하면 다음 단계를 따르는 것이 매우 간단하며 몇 분 정도 걸립니다.</p>
-<p>가상 드라이브를 생성하여 클라우드 서비스에 저장한 다음 맥에 마운트 해야 합니다. 타임머신 설정을 약간 조정하면 맥에서 가상 드라이브를 인식하고 자동으로 저장을 시작합니다.</p>
-<p>macOS가 변경 사항을 가상 드라이브에 저장할 때마다 원드라이브 앱은 해당 변경사항을 클라우드에 다시 동기화합니다.</p>
-<h2 ref="가상-드라이브-생성" >가상 드라이브 생성</h2><a class="anchor" id="가상-드라이브-생성"></a>
-<p>가상 드라이브의 장점은 전체 1TB를 가상 드라이브에 할당된 공간으로 지정하더라도 실제 차지하는 공간은 그 안에 포함된 파일의 크기만큼만 됩니다.</p>
-<p><strong>클라우드 드라이브 폴더 내에 디스크 이미지를 저장해야 합니다. 맥에서 원드라이브 폴더를 찾고 디스크 이미지를 여기에 저장했습니다.</strong></p>
+	    <h3 ref="들어가기-전에" >들어가기 전에</h3><a class="anchor" id="들어가기-전에"></a>
 <ul>
-<li>디스크 유틸리티를 엽니다. 간단하게 Spotlight나 Alfred를 이용해 검색할 수 있습니다.- 파일 메뉴에서 새로운 이미지(New Image) &gt; 빈 이미지(Black Image)를 선택합니다. (단축키 cmd+n)</li>
-<li>클라우드 폴더를 찾아서 가상 드라이브 이름을 설정합니다. (MacBookTM)- 가상드라이브의 최대 용량을 입력합니다. 저의 경우 200 GB를 입력했습니다.- 포맷을 Mac OS 확장 (저널링)로 선택합니다.</li>
-<li>암호화는 사용해도 되고 안 해도 되는데 사용한다면 128-bit 를 선택합니다. 그러면 암호를 입력하는 창이 뜨는데 복구할 때 사용하기 때문에 잊어버리면 안 됩니다.</li>
-<li>파티션을 단일 파티션으로 설정합니다.</li>
-<li>마지막으로 이미지 포맷을 분할 번들 디스크 이미지(sparse bundle disk image)로 선택합니다.</li>
-<li><strong>디스크 이미지 사이즈를 체크합니다.</strong> - 저의 경우 이미지 포맷을 변경하니까 사이즈가 기본으로 변경되어 다시 수정하였습니다.</li>
+<li>이 포스팅은 <a href="https://www.biostars.org/p/342482/">Tutorial: Which human reference genome should I use?</a> 에 있는 포스팅을 번역한 내용이 포함되어있습니다. 오역이나 의역이 있을 수 있습니다. 지적해주시면 확인 후에 정정하겠습니다.</li>
+<li>Original source of this posting is form <a href="https://www.biostars.org/p/342482/">Tutorial: Which human reference genome should I use?</a> If the original author requests deletion, it will be deleted immediately.</li>
 </ul>
-<p>완료하였다면 디스크 유틸리티를 종료 할 수 있습니다.</p>
-<h2 ref="가상-드라이브-마운트" >가상 드라이브 마운트</h2><a class="anchor" id="가상-드라이브-마운트"></a>
-<p>저의 경우 자동으로 가상 드라이브가 마운트 되고 MacBookTM이 나타났습니다.</p>
-<p>자동으로 마운트 되지 않을 경우 파인더를 열고 디스크 이미지를 저장한 위치로 이동하여 두 번 클릭하면 됩니다.</p>
-<h2 ref="가상-드라이브를-인식하도록-타임머신-구성" >가상 드라이브를 인식하도록 타임머신 구성</h2><a class="anchor" id="가상-드라이브를-인식하도록-타임머신-구성"></a>
-<p>이 파트는 조금 까다로워 보이지만 실제로는 간단합니다.</p>
-<p><img src="https://drive.google.com/uc?id=1q2NoJZ86fuFTDyQd2GmjuQ-WpDSihVSY" alt="저와 창이 다를 수 있습니다."></p>
-<ul>
-<li>
-<p><strong>터미널</strong>을 엽니다.
-(저와 다른 창이 떠도 괜찮습니다.)</p>
-</li>
-<li>
-<p>아래의 명령어를 입력합니다. 여기서 {mounted-disk-image}는 마운트 된 디스크의 이름입니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">sudo tmutil setdestination /Volumes/<span style="color:#ff79c6">{</span>mounted-disk-image<span style="color:#ff79c6">}</span>
-  
-<span style="color:#6272a4">#저는 MacBookTimeMachine으로 했으니까 위의 이미지 처럼 입력하였습니다.</span>
-</code></pre></div></li>
-<li>
-<p><strong>Enter</strong>를 누르세요.</p>
-</li>
-<li>
-<p>비밀번호를 입력하라고 나오면 입력하고 Enter를 누르세요.</p>
-</li>
-<li>
-<p>입력이 완료되면 exit를 눌러 터미널을 종료합니다.</p>
-</li>
-</ul>
-<h2 ref="타임머신-설정" >타임머신 설정</h2><a class="anchor" id="타임머신-설정"></a>
-<p>거의 다 끝났습니다. 👏</p>
-<p><img src="https://drive.google.com/uc?id=153DKpTWWJT9vN5WqmrQa4ykmBwF2_5Kx" alt=""></p>
-<p>시스템 환경설정에서 타임머신을 열면 새로 만든 드라이브가 자동으로 나타납니다.</p>
-<h2 ref="타임머신에서-onedrive-폴더-제외" >타임머신에서 OneDrive 폴더 제외</h2><a class="anchor" id="타임머신에서-onedrive-폴더-제외"></a>
-<p>이 부분은 권장하는 파트입니다. 그렇지 않으면 클라우드 동기화 폴더 포함하여 타임머신이 백업한 다음에 클라우드 동기화를 진행합니다.</p>
-<p>폴더를 제외하려면</p>
-<ul>
-<li>타임머신 환경설정에서 옵션을 <strong>클릭</strong>합니다.</li>
-<li><code>+</code> 아이콘을 클릭하고 클라우드 폴더를 선택합니다. (예: Onedrive 또는 googledrive)</li>
-<li>저장을 클릭합니다.</li>
-</ul>
-<h2 ref="그리고-당신은" >그리고 당신은..</h2><a class="anchor" id="그리고-당신은"></a>
-<p>타임머신이 가상드라이브 백업을 시작하고 원드라이브에 해당 변경 사항을 동기화할 것입니다. 더는 외장하드를 검색하거나 네트워크 서버 연결을 기다릴 필요가 없습니다.</p>
-<p>백업을 다운받기 위해서 조금 고통스럽겠지만 저를 믿으세요!</p>
 <hr>
-<h2 ref="코멘트" >📝코멘트</h2><a class="anchor" id="코멘트"></a>
-<p>백업을 진행하다 보면 매우 느린 속도에 좌절하게 되지만 이 속도를 개선해 줄 방법이 있습니다. 아래의 링크를 참고해주세요.</p>
+<p>&ldquo;어떤 reference genome을 선택해야 하는가?&ldquo;는 biostas에서 나오는 상위권 질문들중 하나입니다. 이 질문에 대한 답은 꽤 쉬워보입니다: 가장 최신의 major 버전(GRCh38)을 가져오는 것입니다.(<a href="https://www.ncbi.nlm.nih.gov/grc/human">Genome Reference Consortium</a>)</p>
+<p>그러나 genome 파일을 다운로드 하러가기 전에 다음 질문들이 명확해야 합니다:</p>
+<ol>
+<li>이전 버전을 사용해야 하는 이유는 무엇인가?</li>
+<li>reference fasta 에는 어떤 서열정보가 포함되어 있는가?</li>
+<li>최신 마이너 버전의 사용은 어떤가?</li>
+<li>정렬(alignment)을 위해 reference fasta를 준비하려면 어떤 단계들이 필요한가?</li>
+</ol>
+<h2 ref="1-이전-버전을-사용해야-하는-이유는-무엇인가" >1. 이전 버전을 사용해야 하는 이유는 무엇인가?</h2><a class="anchor" id="1-이전-버전을-사용해야-하는-이유는-무엇인가"></a>
+<p>시작하기 전에 실험에 사용할 데이터베이스를 확인합니다. 최근 assembly에 대한 데이터 접근이 가능한지? 해당 데이터를 아직 사용할 수 없는 경우 데이터를 최신 버전으로 옮기려면 얼마나 큰 노력을 기울여야 하는지?</p>
+<h2 ref="2-reference-fasta-에는-어떤-서열정보가-포함되어-있는가" >2. reference fasta 에는 어떤 서열정보가 포함되어 있는가?</h2><a class="anchor" id="2-reference-fasta-에는-어떤-서열정보가-포함되어-있는가"></a>
+<p>최신 메이저 릴리즈 파일은 다음과 같습니다:
+<a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.28_GRCh38.p13">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.28_GRCh38.p13</a> (<u>2020/01/14 기준</u>)</p>
+<p>서열은 <code>GCA_000001405.28_GRCh38_genomic.fna.gz</code> 에 있습니다.</p>
+<p>이 파일은 다음의 서열정보를 포함합니다.</p>
+<ol>
+<li>chromosomes 1-22, X, Y</li>
+<li>sequences that can be asigned to one chromosome, but not to an exact position or orientation (<strong>unlocalized sequences</strong>)</li>
+<li>sequences that cannot be assigned to any chromosome (<strong>unplaced sequences</strong>)</li>
+<li>the mitochondrial genome</li>
+<li>sequences that provides an alternate representation of a locus (<strong>alernate locus</strong>)</li>
+</ol>
+<p>(1)-(3) build together the so-called <strong>Primary Assembly</strong>.</p>
+<h2 ref="3-최신-마이너-버전의-사용은-어떤가" >3. 최신 마이너 버전의 사용은 어떤가?</h2><a class="anchor" id="3-최신-마이너-버전의-사용은-어떤가"></a>
+<p><code>.p&lt;version-number&gt;</code> 라고 나타나는 마이너 버전을 알 수 있을 것입니다. 최신 버전은 GRCh38.p13.입니다. (2020/01/14 기준)  그런데 제가 왜 이 버전의 링크를 제공하지 않았을까요?</p>
+<p>마이너 버전의 서열들은 메이저 버전에서 untouch 되었습니다. 대신에 <strong>패치</strong>라고 불리는 서열정보가 추가되었습니다(여기서 <code>p</code>가 유래됨.). 이런 패치는 기존 서열의 수정일 수 있으며 다음 메이저 릴리즈 버전의 기본 assembly로 통합될 것입니다. 또는 다음 메이저 릴리즈에서 &ldquo;alternate loci&quot;라고 하는 새로운 서열을 나타내기도 합니다.</p>
+<p>이 <a href="https://www.ncbi.nlm.nih.gov/grc/help/patches">FAQ</a> 에서 패치에 대한 자세한 내용을 읽을 수 있습니다.</p>
+<p>따라서 우리가 특별한 이유가 있지 않은 한, 우리는 정렬(alignment)를 위해 primary assembly 및 mitochondrial genome의 서열을 사용해야 합니다. 그 이유는 다음 챕터에서 말해드리겠습니다.</p>
+<h2 ref="4-정렬alignment을-위해-reference-패스트를-준비하려면-어떤-단계들이-필요한가" >4. 정렬(alignment)을 위해 reference 패스트를 준비하려면 어떤 단계들이 필요한가?</h2><a class="anchor" id="4-정렬alignment을-위해-reference-패스트를-준비하려면-어떤-단계들이-필요한가"></a>
+<blockquote>
+<p>이 부분에 설명하는 대부분의 내용들은 <a href="http://lh3.github.io/2017/11/13/which-human-reference-genome-to-use">Heng Li</a> 의 블로그 포스트에서 영감을 받았습니다. (Heng Li는 우리가 잘 알고있는 <code>bwa</code> 와 <code>samtools</code> 의 개발자입니다.)</p>
+</blockquote>
+<p>위에 링크된 reference sequence는 다음 세 가지 이유로 정렬(alignment)에 사용할 준비가 되어있지 않습니다:</p>
+<ol>
+<li>loci의 alternate represnetation이 포함됩니다. 이것들은 primary assembly와 매우 유사한데, 그렇기 때문에 대부분의 정렬(alignment)에서는 reads 위치를 알지 못하고 mapping 품질이 매우 낮습니다(variant calling에는 좋지 않다는 걸 의미합니다.).</li>
+<li>염색체 Y에는 유사 염색체 X에 위치한 영역의 복제인 pseudo-autosomal region(PAR)이 있습니다. 이것 또한 정렬(alignment)에서 read의 위치를 알지 못합니다.</li>
+<li>서열들이 <code>1</code> 이라는 이름 대신에 <code>CM000663.2</code> 라는 GeneBank Accesion Numbers 를 가지고 있습니다.</li>
+</ol>
+<p>(1)에서 보여지는 불분명한 mapping은 (2)에서 패치 서열에서도 유효합니다. 이건 우리가 정렬(alignment)을 할 때 최신 마이너 버전을 사용할 필요가 없는 이유입니다.</p>
+<p>그래서 우리는 이렇게 해야합니다:</p>
+<ol>
+<li>GRC로부터 제공되는 서열들의 서브셋을 구축</li>
+<li>염색체 Y의 PAR을 표시</li>
+<li>서열 이름 바꾸기</li>
+</ol>
+<p>이러한 일들을 하기 위해서 우리는 몇가지 파일들이 필요합니다:</p>
 <ul>
-<li><a href="https://macnews.tistory.com/4280">맥에서 타임머신 백업 시간을 크게 줄여주는 마법 같은 명령어</a></li>
+<li>서브셋을 구축하고 서열 이름을 바꾸기 위해
+<a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.28_GRCh38.p13/GCA_000001405.28_GRCh38.p13_assembly_report.txt">GCA_000001405.28_GRCh38.p13_assembly_report.txt</a></li>
+<li>PAR을 표시하기 위해
+<a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.28_GRCh38.p13/GCA_000001405.28_GRCh38.p13_assembly_structure/Primary_Assembly/pseudoautosomal_region/par_align.gff">par_align.gff</a></li>
 </ul>
+<h3 ref="grc로부터-제공되는-서열들의-서브셋-구축" >GRC로부터 제공되는 서열들의 서브셋 구축</h3><a class="anchor" id="grc로부터-제공되는-서열들의-서브셋-구축"></a>
+<p><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.28_GRCh38.p13/GCA_000001405.28_GRCh38.p13_genomic.fna.gz">reference sequence</a> 를 다운로드 한 후에 압축을 풀고 <code>samtools faidx</code> 로 인덱스한다:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ samtools faidx GCA_000001405.28_GRCh38.p13_genomic.fna
+</code></pre></div><p><code>GCA_000001405.28_GRCh38.p13_assembly_report.txt</code> 에서 primary assembly들과 mitochondrial genome의 이름들을 추출해야 합니다. 많은 bioinformatic tool들이 서열들이 정리되었다 여깁니다. 따라서 현재 이름을 나중에 사용하려는 서열 이름으로 정렬해야 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ sort -k1,1V GCA_000001405.28_GRCh38.p13_assembly_report.txt|awk -v <span style="color:#8be9fd;font-style:italic">FS</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;\t&#34;</span> <span style="color:#f1fa8c">&#39;$8 == &#34;Primary Assembly&#34; || $8 == &#34;non-nuclear&#34; {print $5}&#39;</span> &gt; subset_ids.txt
+</code></pre></div><p>이 목록을 사용하여 서열의 서브셋을 구축할 수 있습니다.</p>
+<h3 ref="염색체-y의-par을-표시" >염색체 Y의 PAR을 표시</h3><a class="anchor" id="염색체-y의-par을-표시"></a>
+<p><code>par_align.gff</code> 에는 PAR이 X염색체에 있고 그것에 맞먹는 것들이 Y 염색체에 있다는 정보가 들어있습니다. 파일을 열고 각 라인에서 <code>Target</code> 키워드를 찾아보세요. 값은 우리가 마스크하고 싶은 Y 염색체의 위치입니다. 이렇게 하려면 이러한 값을 가진 <code>bed</code> 파일을 우리가 만들어야 합니다(<strong>주의</strong> : <code>gff</code> 는 1-based position이며 <code>bed</code> 는 0-based입니다).
+우리는 이렇게 하면 됩니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ cat parY.bed
+CM000686.2  <span style="color:#bd93f9">10000</span>   <span style="color:#bd93f9">2781479</span>
+CM000686.2  <span style="color:#bd93f9">56887902</span>    <span style="color:#bd93f9">57217415</span>
+</code></pre></div><p><code>bed</code> 파일을 가져오는 한 줄짜리 코드:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ sed -E <span style="color:#f1fa8c">&#39;s/.*Target=([^;]+).*/\1/g&#39;</span> par_align.gff|awk -v <span style="color:#8be9fd;font-style:italic">OFS</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;\t&#34;</span> <span style="color:#f1fa8c">&#39;$0 !~ &#34;^#&#34; {print $1, $2-1, $3}&#39;</span>  &gt; parY.bed
+</code></pre></div><p><code>bedtools</code> 를 가지고 표시할 수도 있습니다:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ bedtools maskfasta -fi GRCh38_subset.fa -bed parY.bed -fo GRCh38_subset_masked.fa
+</code></pre></div><h3 ref="서열-이름-바꾸기" >서열 이름 바꾸기</h3><a class="anchor" id="서열-이름-바꾸기"></a>
+<p>최근에는 각각의 서열들의 헤더는 다음과 같습니다:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">&gt; CM000663.2
+</code></pre></div><p>우리가 좋아하는 것은 이렇게 하는 겁니다:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">&gt;1 CM000663.2 NC_000001.11 chr1
+</code></pre></div><p>첫 공백까지 오는 건 모두 ID가 됩니다. 그 뒤에 오는건 정보가 됩니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ awk -v <span style="color:#8be9fd;font-style:italic">FS</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;\t&#34;</span> <span style="color:#f1fa8c">&#39;NR==FNR {header[&#34;&gt;&#34;$5] = &#34;&gt;&#34;$1&#34; &#34;$5&#34; &#34;$7&#34; &#34;$10; next} $0 ~ &#34;^&gt;&#34; {$0 = header[$0]}1&#39;</span> GCA_000001405.28_GRCh38.p13_assembly_report.txt GRCh38_subset_masked.fa &gt; GRCh38_alignment.fa
+</code></pre></div><h3 ref="인덱싱" >인덱싱</h3><a class="anchor" id="인덱싱"></a>
+<p>이제 <code>GRCh38_alignment.fa</code> 는 정렬에 사용할 준비가 되었습니다. 다른 tool들이 필요로 하기 때문에, 저는 이 파일을 <code>samtools faidx</code> 로 인덱스 하기를 추천합니다. 또한 사용하려는 alignment tool에 설명된 방식으로 인덱싱 해야합니다.
+예를 들어 <code>bwa</code> 라면 : <code>bwa index GRCh38_alignment.ga</code></p>
+<hr>
 
 		</div>
 	
@@ -543,10 +560,10 @@ if (!doNotTrack) {
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/blog/6-10-steps-to-become-a-data-scientist/" title="데이터 과학자(Data Scientist)가 되기 위한 10단계" style="margin-right: 0px;">
+		<a class="next" href="/bioinformatics/4-fastq-format/" title="FastQ 란?" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>데이터 과학자(Data Scientist)가 되기 위한 10단계</label>
+                <label>FastQ 란?</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -571,19 +588,27 @@ if (!doNotTrack) {
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
     <nav>
         <ul >
-            <li><a href="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/">맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</a></li>
+            <li><a href="/bioinformatics/03-which-reference-genome-should-i-use/">어떤 reference genome을 사용해야 할까?</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#어떻게-작동하는가">어떻게 작동하는가?</a></li>
-    <li><a href="#가상-드라이브-생성">가상 드라이브 생성</a></li>
-    <li><a href="#가상-드라이브-마운트">가상 드라이브 마운트</a></li>
-    <li><a href="#가상-드라이브를-인식하도록-타임머신-구성">가상 드라이브를 인식하도록 타임머신 구성</a></li>
-    <li><a href="#타임머신-설정">타임머신 설정</a></li>
-    <li><a href="#타임머신에서-onedrive-폴더-제외">타임머신에서 OneDrive 폴더 제외</a></li>
-    <li><a href="#그리고-당신은">그리고 당신은..</a></li>
-    <li><a href="#코멘트">📝코멘트</a></li>
+    <li>
+      <ul>
+        <li><a href="#들어가기-전에">들어가기 전에</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-이전-버전을-사용해야-하는-이유는-무엇인가">1. 이전 버전을 사용해야 하는 이유는 무엇인가?</a></li>
+    <li><a href="#2-reference-fasta-에는-어떤-서열정보가-포함되어-있는가">2. reference fasta 에는 어떤 서열정보가 포함되어 있는가?</a></li>
+    <li><a href="#3-최신-마이너-버전의-사용은-어떤가">3. 최신 마이너 버전의 사용은 어떤가?</a></li>
+    <li><a href="#4-정렬alignment을-위해-reference-패스트를-준비하려면-어떤-단계들이-필요한가">4. 정렬(alignment)을 위해 reference 패스트를 준비하려면 어떤 단계들이 필요한가?</a>
+      <ul>
+        <li><a href="#grc로부터-제공되는-서열들의-서브셋-구축">GRC로부터 제공되는 서열들의 서브셋 구축</a></li>
+        <li><a href="#염색체-y의-par을-표시">염색체 Y의 PAR을 표시</a></li>
+        <li><a href="#서열-이름-바꾸기">서열 이름 바꾸기</a></li>
+        <li><a href="#인덱싱">인덱싱</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -603,7 +628,7 @@ if (!doNotTrack) {
 		    
 		    <li>
 		    	
-		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/_index" target="blank">
+		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/bioinformatics/03-which-reference-genome-should-I-use/_index" target="blank">
 		        <i class="fab fa-github"></i>
 		        Improve this page</a>
 		    </li>
@@ -612,7 +637,7 @@ if (!doNotTrack) {
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 18 February 2021
+		          Last update on 17 February 2021
 		      </li>
 		    
 		    
