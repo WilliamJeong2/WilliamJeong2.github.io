@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-16T17:25:11 KST">
+<meta name="revised" content="2021-02-18T15:38:07 KST">
 <meta name="description" content="Control how the home page should be rendered">
 
 
@@ -100,7 +100,7 @@
 	</div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href=""  rel="noopener">
+                <a href="https://github.com/williamjeong2"  rel="noopener">
                   Github
                 </a>
             </li>
@@ -155,6 +155,117 @@
       
           <a href="/docport-theme/">DocPort Theme for Hugo</a>
       
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+          <a href="/bioinformatics/">Bioinformatics&nbsp;🧬</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item alwaysopen haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/blog/">Devlog&nbsp;💻</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/1-extract-google-account-profile-picture/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/1-extract-google-account-profile-picture/">구글 프로필 사진 다운로드하기</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/">맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/6-10-steps-to-become-a-data-scientist/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/6-10-steps-to-become-a-data-scientist/">데이터 과학자(Data Scientist)가 되기 위한 10단계</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/7-docker-out-of-disk-space/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/7-docker-out-of-disk-space/">docker를 운영하다가 용량 부족 문제를 겪을 때.</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/8-nas-network-drive-mount-on-ubuntu/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/8-nas-network-drive-mount-on-ubuntu/">우분투에 NAS 마운트</a>
+      
+        
+      
+    </li>
+              
+              
+        </ul>
     </li>
     
 <hr/>
@@ -252,6 +363,21 @@
       
     </li>
         </ul>
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/00-bioinformatics/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/00-bioinformatics/">Adding content</a>
+      
+        
+      
     </li>
               
 
@@ -990,7 +1116,7 @@
 
 <h2 ref="create-a-dedicated-homepage" >Create a dedicated homepage</h2><a class="anchor" id="create-a-dedicated-homepage"></a>
 <p>Create a <code>_index.md</code> in <code>content</code> root folder.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-text" data-lang="text">	content
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-text" data-lang="text">	content
 	├── _index.md  &lt;-- if this file exists, it is the landing page
 	└── section-one/ &lt;-- else this section will be the home page
 	    
@@ -1012,13 +1138,13 @@ set <code>type=&quot;raw&quot;</code> in your home page frontmatter : only your 
 <h2 ref="use-plain-html-for-your-homepage" >Use plain HTML for your homepage</h2><a class="anchor" id="use-plain-html-for-your-homepage"></a>
 <p>Remember that hugo allows you to write your content with HTML when markdown if not enough. very usefull for a landing page !</p>
 <p>Example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">title</span>: <span style="color:#ae81ff">Homepage</span>
-<span style="color:#f92672">type</span>: <span style="color:#ae81ff">raw</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#ff79c6">title</span>: Homepage
+<span style="color:#ff79c6">type</span>: raw
 ---
-<span style="color:#ae81ff">&lt;div class=&#34;myHome&#34;&gt;</span>
-	<span style="color:#ae81ff">Hello</span>
-<span style="color:#ae81ff">&lt;/div&gt;</span>
+&lt;div class=&#34;myHome&#34;&gt;
+	Hello
+&lt;/div&gt;
 </code></pre></div>
 		</div>
 	

@@ -1,0 +1,1665 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등) :: Jeong&#39;s Blog
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-02-18T15:38:07 KST">
+<meta name="description" content="">
+
+
+
+<title>맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등) :: Jeong&#39;s Blog</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://williamjeong2.github.io/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/williamjeong2.github.io";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://williamjeong2.github.io'>Jeong's Blog</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/williamjeong2"  rel="noopener">
+                  Github
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/williamjeong2.github.io";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://williamjeong2.github.io/docport-theme/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+          <a href="/docport-theme/">DocPort Theme for Hugo</a>
+      
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+          <a href="/bioinformatics/">Bioinformatics&nbsp;🧬</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item parent alwaysopen haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/blog/">Devlog&nbsp;💻</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/1-extract-google-account-profile-picture/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/1-extract-google-account-profile-picture/">구글 프로필 사진 다운로드하기</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/">맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/6-10-steps-to-become-a-data-scientist/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/6-10-steps-to-become-a-data-scientist/">데이터 과학자(Data Scientist)가 되기 위한 10단계</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/7-docker-out-of-disk-space/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/7-docker-out-of-disk-space/">docker를 운영하다가 용량 부족 문제를 겪을 때.</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/8-nas-network-drive-mount-on-ubuntu/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/8-nas-network-drive-mount-on-ubuntu/">우분투에 NAS 마운트</a>
+      
+        
+      
+    </li>
+              
+              
+        </ul>
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://williamjeong2.github.io/getting-start/" class="dd-item alwaysopen haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/getting-start/">Getting started&nbsp;👋</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/getting-start/installation/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/getting-start/installation/">Installation</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/getting-start/configuration/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/getting-start/configuration/">Configuration</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+          <a href="/content-and-customization/">Content and Customization</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/00-adding-content/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/00-adding-content/">Adding content</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/00-adding-content/page-slide/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/00-adding-content/page-slide/">As a SlideDeck</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/00-bioinformatics/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/00-bioinformatics/">Adding content</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/01-homepage/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/01-homepage/">Home page</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/02-navigation-search/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/02-navigation-search/">Navigation &amp; Search</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/02-navigation-search/theheader/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/02-navigation-search/theheader/">Header</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/02-navigation-search/menu/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/02-navigation-search/menu/">Menu</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/02-navigation-search/toc/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/02-navigation-search/toc/">Content right bar</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/02-navigation-search/thefooter/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/02-navigation-search/thefooter/">Footer</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/02-navigation-search/search/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/02-navigation-search/search/">Search Engine</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/03-look-and-feel/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/03-look-and-feel/">Look and feel</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/04-shortcodes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/04-shortcodes/">Shortcodes</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+          <a href="/shortcodes/">Shortcodes</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/icon/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/icon/">icon</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/alert/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/alert/">alert</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/attachments/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/attachments/">attachments</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/badge/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/badge/">badge</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/button/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/button/">button</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/">children</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-1/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-1/">page 1</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-1/children-1-1/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-1/children-1-1/">page 1-1</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">page 1-1-1</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">page 1-1-1-1</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">page 1-1-1-1-1</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-2/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-2/">page 2</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/children/children-3/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/children/children-3/">page 3</a>
+      
+        
+      
+    </li>
+              
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/columns/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/columns/">columns</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/excerpt/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/excerpt/">excerpt</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/excerpt-include/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/excerpt-include/">excerpt-include</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/expand/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/expand/">expand</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/mermaid/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/mermaid/">mermaid</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/notice/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/notice/">Notice</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/panel/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/panel/">panel</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/revealjs/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/revealjs/">revealjs</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/tabs/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/tabs/">tabs</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+          <a href="/examples/">Examples</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-without-header/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-without-header/">A page without header</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-without-footer/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-without-footer/">A page without footer</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-without-sidebar-and-toc/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-without-sidebar-and-toc/">A page without sidebar and toc</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-without-toc/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-without-toc/">A page without table of contents</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-without-next-page/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-without-next-page/">A page without &#34;NEXT PAGE&#34;</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-without-any/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-without-any/">A page with only TOC and next page</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/examples/page-with-raw-content/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/examples/page-with-raw-content/">A page with raw content</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<!-- <a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a> -->
+<!-- Place this tag where you want the button to render. -->
+<!-- <a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a> -->
+<!-- Place this tag where you want the button to render. -->
+<!-- <a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a> -->
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://williamjeong2.github.io">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/blog/">
+        Devlog
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#어떻게-작동하는가">어떻게 작동하는가?</a></li>
+    <li><a href="#가상-드라이브-생성">가상 드라이브 생성</a></li>
+    <li><a href="#가상-드라이브-마운트">가상 드라이브 마운트</a></li>
+    <li><a href="#가상-드라이브를-인식하도록-타임머신-구성">가상 드라이브를 인식하도록 타임머신 구성</a></li>
+    <li><a href="#타임머신-설정">타임머신 설정</a></li>
+    <li><a href="#타임머신에서-onedrive-폴더-제외">타임머신에서 OneDrive 폴더 제외</a></li>
+    <li><a href="#그리고-당신은">그리고 당신은..</a></li>
+    <li><a href="#코멘트">📝코멘트</a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    
+
+<div class="notices dark">
+	<p>*이 글은 <a href="https://www.berserkcomputers.co.uk/author/lsumal">Lhyam Sumal</a>의 <a href="https://www.berserkcomputers.co.uk/how-to-save-apple-time-machine-backups-to-cloud-services-like-onedrive/">HOW TO SAVE APPLE TIME MACHINE BACKUPS TO CLOUD SERVICES LIKE ONEDRIVE</a> 를 번역한 글입니다. 모든 저작권과 권리는 Sumal에게 있습니다.<br>
+*This article is a translated version of  <a href="https://www.berserkcomputers.co.uk/author/lsumal">Lhyam Sumal</a>&rsquo;s article: <a href="https://www.berserkcomputers.co.uk/how-to-save-apple-time-machine-backups-to-cloud-services-like-onedrive/">HOW TO SAVE APPLE TIME MACHINE BACKUPS TO CLOUD SERVICES LIKE ONEDRIVE.</a> All rights goes back to him.<br>
+*제가 이해한 대로 번역하였기 때문에 완벽하지 않을 수 있습니다.</p>
+
+</div>
+
+<p>타임머신은 굉장한 기능이면서, 제 생각에는 macOS의 최고 기능입니다. 네, 윈도우에도 파일 히스토리가 있지만 타임머신만큼 포괄적인 것은 없습니다. 말 그대로 맥을 복원하고 프로그램을 다시 설치하거나 환경설정을 지정하거나 driver를 사용하지 않고도 이전에 중단한 위치를 정확하게 선택할 수 있습니다!</p>
+<p>그러나 백업하려면 외장하드가 연결되어야 합니다. 물론 2018년(원문이 쓰인 날)에는 클라우드 서비스에 백업할 수 있습니다. 저는 마이크로소프트 오피스 365를 구독해서 1TB의 공간을 가지고 있습니다.  문서, 사진, 음악, 비디오 및 데스크탑 폴더가 이미 원드라이브에 백업되는 반면에 내 프로그램들과 설정들은 어떤가요?</p>
+<p>놀랍게도 애플은 클라우드 서비스를 사용한 백업 옵션을 타임머신에서 제공하지 않습니다. 하지만 우리는 답을 찾을 것이다. 늘 그랬듯이..(의역)</p>
+<p>하지만 그렇게 열심히 찾아보지 않아도 되었습니다. 이전에 타임머신 백업을 네트워크 드라이브에 저장하는 방법을 약간의 수정을 통해서 할 수 있는 방법을 기사로 썼습니다. 다음은 타임머신을 원드라이브, 구글드라이브, 아이클라우드 또는 원하는 클라우드 서비스에 저장할 수 있는 방법입니다.</p>
+<h2 ref="어떻게-작동하는가" >어떻게 작동하는가?</h2><a class="anchor" id="어떻게-작동하는가"></a>
+<p>이 글의 목적상 원드라이브를 사용하고 있지만 다른 클라우드 서비스도 동일한 방식으로 작동합니다. 맥에서 이미 클라우드 동기화 서비스를 사용하고 있다고 가정하면 다음 단계를 따르는 것이 매우 간단하며 몇 분 정도 걸립니다.</p>
+<p>가상 드라이브를 생성하여 클라우드 서비스에 저장한 다음 맥에 마운트 해야 합니다. 타임머신 설정을 약간 조정하면 맥에서 가상 드라이브를 인식하고 자동으로 저장을 시작합니다.</p>
+<p>macOS가 변경 사항을 가상 드라이브에 저장할 때마다 원드라이브 앱은 해당 변경사항을 클라우드에 다시 동기화합니다.</p>
+<h2 ref="가상-드라이브-생성" >가상 드라이브 생성</h2><a class="anchor" id="가상-드라이브-생성"></a>
+<p>가상 드라이브의 장점은 전체 1TB를 가상 드라이브에 할당된 공간으로 지정하더라도 실제 차지하는 공간은 그 안에 포함된 파일의 크기만큼만 됩니다.</p>
+<p><strong>클라우드 드라이브 폴더 내에 디스크 이미지를 저장해야 합니다. 맥에서 원드라이브 폴더를 찾고 디스크 이미지를 여기에 저장했습니다.</strong></p>
+<ul>
+<li>디스크 유틸리티를 엽니다. 간단하게 Spotlight나 Alfred를 이용해 검색할 수 있습니다.- 파일 메뉴에서 새로운 이미지(New Image) &gt; 빈 이미지(Black Image)를 선택합니다. (단축키 cmd+n)</li>
+<li>클라우드 폴더를 찾아서 가상 드라이브 이름을 설정합니다. (MacBookTM)- 가상드라이브의 최대 용량을 입력합니다. 저의 경우 200 GB를 입력했습니다.- 포맷을 Mac OS 확장 (저널링)로 선택합니다.</li>
+<li>암호화는 사용해도 되고 안 해도 되는데 사용한다면 128-bit 를 선택합니다. 그러면 암호를 입력하는 창이 뜨는데 복구할 때 사용하기 때문에 잊어버리면 안 됩니다.</li>
+<li>파티션을 단일 파티션으로 설정합니다.</li>
+<li>마지막으로 이미지 포맷을 분할 번들 디스크 이미지(sparse bundle disk image)로 선택합니다.</li>
+<li><strong>디스크 이미지 사이즈를 체크합니다.</strong> - 저의 경우 이미지 포맷을 변경하니까 사이즈가 기본으로 변경되어 다시 수정하였습니다.</li>
+</ul>
+<p>완료하였다면 디스크 유틸리티를 종료 할 수 있습니다.</p>
+<h2 ref="가상-드라이브-마운트" >가상 드라이브 마운트</h2><a class="anchor" id="가상-드라이브-마운트"></a>
+<p>저의 경우 자동으로 가상 드라이브가 마운트 되고 MacBookTM이 나타났습니다.</p>
+<p>자동으로 마운트 되지 않을 경우 파인더를 열고 디스크 이미지를 저장한 위치로 이동하여 두 번 클릭하면 됩니다.</p>
+<h2 ref="가상-드라이브를-인식하도록-타임머신-구성" >가상 드라이브를 인식하도록 타임머신 구성</h2><a class="anchor" id="가상-드라이브를-인식하도록-타임머신-구성"></a>
+<p>이 파트는 조금 까다로워 보이지만 실제로는 간단합니다.</p>
+<p><img src="https://drive.google.com/uc?id=1q2NoJZ86fuFTDyQd2GmjuQ-WpDSihVSY" alt="저와 창이 다를 수 있습니다."></p>
+<ul>
+<li>
+<p><strong>터미널</strong>을 엽니다.
+(저와 다른 창이 떠도 괜찮습니다.)</p>
+</li>
+<li>
+<p>아래의 명령어를 입력합니다. 여기서 {mounted-disk-image}는 마운트 된 디스크의 이름입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">sudo tmutil setdestination /Volumes/<span style="color:#ff79c6">{</span>mounted-disk-image<span style="color:#ff79c6">}</span>
+  
+<span style="color:#6272a4">#저는 MacBookTimeMachine으로 했으니까 위의 이미지 처럼 입력하였습니다.</span>
+</code></pre></div></li>
+<li>
+<p><strong>Enter</strong>를 누르세요.</p>
+</li>
+<li>
+<p>비밀번호를 입력하라고 나오면 입력하고 Enter를 누르세요.</p>
+</li>
+<li>
+<p>입력이 완료되면 exit를 눌러 터미널을 종료합니다.</p>
+</li>
+</ul>
+<h2 ref="타임머신-설정" >타임머신 설정</h2><a class="anchor" id="타임머신-설정"></a>
+<p>거의 다 끝났습니다. 👏</p>
+<p><img src="https://drive.google.com/uc?id=153DKpTWWJT9vN5WqmrQa4ykmBwF2_5Kx" alt=""></p>
+<p>시스템 환경설정에서 타임머신을 열면 새로 만든 드라이브가 자동으로 나타납니다.</p>
+<h2 ref="타임머신에서-onedrive-폴더-제외" >타임머신에서 OneDrive 폴더 제외</h2><a class="anchor" id="타임머신에서-onedrive-폴더-제외"></a>
+<p>이 부분은 권장하는 파트입니다. 그렇지 않으면 클라우드 동기화 폴더 포함하여 타임머신이 백업한 다음에 클라우드 동기화를 진행합니다.</p>
+<p>폴더를 제외하려면</p>
+<ul>
+<li>타임머신 환경설정에서 옵션을 <strong>클릭</strong>합니다.</li>
+<li><code>+</code> 아이콘을 클릭하고 클라우드 폴더를 선택합니다. (예: Onedrive 또는 googledrive)</li>
+<li>저장을 클릭합니다.</li>
+</ul>
+<h2 ref="그리고-당신은" >그리고 당신은..</h2><a class="anchor" id="그리고-당신은"></a>
+<p>타임머신이 가상드라이브 백업을 시작하고 원드라이브에 해당 변경 사항을 동기화할 것입니다. 더는 외장하드를 검색하거나 네트워크 서버 연결을 기다릴 필요가 없습니다.</p>
+<p>백업을 다운받기 위해서 조금 고통스럽겠지만 저를 믿으세요!</p>
+<hr>
+<h2 ref="코멘트" >📝코멘트</h2><a class="anchor" id="코멘트"></a>
+<p>백업을 진행하다 보면 매우 느린 속도에 좌절하게 되지만 이 속도를 개선해 줄 방법이 있습니다. 아래의 링크를 참고해주세요.</p>
+<ul>
+<li><a href="https://macnews.tistory.com/4280">맥에서 타임머신 백업 시간을 크게 줄여주는 마법 같은 명령어</a></li>
+</ul>
+
+		</div>
+	
+	
+	<div style="margin-top:150px;">
+		<script
+		  src="https://utteranc.es/client.js"
+		  repo="williamjeong2/blog-comment"
+		  issue-term="pathname"
+		  theme="github-light"
+		  crossorigin="anonymous"
+		  async
+		></script>
+	  </div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/blog/6-10-steps-to-become-a-data-scientist/" title="데이터 과학자(Data Scientist)가 되기 위한 10단계" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>데이터 과학자(Data Scientist)가 되기 위한 10단계</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/">맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#어떻게-작동하는가">어떻게 작동하는가?</a></li>
+    <li><a href="#가상-드라이브-생성">가상 드라이브 생성</a></li>
+    <li><a href="#가상-드라이브-마운트">가상 드라이브 마운트</a></li>
+    <li><a href="#가상-드라이브를-인식하도록-타임머신-구성">가상 드라이브를 인식하도록 타임머신 구성</a></li>
+    <li><a href="#타임머신-설정">타임머신 설정</a></li>
+    <li><a href="#타임머신에서-onedrive-폴더-제외">타임머신에서 OneDrive 폴더 제외</a></li>
+    <li><a href="#그리고-당신은">그리고 당신은..</a></li>
+    <li><a href="#코멘트">📝코멘트</a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+		    
+		    <li>
+		    	
+		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/_index" target="blank">
+		        <i class="fab fa-github"></i>
+		        Improve this page</a>
+		    </li>
+		    
+		    
+			
+		      <li>
+		          <i class='fas fa-calendar'></i>
+		          Last update on 18 February 2021
+		      </li>
+		    
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <!-- <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div> -->
+      <!-- <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div> -->
+      <!-- <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+        </ul>
+      </div> -->
+      <div class="footer-legal">
+        <p>E-mail : jinwoo5480@snu.ac.kr | wjd5480@gmail.com</p>
+        <p>Copyrihgt © williamjeong2.site All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>

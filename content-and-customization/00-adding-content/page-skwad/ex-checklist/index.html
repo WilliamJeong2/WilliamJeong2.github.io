@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-16T17:25:11 KST">
+<meta name="revised" content="2021-02-18T15:38:07 KST">
 <meta name="description" content="Very long and Complex example, with file save/load on client side">
 
 
@@ -96,7 +96,7 @@
 	</div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href=""  rel="noopener">
+                <a href="https://github.com/williamjeong2"  rel="noopener">
                   Github
                 </a>
             </li>
@@ -245,7 +245,7 @@ type="text" class="form-control form-control-lg"></p>
   <label class="custom-control-label" for="app_vuln_report_way-2">No, we do not currently offer a way to report security vulnerabilities for priority handling.</label>
 </div>
 </p>
-<div id="dp-show-5174c5ca9af3cccc756902b603fa872b" class="baz" style="display:none" v-if="skwad.fValue(&#39;app_vuln_report_way&#39;) == &#39;no&#39;">
+<div id="dp-show-b3c7bc28a7540623c951f56ac7fc9ac0" class="baz" style="display:none" v-if="skwad.fValue(&#39;app_vuln_report_way&#39;) == &#39;no&#39;">
 <input type="hidden" name="warn_app_vuln_report_way_no" value="No external security contact published">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
@@ -289,7 +289,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="https_exposition-3">The web application supports HTTP only, and can&rsquo;t be reached over HTTPS even if you edit the URL.</label>
 </div>
 </p>
-<div id="dp-show-80080abd100155a99190b02093087431" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_only&#39;">
+<div id="dp-show-0070010235991a45108a188d009093bb" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_only&#39;">
 <input type="hidden" name="warn_https_exposition" value="Unencrypted application network traffic">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
@@ -307,7 +307,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </div>
 <p>
-<div id="dp-show-130574000800ab03a0991118089b29d5" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39;">
+<div id="dp-show-400519923a987b385a9bd08110001000" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_exposition&#39;) == &#39;https&#39; || skwad.fValue(&#39;https_exposition&#39;) == &#39;http_https&#39;">
 <h3 ref="configuring-ssltls" >Configuring SSL/TLS</h3><a class="anchor" id="configuring-ssltls"></a>
 <p><strong>Have you recently reviewed your SSL configuration to ensure that only secure protocols and ciphers are offered to clients?</strong></p>
 <div class="custom-control custom-radio">
@@ -326,7 +326,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="https_conf-2">We&rsquo;re not sure whether our SSL/TLS configuration is secure.</label>
 </div>
-<div id="dp-show-105910d1b3a80379059904028a10008b" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_conf&#39;) == &#39;not_sure&#39;">
+<div id="dp-show-1409d970011080339b9b015a0208085a" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_conf&#39;) == &#39;not_sure&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -350,7 +350,7 @@ Detailed guidance on SSL/TLS and cipher suites is beyond the scope of this quest
   class="custom-control-input">
   <label class="custom-control-label" for="https_forward_secrecy-2">No, no ciphers providing forward secrecy are enabled.</label>
 </div>
-<div id="dp-show-1b910ba153029008134a8989d0500070" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_forward_secrecy&#39;) == &#39;no&#39;">
+<div id="dp-show-0d90b1000152330890901a1590a884b7" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_forward_secrecy&#39;) == &#39;no&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -374,7 +374,7 @@ In ciphers that support forward secrecy, an ephemeral key is negotiated for each
   class="custom-control-input">
   <label class="custom-control-label" for="https_private_keys-2">I&rsquo;m not sure how well protected they are.</label>
 </div>
-<div id="dp-show-01a0a4071b9080109083b15d29380590" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_private_keys&#39;) == &#39;no&#39;">
+<div id="dp-show-0d80b00047803b23a151995a18090901" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_private_keys&#39;) == &#39;no&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -406,7 +406,7 @@ Make sure private SSL/TLS keys are, at a minimum, protected through file system 
   class="custom-control-input">
   <label class="custom-control-label" for="https_termination-3">Somewhere else</label>
 </div>
-<div id="dp-show-98990a8105105300974d81203a1b000b" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;somewhere&#39;">
+<div id="dp-show-810082803b070539d915a19940ba0100" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;somewhere&#39;">
 <p><strong>Provide more details on the termination point:</strong></p>
 <p><textarea 
 name="https_termination_somewhere_details" 
@@ -415,7 +415,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-9199104805bb0123189a0070800035ad" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;loadbalancer&#39;">
+<div id="dp-show-b1198040080300509b8d01a30957a219" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination&#39;) == &#39;loadbalancer&#39;">
 <p><strong>How is traffic between the load balancer and the application servers protected?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -450,14 +450,14 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="https_termination_lb_traffic-4">Through other means.</label>
 </div>
 </div>
-<div id="dp-show-8001029a00a011547d950031b988b930" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;unencrypted-untrusted&#39;">
+<div id="dp-show-d008379000a90519a3b451b020098811" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;unencrypted-untrusted&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Because user traffic appears to transit networks behind your load balancer that are not fully owned and operated by you, we strongly recommend that you establish another SSL/TLS connection between the load balancer and the servers that actually serve the application. Otherwise, an attacker who can listen in on the traffic behind your load balancers will be able to see unencrypted user data.</p>
 </div>
 </div>
-<div id="dp-show-ab050901081400000d9892a71b335918" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;other&#39;">
+<div id="dp-show-801b89402a3980b0a00519017d010359" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_termination_lb_traffic&#39;) == &#39;other&#39;">
 <p><strong>Describe how the traffic is protected:</strong></p>
 <p><textarea 
 name="https_termination_lb_traffic_details" 
@@ -484,7 +484,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="https_mixedcontent-2">It wouldn&rsquo;t be too difficult for something to fall through the cracks and introduce mixed-content bugs.</label>
 </div>
-<div id="dp-show-030300410901d59809b890185a0ba712" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_mixedcontent&#39;) == &#39;no&#39;">
+<div id="dp-show-908a810390755b010a1d08002091493b" class="baz" style="display:none" v-if="skwad.fValue(&#39;https_mixedcontent&#39;) == &#39;no&#39;">
 <input type="hidden" name="warn_https_mixedcontent" value="Mixed content issue">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
@@ -530,7 +530,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="Auths_basic_infos-3">Our application features complex user management. Various roles can be assigned to user accounts.</label>
 </div>
 </p>
-<div id="dp-show-c0accdbc7ecf6cdd309b0275cd36bb02" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;rbac_model&#39;)">
+<div id="dp-show-0c00ddf737ecab9d23bcd5cbc26c06cb" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;rbac_model&#39;)">
 <p><strong>Briefly describe the different roles your application provides. If your application also offers custom role definitions, be sure to mention that.</strong></p>
 <p><textarea 
 name="Auths_rbac_details" 
@@ -540,7 +540,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 <p>
-<div id="dp-show-2cc3fa3ddd0c7670b5ebb0d6c2cbc09c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-3bdd2fdae05cc9c0cc670b6db07b32cc" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 <p><strong>Is your application integrated with any of the following single sign-on (SSO) mechanisms?</strong></p>
 <div class="custom-control custom-checkbox">
   <input type="checkbox" 
@@ -590,7 +590,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_sso_mechanisms-6">None of the above</label>
 </div>
-<div id="dp-show-0fd05c73a9eccb0bcbd26c27c3b0cd6d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-cc2e73bcdf0c906ab205d3cc07bc6dbd" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;other&#39;)">
 <p><strong>What other SSO mechanisms does the application support?</strong></p>
 <p><textarea 
 name="Auths_sso_other_details" 
@@ -599,21 +599,21 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-5c3bd2cb6cfad709c006b7de30dbcc2c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenID2&#39;) &amp;&amp; !(skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;))">
+<div id="dp-show-0a2ddc67ccbc73be0b3d6c9c2fbd5c00" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenID2&#39;) &amp;&amp; !(skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;))">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
 OpenID 2.0 has been replaced by OpenID Connect (also called OAuth2 Login). We recommend updating your application&rsquo;s SSO integration to support OpenID Connect.</p>
 </div>
 </div>
-<div id="dp-show-037d0c6cb2cd0c6b0df7c9bdcac2b35e" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;LDAP&#39;)">
+<div id="dp-show-bbc0709c2dcd3e60fc02bc5ac3c6b7dd" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;LDAP&#39;)">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
 Integrating with LDAP and/or Active Directory has a significant downside: any application that integrates with it has to receive the user&rsquo;s SSO password. As a result, a vulnerability in any integrated application puts the password at risk for all other applications. We recommend using an SSO mechanism that does not require the password to be sent anywhere other than a central authentication system.</p>
 </div>
 </div>
-<div id="dp-show-0b3ddb7c75cccb6d003dce0a62b2c9fc" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;)">
+<div id="dp-show-5e00b2cc9c77dcb6c6c002fddc3bb3da" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_sso_mechanisms&#39;).includes(&#39;OpenIDConnectOAuth2&#39;)">
 <h3 ref="oauth2-login" >OAuth2 Login</h3><a class="anchor" id="oauth2-login"></a>
 <p><strong>Implementing OAuth2 Login / OpenID Connect from scratch is fairly complex and error-prone, and mistakes can result in security vulnerabilities. Select the option that best describes your implementation:</strong>
 <div class="custom-control custom-radio">
@@ -641,14 +641,14 @@ Integrating with LDAP and/or Active Directory has a significant downside: any ap
   <label class="custom-control-label" for="Auths_oauth2_impl-3">Not sure: We implemented OAuth2 on our own, and it seemed simple at the time. I&rsquo;m not sure about the security of our implementation</label>
 </div>
 </p>
-<div id="dp-show-a92310a81bad86ad1cf418325c6f0150" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;secure&#39;">
+<div id="dp-show-58d12123db091af0f63caa14a86c1508" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;secure&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 If your employees really are OAuth2 experts, you&rsquo;re probably fine. But note that even standard libraries have had vulnerabilities due to the intricacies of the standard. Be sure to ask your penetration testing provider to take a look at the OAuth2 implementation.</p>
 </div>
 </div>
-<div id="dp-show-911fbc260f45a65a311d88da031820ca" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;own_impl&#39;">
+<div id="dp-show-5f326865fd181a041aaba101d382c09c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_oauth2_impl&#39;) == &#39;own_impl&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -681,7 +681,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_handle_password-2">No, all authentication is based on single sign-on (SSO).</label>
 </div>
-<div id="dp-show-b7c2fcba02ec5cd7c3bd6600b3ccd90d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password&#39;) == &#39;yes&#39;">
+<div id="dp-show-ddf0cec0b72392a65c63ccb0cc0bd7db" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password&#39;) == &#39;yes&#39;">
 <h3 ref="usernamepassword-authentication" >Username/Password Authentication</h3><a class="anchor" id="usernamepassword-authentication"></a>
 <p><strong>What username/password-based logins does the application use? For example, if there&rsquo;s a separate administrator authentication, mention that.</strong>
 <p><textarea 
@@ -708,7 +708,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_handle_password_allowusechange-2">No</label>
 </div>
-<div id="dp-show-86b42d48ce4beb2b3757f473e03f4e6f" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_allowusechange&#39;) == &#39;no&#39;">
+<div id="dp-show-8347cf2447e7bbd5648ebb0f2ee6334f" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_allowusechange&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -741,7 +741,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="Auths_handle_password_policyenforced-2">No</label>
 </div>
-<div id="dp-show-e8fd4eb054322e737e76b4b8ff446bc3" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_policyenforced&#39;) == &#39;no&#39;">
+<div id="dp-show-6b743b648eec75f4b743d23204ebe8ff" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_policyenforced&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -808,7 +808,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="Auths_handle_password_storage-6">None of the above</label>
 </div>
 </p>
-<div id="dp-show-f7674358becdf6e044428eb74fe23b3b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;none&#39;">
+<div id="dp-show-4eb28d4834734c7620fbf674e35efbeb" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;none&#39;">
 <p><strong>Explain how your application stores passwords:</strong></p>
 <p><textarea 
 name="Auths_handle_password_storage_details" 
@@ -817,7 +817,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-b7d4ff8ef8be36654422ce37730b44be" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;plaintext&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;reversible&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;hashnosalted&#39;">
+<div id="dp-show-fc7f44547762b63eb830fe83d4ebbe42" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;plaintext&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;reversible&#39; || skwad.fValue(&#39;Auths_handle_password_storage&#39;) == &#39;hashnosalted&#39;">
 <div class="alert danger" role="alert"><strong>Warning — possible critical-risk issue</strong></div>
 <div class="notices danger">
 	<p>Passwords should be stored in such a way that the original passwords cannot be easily recovered, even if an attacker manages to get access to the storage location (e.g., through a SQL injection vulnerability). At a minimum, passwords should be secured using a cryptographic one-way hash function and a salt. We strongly recommended using password-based key derivation function like bcrypt PBKDF2 or scrypt instead; they were specifically designed for this use case and make it significantly harder for attackers to crack password hashes.<br>
@@ -866,7 +866,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="Auths_handle_password_init_process-4">None of the above.</label>
 </div>
 </p>
-<div id="dp-show-f72452f6b3ebe4644707c3d88fb3eeb4" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;none&#39;">
+<div id="dp-show-b4fe2bc3eb6e0b4efd365448f8327747" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;none&#39;">
 <p><strong>Explain how users get their initial passwords:</strong></p>
 <p><textarea 
 name="Auths_handle_password_init_process_details" 
@@ -875,7 +875,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-334472fe0e6ce2b8fe75b84734b64fbd" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;linktoset&#39;">
+<div id="dp-show-eb0b453e8634bcdb4f7f426f42778e3e" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_init_process&#39;) == &#39;linktoset&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -935,7 +935,7 @@ If passwords are sent by email, make sure users are required to change their ini
   <label class="custom-control-label" for="Auths_handle_password_recovery-4">None of the above.</label>
 </div>
 </p>
-<div id="dp-show-483d7b0e343456fc77fbe44efb68e22b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;none&#39;)">
+<div id="dp-show-537e3f4beebf287b724e646b83c440df" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;none&#39;)">
 <p><strong>Describe your password recovery mechanism:</strong></p>
 <p><textarea 
 name="Auths_handle_password_recovery_details" 
@@ -944,7 +944,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-e2436fbd24ee483f73b07fe6b4784cb5" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;questions&#39;) &amp;&amp;  !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;resetlink&#39;)) &amp;&amp; !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;))">
+<div id="dp-show-34b737d64e2e03b46b4ffc824ee7f85b" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;questions&#39;) &amp;&amp;  !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;resetlink&#39;)) &amp;&amp; !(skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;))">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -959,7 +959,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-f4b735f274f86e6ce4b403bdee4b3827" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;)">
+<div id="dp-show-db3e544f27644f20bb7c3e48efb637e8" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_handle_password_recovery&#39;).includes(&#39;newpassbymail&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -978,7 +978,7 @@ class="form-control" rows="3"></textarea></p>
  <!-- `{Auths_handle_password} == 'yes'`s -->
 </div>
  <!-- `{Auths_basic_infos} has 'login_required' or {Auths_basic_infos} has 'isolated_admin_ui'` --></p>
-<div id="dp-show-d6cc037f2bcddcb76cc00ac9bb02e53d" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-c760cbbdcda0c2edc9f070bd5c2b63c3" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 <h3 ref="authentication-cookies-and-sessions" >Authentication Cookies and Sessions</h3><a class="anchor" id="authentication-cookies-and-sessions"></a>
 <p><strong>Cookies can be decorated with a special keyword, <code>HttpOnly</code>. If this keyword is set, the browser will not allow JavaScript to access the cookie. Even if the application has a cross-site scripting vulnerability, this keyword makes it much harder for an attacker to steal the session cookie.</strong></p>
 <div class="custom-control custom-radio">
@@ -997,7 +997,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_cookies_sessions_httponly-2">Our application does not make use of this defense-in-depth mechanism.</label>
 </div>
-<div id="dp-show-13783ac948bbd5ecd3de01869ba06767" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_httponly&#39;) == &#39;no&#39;">
+<div id="dp-show-e69761ac369b884e05db7d3ba7c801d3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_httponly&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1046,7 +1046,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_cookies_sessions_id-4">We use some other mechanism.</label>
 </div>
 </p>
-<div id="dp-show-ecc71e6d73baa1d89d0463586b30b978" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-78db18016da3c98467db9a63ec703be5" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;other&#39;)">
 <p><strong>Describe the mechanism you&rsquo;re using</strong></p>
 <p><textarea 
 name="auths_cookies_sessions_id_no_details" 
@@ -1055,7 +1055,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-8a198cdb00e467c68b67713b9e5da3d3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
+<div id="dp-show-8d161ecba309c6b3d364e7578087a9bd" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
 <p><strong>What&rsquo;s the name of the framework that generates your session IDs</strong></p>
 <p><input 
 name="auths_cookies_sessions_id_framework_name" 
@@ -1063,7 +1063,7 @@ required="false"
 placeholder='' 
 type="text" class="form-control form-control-lg"></p>
 </div>
-<div id="dp-show-b16ab8396e0cddbc0164d7857e78a393" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;) || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;signedcookie&#39;)">
+<div id="dp-show-8d67d8ae16e8b76b57d91c3ba0303c94" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;) || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;signedcookie&#39;)">
 <p><strong>Do sessions automatically time out after a specified period of inactivity</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1081,7 +1081,7 @@ type="text" class="form-control form-control-lg"></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_cookies_sessions_timeout-2">No</label>
 </div>
-<div id="dp-show-da7d8bb3006a16389e347b95ec87d16c" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;yes&#39; || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
+<div id="dp-show-76b8e08ab6dd54a3391dcc93710b68e7" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;yes&#39; || skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;framework&#39;)">
 <p><strong>How long is the session timeout?</strong></p>
 <p><input 
 name="application_auth_cookies_timeout_length" 
@@ -1090,7 +1090,7 @@ placeholder=''
 type="text" class="form-control form-control-lg"></p>
 </div>
 </div>
-<div id="dp-show-7a6e6bcdb498de815b010938773d6ca3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;no&#39;">
+<div id="dp-show-65963e9b0bcd3d481b87da3ac87607e1" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_timeout&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1105,7 +1105,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-0b451c139c6e88bd86397a6dd3b77e0a" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;)">
+<div id="dp-show-3409d8a77e856063a7c6d31b19dc8bbe" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_id&#39;).includes(&#39;randomalphanum&#39;)">
 <p><strong>Does the application use a secure <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator#Cryptographically_secure_pseudorandom_number_generators">cryptographic pseudo random number generator</a> (PRNG) to generate session IDs? The PRNG should not allow the state of the generator to be recalculated from its output, and the entropy of the session ID should be sufficient to make brute-forcing infeasible.</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1123,7 +1123,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_cookies_sessions_prng-2">No, we don&rsquo;t use a PRNG, or our PRNG doesn&rsquo;t meet these criteria.</label>
 </div>
-<div id="dp-show-cb573a760be116bd8e0d78d893ca4396" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_prng&#39;) == &#39;no&#39;">
+<div id="dp-show-768b6303ad6957e4d9eda0838cb1c17b" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_prng&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1157,7 +1157,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_cookies_sessions_logoutexists-2">No</label>
 </div>
 </p>
-<div id="dp-show-d8138c79e771b34bc6608baa950de6d3" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_logoutexists&#39;) == &#39;no&#39;">
+<div id="dp-show-9a66910b73343ddcaeebc888677bd105" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_cookies_sessions_logoutexists&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1173,7 +1173,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </div>
 </div>
-<div id="dp-show-dc0607cccccb7fec3db302d0b6ba2d59" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-cd75e7b0a6d30d0cdb6ccc2c32cb0b9f" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 <h3 ref="authorization" >Authorization</h3><a class="anchor" id="authorization"></a>
 <p>In most applications, certain information should only be accessible to certain users. For example, in most applications that require authentication, only the currently logged-in user should be able to change master data (such as the username, the associated email address, or the account password). When an application has data that should not be available to other users or should be restricted to certain roles, authorization must be enforced on the server side.</p>
 <p><strong>Horizontal Access Control: Horizontal access control refers to isolation between users of the same role. For example, consider an application that allows users to access their payroll statements. The application must ensure that a user cannot access another user&rsquo;s statements; i.e., if the user&rsquo;s statement for the month of May is found at <code>statement.html?id=8372&amp;month=5</code>, it shouldn&rsquo;t be possible to see someone else&rsquo;s pay stub simply by loading <code>statement.html?id=8373&amp;month=5</code>.</strong>
@@ -1194,7 +1194,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_isolation_data-2">It&rsquo;s possible that we missed checks like this in a few places.</label>
 </div>
 </p>
-<div id="dp-show-f57fd0de4b76c01c301d4b3da83f197c" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_data&#39;) == &#39;no&#39;">
+<div id="dp-show-b1c1f4357c360ef097cdd8fd3d04b7a1" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_data&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1227,7 +1227,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_isolation_features-2">It&rsquo;s possible that we missed checks like this in a few places.</label>
 </div>
 </p>
-<div id="dp-show-d7d4fd3393ccabf151e70db8c01740f6" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_features&#39;) == &#39;no&#39;">
+<div id="dp-show-3ab34d4bcd1ff5707908711fdd6cec30" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_isolation_features&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1244,7 +1244,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </div>
 <p>
-<div id="dp-show-b2602cc093cbdbcc73df7cbde60d5a0c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
+<div id="dp-show-b30ce7ca2bc6c2cd0d9dfb00cd76b35c" class="baz" style="display:none" v-if="skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;login_required&#39;) || skwad.fValue(&#39;Auths_basic_infos&#39;).includes(&#39;isolated_admin_ui&#39;)">
 <h3 ref="authorization-related-web-vulnerabilities" >Authorization-Related Web Vulnerabilities</h3><a class="anchor" id="authorization-related-web-vulnerabilities"></a>
 <h4 ref="cross-site-request-forgery" >Cross Site Request Forgery</h4><a class="anchor" id="cross-site-request-forgery"></a>
 <p>Applications must protect all state-changing actions against cross-site request forgery (XSRF). In this attack, a malicious user forces the victim to send a request to the application, for example by luring the user to a page under the attacker&rsquo;s control. Because the browser automatically attaches available authentication cookies, the request will appear to be authorized if the user is logged in to the application.</p>
@@ -1271,7 +1271,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_XSRF-2">Some actions might not be protected against XSRF.</label>
 </div>
 </p>
-<div id="dp-show-c44f166fbf8bcc8c734f49688dd1723f" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;no&#39;">
+<div id="dp-show-9cf84438cdbfc87b6fc41f16463df782" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;no&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1286,7 +1286,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-88b78f6b68c43dcc7f93f2c1df44416f" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;yes&#39;">
+<div id="dp-show-3d6c14964b78f4b183cf78fd62c4fc8f" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF&#39;) == &#39;yes&#39;">
 <p><strong>What strategy do you use to protect against XSRF?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1313,14 +1313,14 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_XSRF_strategy-3">The application does one of the following: verifies the referrer header; requires all state-changing actions to be POST requests; employs another mechanism to protect against XSRF</label>
 </div>
 </div>
-<div id="dp-show-bff838c47fb8844d71f1d3c624c96cf6" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;header&#39;">
+<div id="dp-show-f34f1d7c87cd9c84cf3fb6842416bf68" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;header&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Various browser plugins (such as Flash and Java) have had security vulnerabilities that allowed an attacker to set arbitrary custom headers on cross-domain requests. We highly recommend the use of tokens instead of headers.</p>
 </div>
 </div>
-<div id="dp-show-7368f81ffd8c1fc64bfb943824d4cc76" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;post&#39;">
+<div id="dp-show-cc446f7838b2f4ff186cd3c7bd49618f" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSRF_strategy&#39;) == &#39;post&#39;">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1359,7 +1359,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="auths_authorization_XSSI-2">Our application uses another format that sets variables or calls functions with non-public information.</label>
 </div>
 </p>
-<div id="dp-show-3cf84b121f94d7df884cb7fcc3648f66" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSSI&#39;).includes(&#39;no&#39;)">
+<div id="dp-show-f388f7f9b24c3cf44fcc66887b14d1d6" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_XSSI&#39;).includes(&#39;no&#39;)">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1394,7 +1394,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="auths_authorization_clickjacking-2">Our application does not have such protections.</label>
 </div>
-<div id="dp-show-4b8b6ddfc317f4fc6c8932744168f8fc" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_clickjacking&#39;).includes(&#39;no&#39;)">
+<div id="dp-show-f1db48486f4c81f93c4c27f663d78fcb" class="baz" style="display:none" v-if="skwad.fValue(&#39;auths_authorization_clickjacking&#39;).includes(&#39;no&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -1462,7 +1462,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln-6">The application uses cryptography to encrypt data or protect its integrity.</label>
 </div>
 </p>
-<div id="dp-show-4300a2d843cec838ce5d4768e19be5d0" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;3rdpartycontent&#39;)">
+<div id="dp-show-0ebd82ea01cd4743368898ee35cc450d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;3rdpartycontent&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1483,7 +1483,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-de888193ce008caee5563b4d4302c74d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;xml&#39;)">
+<div id="dp-show-a9d80bd354c08384ee476021ece5c83d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;xml&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1553,7 +1553,7 @@ Unfortunately, XSS is one of the most common security issues in web applications
   <label class="custom-control-label" for="webvuln_xss_strategies-5">Part of the application deals with user-provided HTML that is sanitized and re-displayed to the user.</label>
 </div>
 </p>
-<div id="dp-show-e3bbaea3e3607f3142abbebbf9793362" class="baz" style="display:none" v-if="!(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;))">
+<div id="dp-show-eebaa37f93eb602b2ab6bf39333714be" class="baz" style="display:none" v-if="!(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;))">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1568,21 +1568,21 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-3bab303ab7f393a6412eb693bf7e2ebe" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)">
+<div id="dp-show-7a36b2ab2b13b39effea0b337e9e63b4" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Using a templating system to escape user input is a good way to protect against XSS. But be careful with directives that disable automatic escaping, and watch for the direct display of user input (for example, in error messages). Additionally, be aware of the context in which user input is used in templates. Not all templating systems automatically understand that different escaping may be required, depending on where in the application the user input is displayed. For example, many templating systems would not correctly escape a construct such as <code>&amp;gt;a href=\&quot;{{ user_input }}\&quot;&amp;lt;</code>, where a user could supply <code>javascript:alert(/xss/)</code> as user_input. We recommend using a context-sensitive templating system.</p>
 </div>
 </div>
-<div id="dp-show-239b7aeae230bb373f3e66f4ab91e3bb" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)">
+<div id="dp-show-333b9ee2337fae0eab76bb3b4f62a91b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 A central choke point for validating and escaping user input is generally a good way to protect against XSS. But make sure your application identifies the context in which the user input is being used; otherwise, it might still be possible to smuggle in JavaScript through user input. You might also want to consider using a context-sensitive templating system, to address this issue automatically.</p>
 </div>
 </div>
-<div id="dp-show-a7b932aeb2fe3f93a663b4b31b037eeb" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;))">
+<div id="dp-show-339b29ab7eb3afbe363bb0ea32417f6e" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;perpage&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;templating&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;chokepoint&#39;))">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1597,7 +1597,7 @@ Escaping user input on each page individually is a fairly dangerous strategy: it
 </ul>
 </div>
 </div>
-<div id="dp-show-b763bbbaee3a2bfe0ae13639f342973b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-3327b2b61e30aeb3ebfbe3947abf39a6" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;other&#39;)">
 <p><strong>Describe your strategy for protecting against XSS vulnerabilities:</strong></p>
 <p><textarea 
 name="webvuln_xss_strategies_other_details" 
@@ -1606,7 +1606,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-3b6eb14673faa3b923bebae709b2ef33" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;)">
+<div id="dp-show-a336e3b3fbb63baf7eb4e9232e701a9b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_strategies&#39;).includes(&#39;sanitization&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1639,7 +1639,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_xss_content_type-2">I&rsquo;m not sure all pages set an appropriate content type.</label>
 </div>
 </p>
-<div id="dp-show-23e7632363b3a9be730bfafa91bee4bb" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_content_type&#39;) == &#39;no&#39;">
+<div id="dp-show-a23b3f1b7eb03a9f36b3e2b67b3eea49" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_content_type&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1654,7 +1654,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-ee3ef3323bb7ba603614ba3b2be99fa7" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
+<div id="dp-show-6bbe73e931ab4f36f2be7beb0923a33a" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
 <p><strong>Earlier, you noted that the application has a file upload feature. Does the application allow other users (or administrators) to access the files that are uploaded?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1673,7 +1673,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_xss_fileupload-2">No, uploaded files are processed but can&rsquo;t be downloaded again.</label>
 </div>
 </div>
-<div id="dp-show-3e9b03af67ea7e3bbba236bf1e32b439" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_fileupload&#39;) == &#39;yes&#39;">
+<div id="dp-show-e30b3bafb7b63e4fe321e3bb726a93a9" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_fileupload&#39;) == &#39;yes&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1706,7 +1706,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_xss_dombased-2">It may be possible that something slipped through the cracks and our application has DOM-based XSS vulnerabilities.</label>
 </div>
 </p>
-<div id="dp-show-37b327ab4a39ae62bb33bfe9e3b1f60e" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_dombased&#39;) == &#39;no&#39;">
+<div id="dp-show-be3baee0a3612339bb734b2ae9bf73f6" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_xss_dombased&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1721,7 +1721,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-e1857d6d5eee4383b83ca9d0820c4c04" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;db&#39;)">
+<div id="dp-show-89dc54b43483c30e57dc812a080ed6ee" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;db&#39;)">
 <h3 ref="persistence-back-ends-and-querying" >Persistence Back Ends and Querying</h3><a class="anchor" id="persistence-back-ends-and-querying"></a>
 <p>Because your application uses a database or a similar back end to persist data, we need to make sure it&rsquo;s not vulnerable to injection attacks, such as <a href="http://en.wikipedia.org/wiki/SQL_injection">SQL injection</a></p>
 <p>An application is vulnerable to SQL injection when some portion of user input is interpreted by the database as part of a query. When this occurs, an attacker may be able to read or even write data directly from or to the database.</p>
@@ -1765,7 +1765,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="webvuln_db_sql-5">We do something else.</label>
 </div>
-<div id="dp-show-1a91b63414b716bfbfc932825181a70f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-67950841f9b16afba1c3b231841b127f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;other&#39;)">
 <p><strong>Describe the other mechanism you&rsquo;re using to protect against SQL injection:</strong></p>
 <p><textarea 
 name="webvuln_db_sql_other_details" 
@@ -1774,14 +1774,14 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-31b2c65af1b7fb94620f141883b91a17" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
+<div id="dp-show-bfc8728571341b166fa9b194311b2a0f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Using an ORM layer is generally a good way to protect against SQL injection. However, in most ORM frameworks, it&rsquo;s possible to directly specify parts of the SQL query. Some ORM frameworks also have a special querying language that makes it possible to set the <code>WHERE</code> part of the statement. In these cases, you still need to be sure to guard against injection vulnerabilities.</p>
 </div>
 </div>
-<div id="dp-show-9a62b811ab169740812f7cf13bbf4153" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
+<div id="dp-show-4b51b891138f9023f1fa11472b7b66ac" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
 <p><strong>What ORM framework are you using ?</strong></p>
 <p><textarea 
 name="webvuln_sql_orm" 
@@ -1790,14 +1790,14 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-a1a311cb3f4981b2187069bf627f4b15" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;stored&#39;)">
+<div id="dp-show-0f97191b417aa431f856b23c86fb11b2" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;stored&#39;)">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
 Using stored procedures is generally a good way to protect against SQL injection. But this strategy must be used consistently. Make sure neither the stored procedures themselves nor the calls of the stored procedures are vulnerable to injection attacks.</p>
 </div>
 </div>
-<div id="dp-show-c62b14118b57317af9a8314fb601f29b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;prepared&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;))">
+<div id="dp-show-0a121114361879f5fb7ba6cfb23b8491" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;prepared&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;))">
 <p><strong>Do you take special steps (policies, code reviews, audits, etc.) to ensure that prepared statements are used consistently, and that string concatenation is never used to construct database queries?</strong></p>
 <div class="custom-control custom-radio">
   <input type="radio" 
@@ -1816,7 +1816,7 @@ Using stored procedures is generally a good way to protect against SQL injection
   <label class="custom-control-label" for="webvuln_db_sql_prepared-2">We try to make our developers use prepared statements, but it may be possible for some string concatenation to slip through.</label>
 </div>
 </div>
-<div id="dp-show-f7407f5b1bca9613b1412fa1198268b3" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;) || skwad.fValue(&#39;webvuln_db_sql_prepared&#39;) == &#39;no&#39;">
+<div id="dp-show-3158bf0446727861b2a1139cf1ba91fb" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;) || skwad.fValue(&#39;webvuln_db_sql_prepared&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1837,7 +1837,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </div>
 </div>
-<div id="dp-show-2eec8ec354dec45a10860b8403d83d97" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;plugin&#39;)">
+<div id="dp-show-03e108435ddbdcc890e4a78e43c68e52" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;plugin&#39;)">
 <h3 ref="browser-plugins" >Browser Plugins</h3><a class="anchor" id="browser-plugins"></a>
 <p><strong>You mentioned that your application requires certain browser plugins to work correctly. Which of the following plugins are required?</strong>
 <div class="custom-control custom-checkbox">
@@ -1873,7 +1873,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="webvuln_plugin-4">Other</label>
 </div>
 </p>
-<div id="dp-show-25b3430bc3c06295ed79fe9bb5e02334" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-29de5b39eb9f46c33033b4572e20c5b0" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
 <p><strong>What other plugins are required by your application?</strong></p>
 <p><input 
 name="webvuln_plugin_other" 
@@ -1881,7 +1881,7 @@ required="false"
 placeholder='' 
 type="text" class="form-control form-control-lg"></p>
 </div>
-<div id="dp-show-07042bee90b259fce5343b33dc5b2639" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-40e3223fb05de7e5c9c53039b39462bb" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
 <p><strong>Explain what the plugin is used for, what technology it uses (e.g., ActiveX, NPAPI, Chrome plugin, etc.), how it is usually deployed to your users, and what privileges it requires:</strong></p>
 <p><textarea 
 name="webvuln_plugin_other_details" 
@@ -1890,7 +1890,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-23e50c9b69dcb325eb30394fb32e4075" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;java&#39;)">
+<div id="dp-show-b203c35e36bd3c9425270e4ef9590bb3" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;java&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -1905,7 +1905,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-936c4902393e42db52b50bc5ebe0733f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-f52ebd9bb0476ccb5293330e02539e43" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_plugin&#39;).includes(&#39;other&#39;)">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -1921,7 +1921,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </div>
 </div>
-<div id="dp-show-1a478653b89e8e42354cdc8ce3d00e0d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
+<div id="dp-show-304d8eae47e1ec3d5286c980d84bc503" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;upload&#39;)">
 <h3 ref="file-uploads" >File Uploads</h3><a class="anchor" id="file-uploads"></a>
 <p><strong>You mentioned previously that your application allows users to upload files. Where does the application store those files?</strong></p>
 <div class="custom-control custom-radio">
@@ -1948,7 +1948,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="webvuln_upload_storage-3">Somewhere else</label>
 </div>
-<div id="dp-show-55c2a4631a8380a1765dc84084b9948d" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
+<div id="dp-show-8b48286354931c5aa5d84d0749a1068c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
 <p><strong>Explain where the uploaded files are stored:</strong></p>
 <p><textarea 
 name="webvuln_upload_storage_other_details" 
@@ -1957,7 +1957,7 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-b549827d4a68d5908cac01386148a453" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
+<div id="dp-show-0834a410a89d6a8d4b83c5764552819c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -2013,7 +2013,7 @@ type="text" class="form-control form-control-lg"></p>
   <label class="custom-control-label" for="webvuln_upload_storage_type-4">We employ another method to verify the file type.</label>
 </div>
 </p>
-<div id="dp-show-802a41ad358639cd808194b58654ac74" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
+<div id="dp-show-8a082640a8547d9595a4c183b8c13d64" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;other&#39;">
 <p><strong>Explain how you verify the file type and enforce the whitelist:</strong></p>
 <p><textarea 
 name="webvuln_upload_storage_type_other_details" 
@@ -2022,14 +2022,14 @@ placeholder=''
 name="paragraph" 
 class="form-control" rows="3"></textarea></p>
 </div>
-<div id="dp-show-660c58dda8b93944c451781a2435880a" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;) &amp;&amp; skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
+<div id="dp-show-a7269c8114a48653a8894350508ddc4b" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;) &amp;&amp; skwad.fValue(&#39;webvuln_upload_storage&#39;) == &#39;fs&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
 Some web servers are configured by default to allow double file extensions. For example, if a user uploads a file called <code>malicious.php.gif</code>, it might actually be executed as PHP code upon retrieval. Because you store uploaded files on the file system, this issue may affect your application. Make sure your web server uses only the last extension (i.e., the part after the right-most dot in the file name) when determining how to process the file.\</p>
 </div>
 </div>
-<div id="dp-show-938861b4ada08c5644a853172590d84c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)">
+<div id="dp-show-345ad7283a1ca98c48845b09d6108456" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -2046,7 +2046,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-47855a8020148b3d5a43cac8196d4698" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;contenttype&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;))">
+<div id="dp-show-83a546c8a53a188994b041d2dc865740" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;contenttype&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;reencoding&#39;)) &amp;&amp; !(skwad.fValue(&#39;webvuln_upload_storage_type&#39;).includes(&#39;extension&#39;))">
 <div class="notices danger">
 	<p><strong>Warning — possible high-risk issue</strong><br>
 <br>
@@ -2062,7 +2062,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </div>
 </div>
-<div id="dp-show-04e539de86b33d8ca0d7c8258c401ee4" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;crypto&#39;)">
+<div id="dp-show-48597e48ec0b3e8834edd61d0c2a3c50" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln&#39;).includes(&#39;crypto&#39;)">
 <h3 ref="use-of-cryptography" >Use of Cryptography</h3><a class="anchor" id="use-of-cryptography"></a>
 <p>You previously mentioned that your application uses cryptography to ensure the confidentiality and/or integrity of information. That&rsquo;s great! But we want to make sure you&rsquo;re using cryptography correctly.</p>
 <p>Note: when using cryptography, make sure algorithms are used in the right context and within appropriate constraints. For example, encrypting a session ID does not prevent an attacker from manipulating it. Similarly, a signature does not protect a message&rsquo;s confidentiality.</p>
@@ -2102,7 +2102,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
 </p>
 <p>
-<div id="dp-show-13fa684af17eb94d4dd4619cd37fa595" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit&#39;) == &#39;yes&#39;">
+<div id="dp-show-5d9faefad6443a1d5b93c9844f1d7761" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit&#39;) == &#39;yes&#39;">
 <h3 ref="unit-testing" >Unit Testing</h3><a class="anchor" id="unit-testing"></a>
 <p><strong>How would you describe the code coverage of your unit tests?</strong></p>
 <div class="custom-control custom-radio">
@@ -2129,7 +2129,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="application_testing_unit_coverage-3">Nonexistent - We have no (or almost no) unit tests.</label>
 </div>
-<div id="dp-show-9ffc1e6daf449b637da3d8d57454119a" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;med&#39; || skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;small&#39;">
+<div id="dp-show-49a9d943f1edad5c6ba43718654d17ff" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;med&#39; || skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;small&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -2144,7 +2144,7 @@ name="paragraph"
 class="form-control" rows="3"></textarea></p>
 </div>
 </div>
-<div id="dp-show-9574ed1dc4fd1d8f3541396a46faa7b9" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;med&#39; || skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;large&#39;">
+<div id="dp-show-43dda6a4938e1d4d65719a74fc1f5b9f" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;med&#39; || skwad.fValue(&#39;application_testing_unit_coverage&#39;) == &#39;large&#39;">
 <p><strong>Do you have special unit tests in place for testing the security of your code? For example, unit tests can be used to do the following:</strong></p>
 <ul>
 <li>Verify that XSRF tokens are required for all state-changing actions</li>
@@ -2167,7 +2167,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="application_testing_unit_security-2">No</label>
 </div>
-<div id="dp-show-d6d94e8baffc354daa7f76415d119493" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit_security&#39;) == &#39;no&#39;">
+<div id="dp-show-4fc9473d859dd67deafaf1a5b3496141" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_unit_security&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -2203,7 +2203,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="application_testing_qa_security-2">This is an area where we have some room for improvement.</label>
 </div>
-<div id="dp-show-e86b4a1adc4199f4ff5d514397d6ad73" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_qa_security&#39;) == &#39;no&#39;">
+<div id="dp-show-5f14fb361d1583a79a9cdf4e67d4a9d4" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_testing_qa_security&#39;) == &#39;no&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -2247,7 +2247,7 @@ class="form-control" rows="3"></textarea></p>
   class="custom-control-input">
   <label class="custom-control-label" for="application_monitoring-3">Nonexistent - At the moment, we are not doing any kind of post-release monitoring that looks for signs of exploitation or increases in crashes/exceptions.</label>
 </div>
-<div id="dp-show-e1f58a6d474c3d61d4791aa93b5f9fd4" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_monitoring&#39;) == &#39;robust&#39;">
+<div id="dp-show-aff13f4d1dd667bd9985e44a4751ca93" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_monitoring&#39;) == &#39;robust&#39;">
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
 <br>
@@ -2255,7 +2255,7 @@ Thank you for putting effort into post-launch monitoring. Exceptions often indic
 </div>
 </div>
 </p>
-<div id="dp-show-5afeda734d7419dd3c8f1a966149b4f5" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_monitoring&#39;) == &#39;weak&#39; || skwad.fValue(&#39;application_monitoring&#39;) == &#39;none&#39;">
+<div id="dp-show-65afada1149d48539f4dc643f7e197bd" class="baz" style="display:none" v-if="skwad.fValue(&#39;application_monitoring&#39;) == &#39;weak&#39; || skwad.fValue(&#39;application_monitoring&#39;) == &#39;none&#39;">
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
 <br>
@@ -2331,7 +2331,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-4030ba7a5acf3b0a8fcefdeb27bec2d0" class="baz" style="display:none" v-if="false">
+<div id="dp-show-cd00f08b0e2ce7f43f7aeaabca3b2d5b" class="baz" style="display:none" v-if="false">
 
 <h2 ref="show" >Show</h2><a class="anchor" id="show"></a>
 <div class="custom-control custom-radio">
@@ -2367,7 +2367,7 @@ class="form-control" rows="3"></textarea></p>
   <label class="custom-control-label" for="mychoices-4">Show the two blocks</label>
 </div>
 <h3 ref="show-1" >show 1</h3><a class="anchor" id="show-1"></a>
-<div id="dp-show-e02a3cdf50a0772bb8dbea4bf03fceca" class="baz" style="display:none" v-if="skwad.fValue(&#39;mychoices&#39;) == &#39;aa&#39; || skwad.fValue(&#39;mychoices&#39;) == &#39;two&#39;">
+<div id="dp-show-babab20a0cdce8b373fc0a547ef0f2ed" class="baz" style="display:none" v-if="skwad.fValue(&#39;mychoices&#39;) == &#39;aa&#39; || skwad.fValue(&#39;mychoices&#39;) == &#39;two&#39;">
 <div class="notices primary">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -2377,7 +2377,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 </div>
-<div id="dp-show-fa0fb0bf35aec80ae73dbacb72c24e0d" class="baz" style="display:none" v-if="skwad.fValue(&#39;mychoices&#39;) == &#39;no&#39;  || skwad.fValue(&#39;mychoices&#39;) == &#39;two&#39;">
+<div id="dp-show-f00fe5aef7b230bda7a24cec3dab08cb" class="baz" style="display:none" v-if="skwad.fValue(&#39;mychoices&#39;) == &#39;no&#39;  || skwad.fValue(&#39;mychoices&#39;) == &#39;two&#39;">
 <div class="alert info" role="alert">No Alert selected !</div>
 </div>
 <h2 ref="text" >text</h2><a class="anchor" id="text"></a>
@@ -2460,7 +2460,7 @@ class="form-control" rows="3"></textarea></p>
 </div>
   </div>
 </div>
-<div id="dp-show-faee02cad0d7bb8c5304cf370fabea2b" class="baz" style="display:none" v-if="skwad.fValue(&#39;app_vulnerability&#39;) == &#39;no&#39; &amp;&amp; skwad.fValue(&#39;app_vulnerabilitymulti&#39;).includes(&#39;no&#39;)">
+<div id="dp-show-0dbaeaca350fdf43b0f7a82e2b7cbe0c" class="baz" style="display:none" v-if="skwad.fValue(&#39;app_vulnerability&#39;) == &#39;no&#39; &amp;&amp; skwad.fValue(&#39;app_vulnerabilitymulti&#39;).includes(&#39;no&#39;)">
 <div class="alert danger" role="alert">OK !</div>
 </div>
 <h2 ref="list" >List</h2><a class="anchor" id="list"></a>
@@ -2517,12 +2517,12 @@ class="form-control" rows="3"></textarea></p>
         <span>Expand me...</span>
     </div>
     <div class="expand-content" style="display: none;"><p>Change on any element form</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js">	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;form&#39;</span>);
-	<span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>,<span style="color:#a6e22e">v</span>) {
-    	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;element changed&#34;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>,<span style="color:#a6e22e">v</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js">	<span style="color:#8be9fd;font-style:italic">var</span> form <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.querySelector(<span style="color:#f1fa8c">&#39;form&#39;</span>);
+	form.addEventListener(<span style="color:#f1fa8c">&#39;change&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>(e,v) {
+    	console.log(<span style="color:#f1fa8c">&#34;element changed&#34;</span>, e.target,v)
 	});
 <p></code></pre></div><p>Get all data</p></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js">	<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;form[name=myform]&#34;</span>).<span style="color:#a6e22e">serializeArray</span>()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js">	$(<span style="color:#f1fa8c">&#34;form[name=myform]&#34;</span>).serializeArray()
 </code></pre></div><p>Download file :</p>
 <ul>
 <li>date</li>
@@ -2531,69 +2531,69 @@ class="form-control" rows="3"></textarea></p>
 <li>data</li>
 <li>hash or signature</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadFile</span>() {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">123</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;4 5 6&#34;</span>};
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;download.json&#34;</span>;
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">blob</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Blob</span>([<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">obj</span>)], {<span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/plain&#39;</span>});
-    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">navigator</span> <span style="color:#f92672">&amp;&amp;</span> window.<span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">msSaveOrOpenBlob</span>) {
-        window.<span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">msSaveOrOpenBlob</span>(<span style="color:#a6e22e">blob</span>, <span style="color:#a6e22e">filename</span>);
-    } <span style="color:#66d9ef">else</span>{
-        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createEvent</span>(<span style="color:#e6db74">&#39;MouseEvents&#39;</span>),
-        <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
-        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">filename</span>;
-        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#a6e22e">blob</span>);
-        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">downloadurl</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;text/plain&#39;</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span>].<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;:&#39;</span>);
-        <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">initEvent</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">false</span>, window, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">null</span>);
-        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">e</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#8be9fd;font-style:italic">function</span> downloadFile() {
+    <span style="color:#8be9fd;font-style:italic">var</span> obj <span style="color:#ff79c6">=</span> {a<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">123</span>, b<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;4 5 6&#34;</span>};
+    <span style="color:#8be9fd;font-style:italic">var</span> filename <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;download.json&#34;</span>;
+    <span style="color:#8be9fd;font-style:italic">var</span> blob <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Blob([JSON.stringify(obj)], {type<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;text/plain&#39;</span>});
+    <span style="color:#ff79c6">if</span> (<span style="color:#8be9fd;font-style:italic">window</span>.navigator <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">window</span>.navigator.msSaveOrOpenBlob) {
+        <span style="color:#8be9fd;font-style:italic">window</span>.navigator.msSaveOrOpenBlob(blob, filename);
+    } <span style="color:#ff79c6">else</span>{
+        <span style="color:#8be9fd;font-style:italic">var</span> e <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.createEvent(<span style="color:#f1fa8c">&#39;MouseEvents&#39;</span>),
+        a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.createElement(<span style="color:#f1fa8c">&#39;a&#39;</span>);
+        a.download <span style="color:#ff79c6">=</span> filename;
+        a.href <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">window</span>.URL.createObjectURL(blob);
+        a.dataset.downloadurl <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;text/plain&#39;</span>, a.download, a.href].join(<span style="color:#f1fa8c">&#39;:&#39;</span>);
+        e.initEvent(<span style="color:#f1fa8c">&#39;click&#39;</span>, <span style="color:#ff79c6">true</span>, <span style="color:#ff79c6">false</span>, <span style="color:#8be9fd;font-style:italic">window</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">false</span>, <span style="color:#ff79c6">false</span>, <span style="color:#ff79c6">false</span>, <span style="color:#ff79c6">false</span>, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">null</span>);
+        a.dispatchEvent(e);
     }
 }
 </code></pre></div><p>load file 1 :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, () =&gt; { 
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">files</span>; 
-<pre><code>&lt;span style=&quot;color:#66d9ef&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color:#a6e22e&quot;&gt;files&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;length&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#ae81ff&quot;&gt;0&lt;/span&gt;) &lt;span style=&quot;color:#66d9ef&quot;&gt;return&lt;/span&gt;; 
-<p>&lt;span style=&quot;color:#75715e&quot;&gt;/* If any further modifications have to be made on the
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js">input.addEventListener(<span style="color:#f1fa8c">&#39;change&#39;</span>, () =&gt; { 
+    <span style="color:#8be9fd;font-style:italic">let</span> files <span style="color:#ff79c6">=</span> input.files; 
+<pre><code>&lt;span style=&quot;color:#ff79c6&quot;&gt;if&lt;/span&gt; (files.length &lt;span style=&quot;color:#ff79c6&quot;&gt;==&lt;/span&gt; &lt;span style=&quot;color:#bd93f9&quot;&gt;0&lt;/span&gt;) &lt;span style=&quot;color:#ff79c6&quot;&gt;return&lt;/span&gt;; 
+<p>&lt;span style=&quot;color:#6272a4&quot;&gt;/* If any further modifications have to be made on the
 </code></pre></p>
-<p></span><span style="color:#75715e">       Extracted text. The text can be accessed using the<br>
-</span><span style="color:#75715e">       file variable. But since this is const, it is a read<br>
-</span><span style="color:#75715e">       only variable, hence immutable. To make any changes,<br>
-</span><span style="color:#75715e">       changing const to var, here and In the reader.onload<br>
-</span><span style="color:#75715e">       function would be advisible */</span>
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>];</p>
-<pre><code>&lt;span style=&quot;color:#66d9ef&quot;&gt;let&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;reader&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color:#66d9ef&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;FileReader&lt;/span&gt;(); 
-<p>&lt;span style=&quot;color:#a6e22e&quot;&gt;reader&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;onload&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;=&lt;/span&gt; (&lt;span style=&quot;color:#a6e22e&quot;&gt;e&lt;/span&gt;) =&amp;gt; {
-&lt;span style=&quot;color:#66d9ef&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;file&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;e&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;target&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;result&lt;/span&gt;;</p>
-<pre><code>&amp;lt;span style=&amp;quot;color:#75715e&amp;quot;&amp;gt;// This is a regular expression to identify carriage  
+<p></span><span style="color:#6272a4">       Extracted text. The text can be accessed using the<br>
+</span><span style="color:#6272a4">       file variable. But since this is const, it is a read<br>
+</span><span style="color:#6272a4">       only variable, hence immutable. To make any changes,<br>
+</span><span style="color:#6272a4">       changing const to var, here and In the reader.onload<br>
+</span><span style="color:#6272a4">       function would be advisible */</span>
+<span style="color:#ff79c6">const</span> file <span style="color:#ff79c6">=</span> files[<span style="color:#bd93f9">0</span>];</p>
+<pre><code>&lt;span style=&quot;color:#8be9fd;font-style:italic&quot;&gt;let&lt;/span&gt; reader &lt;span style=&quot;color:#ff79c6&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color:#ff79c6&quot;&gt;new&lt;/span&gt; FileReader(); 
+<p>reader.onload &lt;span style=&quot;color:#ff79c6&quot;&gt;=&lt;/span&gt; (e) =&amp;gt; {
+&lt;span style=&quot;color:#ff79c6&quot;&gt;const&lt;/span&gt; file &lt;span style=&quot;color:#ff79c6&quot;&gt;=&lt;/span&gt; e.target.result;</p>
+<pre><code>&amp;lt;span style=&amp;quot;color:#6272a4&amp;quot;&amp;gt;// This is a regular expression to identify carriage  
 </code></pre>
 <p></code></pre></p>
-<p></span><span style="color:#75715e"></span>        <span style="color:#75715e">// Returns and line breaks
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lines</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/\r\n|\n/</span>);
-<span style="color:#a6e22e">textarea</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lines</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">'\n'</span>);</p>
+<p></span><span style="color:#6272a4"></span>        <span style="color:#6272a4">// Returns and line breaks
+</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">const</span> lines <span style="color:#ff79c6">=</span> file.split(<span style="color:#f1fa8c">/\r\n|\n/</span>);
+textarea.value <span style="color:#ff79c6">=</span> lines.join(<span style="color:#f1fa8c">'\n'</span>);</p>
 <pre><code>}; 
-<p>&lt;span style=&quot;color:#a6e22e&quot;&gt;reader&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;onerror&lt;/span&gt; &lt;span style=&quot;color:#f92672&quot;&gt;=&lt;/span&gt; (&lt;span style=&quot;color:#a6e22e&quot;&gt;e&lt;/span&gt;) =&amp;gt; &lt;span style=&quot;color:#a6e22e&quot;&gt;alert&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;e&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;target&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;error&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;name&lt;/span&gt;);</p>
-<p>&lt;span style=&quot;color:#a6e22e&quot;&gt;reader&lt;/span&gt;.&lt;span style=&quot;color:#a6e22e&quot;&gt;readAsText&lt;/span&gt;(&lt;span style=&quot;color:#a6e22e&quot;&gt;file&lt;/span&gt;);
+<p>reader.onerror &lt;span style=&quot;color:#ff79c6&quot;&gt;=&lt;/span&gt; (e) =&amp;gt; alert(e.target.error.name);</p>
+<p>reader.readAsText(file);
 </code></pre></p>
 <p>});
 </code></pre></div><p>load file 2 :</p></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onFileLoad</span>(<span style="color:#a6e22e">elementId</span>, <span style="color:#a6e22e">event</span>) {
-    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">elementId</span>).<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">result</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#8be9fd;font-style:italic">function</span> onFileLoad(elementId, event) {
+    <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(elementId).innerText <span style="color:#ff79c6">=</span> event.target.result;
 }
-<p><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onChooseFile</span>(<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">onLoadFileHandler</span>) {
-<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> window.<span style="color:#a6e22e">FileReader</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">'function'</span>)
-<span style="color:#66d9ef">throw</span> (<span style="color:#e6db74">&quot;The file API isn't supported on this browser.&quot;</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>;
-<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">input</span>)
-<span style="color:#66d9ef">throw</span> (<span style="color:#e6db74">&quot;The browser does not properly implement the event object&quot;</span>);
-<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">files</span>)
-<span style="color:#66d9ef">throw</span> (<span style="color:#e6db74">&quot;This browser does not support the <code>files</code> property of the file input.&quot;</span>);
-<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>])
-<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">undefined</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>];
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FileReader</span>();
-<span style="color:#a6e22e">fr</span>.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">onLoadFileHandler</span>;
-<span style="color:#a6e22e">fr</span>.<span style="color:#a6e22e">readAsText</span>(<span style="color:#a6e22e">file</span>);
+<p><span style="color:#8be9fd;font-style:italic">function</span> onChooseFile(event, onLoadFileHandler) {
+<span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">typeof</span> <span style="color:#8be9fd;font-style:italic">window</span>.FileReader <span style="color:#ff79c6">!==</span> <span style="color:#f1fa8c">'function'</span>)
+<span style="color:#ff79c6">throw</span> (<span style="color:#f1fa8c">&quot;The file API isn't supported on this browser.&quot;</span>);
+<span style="color:#8be9fd;font-style:italic">let</span> input <span style="color:#ff79c6">=</span> event.target;
+<span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>input)
+<span style="color:#ff79c6">throw</span> (<span style="color:#f1fa8c">&quot;The browser does not properly implement the event object&quot;</span>);
+<span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>input.files)
+<span style="color:#ff79c6">throw</span> (<span style="color:#f1fa8c">&quot;This browser does not support the <code>files</code> property of the file input.&quot;</span>);
+<span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>input.files[<span style="color:#bd93f9">0</span>])
+<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">undefined</span>;
+<span style="color:#8be9fd;font-style:italic">let</span> file <span style="color:#ff79c6">=</span> input.files[<span style="color:#bd93f9">0</span>];
+<span style="color:#8be9fd;font-style:italic">let</span> fr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> FileReader();
+fr.onload <span style="color:#ff79c6">=</span> onLoadFileHandler;
+fr.readAsText(file);
 }
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">'file'</span> <span style="color:#a6e22e">onchange</span><span style="color:#f92672">=</span><span style="color:#e6db74">'onChooseFile(event, onFileLoad.bind(this, &quot;contents&quot;))'</span> /&gt;
-&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&quot;contents&quot;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">'file'</span> <span style="color:#50fa7b">onchange</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">'onChooseFile(event, onFileLoad.bind(this, &quot;contents&quot;))'</span> /&gt;
+&lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&quot;contents&quot;</span>&gt;&lt;/<span style="color:#ff79c6">p</span>&gt;
 </code></pre></div></p>
 </div>
 </div>

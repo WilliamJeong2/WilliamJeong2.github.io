@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://williamjeong2.github.io/blog/1-extract-google-account-profile-picture/</loc>
+    <lastmod>2021-02-18T14:55:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://williamjeong2.github.io/content-and-customization/00-adding-content/</loc>
+    <lastmod>2020-09-08T22:49:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/content-and-customization/00-bioinformatics/</loc>
     <lastmod>2020-09-08T22:49:36+00:00</lastmod>
   </url>
   
@@ -25,12 +35,36 @@
   </url>
   
   <url>
-    <loc>https://williamjeong2.github.io/getting-start/</loc>
-    <lastmod>2020-08-20T16:42:11+00:00</lastmod>
+    <loc>https://williamjeong2.github.io/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/</loc>
+    <lastmod>2021-02-18T14:55:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/bioinformatics/</loc>
+    <lastmod>2021-02-16T17:38:54+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://williamjeong2.github.io/getting-start/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/6-10-steps-to-become-a-data-scientist/</loc>
+    <lastmod>2021-02-18T14:55:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/</loc>
+    <lastmod>2021-02-18T14:47:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/7-docker-out-of-disk-space/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/getting-start/</loc>
+    <lastmod>2020-08-20T16:42:11+00:00</lastmod>
   </url>
   
   <url>
@@ -157,12 +191,12 @@
   </url>
   
   <url>
-    <loc>https://williamjeong2.github.io/docport-theme/credits/</loc>
-    <lastmod>2020-09-10T19:54:04+00:00</lastmod>
+    <loc>https://williamjeong2.github.io/</loc>
+    <lastmod>2021-02-18T14:55:31+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://williamjeong2.github.io/</loc>
+    <loc>https://williamjeong2.github.io/docport-theme/credits/</loc>
     <lastmod>2020-09-10T19:54:04+00:00</lastmod>
   </url>
   
@@ -391,6 +425,22 @@
   
   <url>
     <loc>https://williamjeong2.github.io/shortcodes/tabs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/9-python-funtions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/8-nas-network-drive-mount-on-ubuntu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/4-weekly-archive-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://williamjeong2.github.io/blog/5-weekly-archive-2/</loc>
   </url>
   
 </urlset>

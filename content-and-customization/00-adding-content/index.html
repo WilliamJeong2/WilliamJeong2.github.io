@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-16T17:25:11 KST">
+<meta name="revised" content="2021-02-18T15:38:07 KST">
 <meta name="description" content="This page tells you how to use the theme to add and structure your site content.">
 
 
@@ -100,7 +100,7 @@
 	</div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href=""  rel="noopener">
+                <a href="https://github.com/williamjeong2"  rel="noopener">
                   Github
                 </a>
             </li>
@@ -155,6 +155,117 @@
       
           <a href="/docport-theme/">DocPort Theme for Hugo</a>
       
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+          <a href="/bioinformatics/">Bioinformatics&nbsp;🧬</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item alwaysopen haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/blog/">Devlog&nbsp;💻</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/1-extract-google-account-profile-picture/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/1-extract-google-account-profile-picture/">구글 프로필 사진 다운로드하기</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/2-how-to-save-apple-time-machine-mackups-to-cloud-services/">맥 타임머신을 클라우드 서비스에 하기(원드라이브, 구글드라이브, 드랍박스 등)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/6-10-steps-to-become-a-data-scientist/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/6-10-steps-to-become-a-data-scientist/">데이터 과학자(Data Scientist)가 되기 위한 10단계</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/7-docker-out-of-disk-space/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/7-docker-out-of-disk-space/">docker를 운영하다가 용량 부족 문제를 겪을 때.</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/8-nas-network-drive-mount-on-ubuntu/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/8-nas-network-drive-mount-on-ubuntu/">우분투에 NAS 마운트</a>
+      
+        
+      
+    </li>
+              
+              
+        </ul>
     </li>
     
 <hr/>
@@ -253,6 +364,21 @@
       
     </li>
         </ul>
+    </li>
+              
+
+    <li data-nav-id="https://williamjeong2.github.io/content-and-customization/00-bioinformatics/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/content-and-customization/00-bioinformatics/">Adding content</a>
+      
+        
+      
     </li>
               
 
@@ -1014,7 +1140,7 @@ The files in your content root directory are typically grouped in subdirectories
 </div>
 </p>
 <p>To link pages to each other, place them in a folders hierarchy.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-text" data-lang="text">	content
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-text" data-lang="text">	content
 	└── section-one/			
 	    ├── _index.md
 	    └── section-one-two/ 	
@@ -1034,34 +1160,34 @@ Subpages are not displayed in left menu.</p>
 <p>Each page file in a Hugo site has metadata frontmatter that tells Hugo about the page. You specify page frontmatter in TOML, YAML, or JSON.<br>
 Use the frontmatter to specify the page title, description, creation date, link title, template, menu weighting, and even any resources such as images used by the page. You can see a complete list of possible page frontmatter in <a href="https://gohugo.io/content-management/front-matter/">Front Matter</a>.</p>
 <p>On top of the <a href="https://gohugo.io/content-management/front-matter/">existing ones</a>, DocPort comes with additional params to control what and how to display your content, their entry in left menu or behaviour.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Adding content&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#ff79c6">title</span>: <span style="color:#f1fa8c">&#34;Adding content&#34;</span>
 
-<span style="color:#75715e"># order sections</span>
-<span style="color:#f92672">weight</span>: <span style="color:#ae81ff">10</span> 
+<span style="color:#6272a4"># order sections</span>
+<span style="color:#ff79c6">weight</span>: <span style="color:#bd93f9">10</span> 
 
-<span style="color:#75715e"># Hide some page components</span>
-<span style="color:#f92672">hide</span>:
-- <span style="color:#ae81ff">header</span>
-- <span style="color:#ae81ff">nav</span>
-- <span style="color:#ae81ff">breadcrumb</span>
-- <span style="color:#ae81ff">toc</span>
-- <span style="color:#ae81ff">nextpage</span>
-- <span style="color:#ae81ff">footer</span>
+<span style="color:#6272a4"># Hide some page components</span>
+<span style="color:#ff79c6">hide</span>:
+- header
+- nav
+- breadcrumb
+- toc
+- nextpage
+- footer
 
-<span style="color:#75715e"># subpage</span>
-<span style="color:#f92672">subpage</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># usefull when you want to force a sub section to be considered as a subpage</span>
+<span style="color:#6272a4"># subpage</span>
+<span style="color:#ff79c6">subpage</span>: <span style="color:#ff79c6">false</span> <span style="color:#6272a4"># usefull when you want to force a sub section to be considered as a subpage</span>
 
-<span style="color:#75715e"># Redirect to another content</span>
-<span style="color:#75715e"># Set a full URL or a .md path</span>
-<span style="color:#75715e"># examples : </span>
-<span style="color:#75715e">#  redirect = &#34;https://github.com/vjeantet&#34; </span>
-<span style="color:#75715e">#  redirect = &#34;folder&#34; </span>
-<span style="color:#75715e">#  redirect = &#34;folder/_index.md&#34; </span>
-<span style="color:#f92672">redirect</span>: <span style="color:#e6db74">&#34;folder/_index.md&#34;</span>
+<span style="color:#6272a4"># Redirect to another content</span>
+<span style="color:#6272a4"># Set a full URL or a .md path</span>
+<span style="color:#6272a4"># examples : </span>
+<span style="color:#6272a4">#  redirect = &#34;https://github.com/vjeantet&#34; </span>
+<span style="color:#6272a4">#  redirect = &#34;folder&#34; </span>
+<span style="color:#6272a4">#  redirect = &#34;folder/_index.md&#34; </span>
+<span style="color:#ff79c6">redirect</span>: <span style="color:#f1fa8c">&#34;folder/_index.md&#34;</span>
 
-<span style="color:#75715e"># Do not include this page in search results</span>
-<span style="color:#f92672">nosearch</span>: <span style="color:#66d9ef">true</span>
+<span style="color:#6272a4"># Do not include this page in search results</span>
+<span style="color:#ff79c6">nosearch</span>: <span style="color:#ff79c6">true</span>
 ---
 </code></pre></div>
 
