@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-02-18T15:38:07 KST">
+<meta name="revised" content="2021-02-18T15:45:42 KST">
 <meta name="description" content="">
 
 
@@ -45,6 +45,19 @@
 </script>
 
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-150213770-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
 
     
@@ -1283,7 +1296,7 @@
 
 
 
-<div id="dp-show-67950841f9b16afba1c3b231841b127f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;other&#39;)">
+<div id="dp-show-f2161460b11a971781a83b2c9f453bbf" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;other&#39;)">
 
 <p><strong>Describe the other mechanism you&rsquo;re using to protect against SQL injection:</strong></p>
 <p><textarea 
@@ -1304,7 +1317,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-bfc8728571341b166fa9b194311b2a0f" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
+<div id="dp-show-04f78b1baf913682517c169ba4b11f23" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
 
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
@@ -1323,7 +1336,7 @@ Using an ORM layer is generally a good way to protect against SQL injection. How
 
 
 
-<div id="dp-show-4b51b891138f9023f1fa11472b7b66ac" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
+<div id="dp-show-3b8aa6f99f74c12b1b481137621bf150" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;orm&#39;)">
 
 <p><strong>What ORM framework are you using ?</strong></p>
 <p><textarea 
@@ -1344,7 +1357,7 @@ class="form-control" rows="3"></textarea></p>
 
 
 
-<div id="dp-show-0f97191b417aa431f856b23c86fb11b2" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;stored&#39;)">
+<div id="dp-show-b77a64a3f1b11581f12bf9b06219384c" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;stored&#39;)">
 
 <div class="notices primary">
 	<p><strong>Tip</strong><br>
@@ -1363,7 +1376,7 @@ Using stored procedures is generally a good way to protect against SQL injection
 
 
 
-<div id="dp-show-0a121114361879f5fb7ba6cfb23b8491" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;prepared&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;))">
+<div id="dp-show-14f1ba1fc128b187394957b123b06af6" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;prepared&#39;) &amp;&amp; !(skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;))">
 
 <p><strong>Do you take special steps (policies, code reviews, audits, etc.) to ensure that prepared statements are used consistently, and that string concatenation is never used to construct database queries?</strong></p>
 <div class="custom-control custom-radio">
@@ -1394,7 +1407,7 @@ Using stored procedures is generally a good way to protect against SQL injection
 
 
 
-<div id="dp-show-3158bf0446727861b2a1139cf1ba91fb" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;) || skwad.fValue(&#39;webvuln_db_sql_prepared&#39;) == &#39;no&#39;">
+<div id="dp-show-b15bb91f83f17c02a41ba8174696f231" class="baz" style="display:none" v-if="skwad.fValue(&#39;webvuln_db_sql&#39;).includes(&#39;manual&#39;) || skwad.fValue(&#39;webvuln_db_sql_prepared&#39;) == &#39;no&#39;">
 
 <div class="notices warning">
 	<p><strong>Warning — possible medium-risk issue</strong><br>
