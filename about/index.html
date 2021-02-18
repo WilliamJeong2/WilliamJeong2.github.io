@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	attachments :: Jeong&#39;s Blog
+	About :: Jeong&#39;s Blog
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-02-18T16:42:09 KST">
-<meta name="description" content="The Attachments shortcode displays a list of files attached to a page.">
+<meta name="description" content="">
 
 
 
-<title>attachments :: Jeong&#39;s Blog</title>
+<title>About :: Jeong&#39;s Blog</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -63,9 +63,9 @@ if (!doNotTrack) {
     
   </head>
 
-  <body data-url="/shortcodes/attachments/"
+  <body data-url="/about/"
 
-  class="">
+  class="hidetoc ">
 
 <style type="text/css">
   #debug{
@@ -156,7 +156,7 @@ if (!doNotTrack) {
 
 <ul class="menu">
 
-    <li data-nav-id="https://williamjeong2.github.io/about/" class="dd-item
+    <li data-nav-id="https://williamjeong2.github.io/about/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -532,15 +532,14 @@ if (!doNotTrack) {
     </li>
     
 
-    <li data-nav-id="https://williamjeong2.github.io/shortcodes/" class="dd-item parent haschildren
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
           <a href="/shortcodes/">Shortcodes</a>
@@ -578,7 +577,7 @@ if (!doNotTrack) {
     </li>
               
 
-    <li data-nav-id="https://williamjeong2.github.io/shortcodes/attachments/" class="dd-item parent active
+    <li data-nav-id="https://williamjeong2.github.io/shortcodes/attachments/" class="dd-item
         item_level_$level
         ">
 
@@ -1047,9 +1046,6 @@ if (!doNotTrack) {
         
   
   	
-		
-  
-  	
 	<li >
       <a class="text-link" href="https://williamjeong2.github.io">
         Home
@@ -1057,17 +1053,9 @@ if (!doNotTrack) {
     </li>
 	
   
-    <li class="">
-      <a class="text-link" href="/shortcodes/">
-        Shortcodes
-      </a>
-    </li>
-	
-  	
-  
     <li class="active">
       
-        attachments
+        About
       
     </li>
 
@@ -1088,7 +1076,7 @@ if (!doNotTrack) {
 		
 
 		
-			<h1>attachments</h1>
+			<h1>About</h1>
         
 
 		
@@ -1100,28 +1088,6 @@ if (!doNotTrack) {
 
 	
 	
-	<div class="jump-to-section">
-		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-  			<span class="fas fa-align-right"></span>
-  			Jump to Section
-  			<i style=";" class="fas fa-chevron-right"></i>
-		</span>
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#usage">Usage</a>
-      <ul>
-        <li><a href="#parameters">parameters</a></li>
-      </ul>
-    </li>
-    <li><a href="#demo">Demo</a>
-      <ul>
-        <li><a href="#list-of-attachments-ending-in-pdf-or-mp4">List of attachments ending in pdf or mp4</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-	</div>
-	
 	
 
 
@@ -1130,105 +1096,26 @@ if (!doNotTrack) {
 
 
 	<div class="content">
-	    <p>The Attachments shortcode displays a list of files attached to a page.
-Example :
-
-
-<div class="alert success" role="alert"><section class="attachments">
-<i class="fas fa-paperclip"></i>	
-<label>
-Attachments
-</label>
-<li><a href="https://williamjeong2.github.io/shortcodes/attachments/_files/Carroll_AliceAuPaysDesMerveilles.pdf" >Carroll_AliceAuPaysDesMerveilles.pdf</a>&nbsp;(175 kB)</li><li><a href="https://williamjeong2.github.io/shortcodes/attachments/_files/adivorciarsetoca00cape.pdf" >adivorciarsetoca00cape.pdf</a>&nbsp;(212 kB)</li><li><a href="https://williamjeong2.github.io/shortcodes/attachments/_files/hugo.png" >hugo.png</a>&nbsp;(17 kB)</li><li><a href="https://williamjeong2.github.io/shortcodes/attachments/_files/movieselectricsheep-flock-244-32500-2.mp4" >movieselectricsheep-flock-244-32500-2.mp4</a>&nbsp;(340 kB)</li><li><a href="https://williamjeong2.github.io/shortcodes/attachments/_files/zip.mp3" >zip.mp3</a>&nbsp;(57 kB)</li></section>
-</div>
-</p>
-<h2 ref="usage" >Usage</h2><a class="anchor" id="usage"></a>
-<p>The shortcurt lists files found in the <strong>_files folder</strong>.</p>
-<ol start="2">
-<li>If your page is a <strong>folderA</strong>, attachements must be place in a <strong>'_files'</strong> subfolder.</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">content
-└── folderA
-       ├── _index.md
-       └── _files
-              ├── attachment.pdf
-              └── attachment.pdf
-</code></pre></div><p>That&rsquo;s all !</p>
-
-
-<div class="alert info" role="alert"><strong>Tip</strong> : Look at this documentation source code on github</div>
-
-<h3 ref="parameters" >parameters</h3><a class="anchor" id="parameters"></a>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Parameter</th>
-<th style="text-align:left">Default</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">title</td>
-<td style="text-align:left">&ldquo;Attachments&rdquo;</td>
-<td style="text-align:left">List&rsquo;s title</td>
-</tr>
-<tr>
-<td style="text-align:left">pattern</td>
-<td style="text-align:left">&ldquo;.*&rdquo;</td>
-<td style="text-align:left">A regular expressions, used to filter the attachments by file name. <br/><br/>
-
-<div class="alert warning" role="alert"><p>The <strong>pattern</strong> parameter value must be <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>.</p>
-<p>For example:</p>
+	    <h2 ref="jinwoo-jeong" >Jinwoo Jeong</h2><a class="anchor" id="jinwoo-jeong"></a>
+<h2 ref="정진우" >정진우</h2><a class="anchor" id="정진우"></a>
+<h3 ref="contact" >Contact</h3><a class="anchor" id="contact"></a>
 <ul>
-<li>To match a file suffix of &lsquo;jpg&rsquo;, use *<em>.<em>jpg</em></em> (not *.jpg).</li>
-<li>To match file names ending in &lsquo;jpg&rsquo; or &lsquo;png&rsquo;, use <strong>.*(jpg|png)</strong></li>
+<li><a href="mailto:jinwoo5480@snu.ac.kr">jinwoo5480@snu.ac.kr</a></li>
 </ul>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<h2 ref="demo" >Demo</h2><a class="anchor" id="demo"></a>
-<h3 ref="list-of-attachments-ending-in-pdf-or-mp4" >List of attachments ending in pdf or mp4</h3><a class="anchor" id="list-of-attachments-ending-in-pdf-or-mp4"></a>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">    {{%attachments title=&#34;Related files&#34; pattern=&#34;.*(pdf|mp4)&#34;/%}}
-</code></pre></div><p>renders as</p>
-
-
-<section class="attachments">
-<i class="fas fa-paperclip"></i>	
-
-<label>
-Related files
-</label>
-
-
-
-	
-
-
-			<li>
-				<a href="https://williamjeong2.github.io/shortcodes/attachments/_files/Carroll_AliceAuPaysDesMerveilles.pdf" >
-					Carroll_AliceAuPaysDesMerveilles.pdf
-				</a>
-				&nbsp;(175 kB)
-			</li>
-		
-			<li>
-				<a href="https://williamjeong2.github.io/shortcodes/attachments/_files/adivorciarsetoca00cape.pdf" >
-					adivorciarsetoca00cape.pdf
-				</a>
-				&nbsp;(212 kB)
-			</li>
-		
-			<li>
-				<a href="https://williamjeong2.github.io/shortcodes/attachments/_files/movieselectricsheep-flock-244-32500-2.mp4" >
-					movieselectricsheep-flock-244-32500-2.mp4
-				</a>
-				&nbsp;(340 kB)
-			</li>
-		</section>
-
+<hr>
+<h3 ref="interests" >Interests</h3><a class="anchor" id="interests"></a>
+<ol>
+<li><strong>Bioinformatics</strong></li>
+<li><strong>Data Scientist</strong></li>
+<li><strong>Deep Learning</strong></li>
+</ol>
+<hr>
+<h3 ref="educations-and-research-experiences" >Educations and Research Experiences</h3><a class="anchor" id="educations-and-research-experiences"></a>
+<p>Master Student of  <a href="http://bike.snu.ac.kr/">BiKE Lab</a> in Seoul National University</p>
+<p><em>Editing&hellip;</em></p>
+<hr>
+<h3 ref="stacks" >Stacks</h3><a class="anchor" id="stacks"></a>
+<p><a frameborder="0" data-theme="dark" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/ff1a6df2d7d2aecdf0351d73b6540f"/><script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script></p>
 
 		</div>
 	
@@ -1251,10 +1138,10 @@ Related files
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/shortcodes/badge/" title="badge" style="margin-right: 0px;">
+		<a class="next" href="/bioinformatics/" title="Bioinformatics" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>badge</label>
+                <label>Bioinformatics</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -1264,70 +1151,6 @@ Related files
       </section>
 
       
-      
-      <section class="right-menu ">
-      
-	
-
-		
-	
-			
-		
-	    	
-	  	
-	<div class="TableOfContents">
-    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
-    <nav>
-        <ul >
-            <li><a href="/shortcodes/attachments/">attachments</a></li>
-        </ul>
-    </nav>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#usage">Usage</a>
-      <ul>
-        <li><a href="#parameters">parameters</a></li>
-      </ul>
-    </li>
-    <li><a href="#demo">Demo</a>
-      <ul>
-        <li><a href="#list-of-attachments-ending-in-pdf-or-mp4">List of attachments ending in pdf or mp4</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-</div>
-
-		
-	
-			
-		
-	    	
-	    
-	<div class="Actions">
-	<nav>
-		<ul>
-				
-		    
-		    
-		    
-		    <li>
-		    	
-		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/shortcodes/attachments/_index" target="blank">
-		        <i class="fab fa-github"></i>
-		        Improve this page</a>
-		    </li>
-		    
-		    
-			
-		    
-
-    	</ul>
-	</nav>
-    
-</div>
-
-      </section>
       
     </article>
     
