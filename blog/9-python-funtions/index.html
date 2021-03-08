@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-03-07T16:59:56 KST">
+<meta name="revised" content="2021-03-08T21:05:54 KST">
 <meta name="description" content="">
 
 
@@ -97,7 +97,7 @@ if (!doNotTrack) {
     <header style="">
         <div>
     
-    <div class="burger post">
+    <div class="burger ">
         <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
     </div>
     
@@ -125,7 +125,7 @@ if (!doNotTrack) {
 
     <article>
       
-      <aside class="post">
+      <aside class="">
         
 <div class="search">
 	<div class="searchbox">
@@ -233,7 +233,7 @@ if (!doNotTrack) {
     </li>
     
 
-    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item parent active alwaysopen haschildren
+    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item parent alwaysopen haschildren
         item_level_$level
         ">
 
@@ -308,6 +308,20 @@ if (!doNotTrack) {
       
     </li>
               
+
+    <li data-nav-id="https://williamjeong2.github.io/blog/9-python-funtions/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/blog/9-python-funtions/">보통 잘 모르는 파이썬 내장함수 3가지</a>
+      
+        
+      
+    </li>
               
 
     <li data-nav-id="https://williamjeong2.github.io/blog/8-nas-network-drive-mount-on-ubuntu/" class="dd-item
@@ -352,9 +366,10 @@ if (!doNotTrack) {
       </aside>
       
 
-      <section class="page post">
+      <section class="page ">
       
 	
+		
     
     
     <nav id="ariane" aria-label="breadcrumb">
@@ -403,31 +418,13 @@ if (!doNotTrack) {
 		
 
 		
-			<h1>Devlog<span>보통 잘 모르는 파이썬 내장함수 3가지</span></h1>
+			<h1>보통 잘 모르는 파이썬 내장함수 3가지</h1>
         
 
-			
-			
+		
+										
 		
 
-		
-				<nav class="subpages">
-	            		
-	        			
-	            	<li class="active">
-	            		<a title="$pagetitle" href="/blog/9-python-funtions/">보통 잘 모르는 파이썬 내장함수 3가지</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/blog/4-weekly-archive-1/">🔖한 주간 본 영상, 글 아카이브 #1</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/blog/5-weekly-archive-2/">🔖한 주간 본 영상, 글 아카이브 #2</a>
-	            	</li>
-	        	</nav> 
 		
 	
 
@@ -442,11 +439,7 @@ if (!doNotTrack) {
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#map">map</a></li>
-    <li><a href="#filter">filter</a>
-      <ul>
-        <li><a href="#이-방법이-괜찮은데">이 방법이 괜찮은데?</a></li>
-      </ul>
-    </li>
+    <li><a href="#filter">filter</a></li>
     <li><a href="#reduce">reduce</a></li>
   </ul>
 </nav>
@@ -460,8 +453,10 @@ if (!doNotTrack) {
 
 
 	<div class="content">
-	    <p>파이썬의 기본을 한 번 끝낸 후, 조금 더 심화된 파이썬 문법을 필요로 한다면 배워볼 수 있는 문법들입니다. 중급 문법들은 파이썬을 조금 더 쉽게 작성할 수 있도록 도와주고 불필요한 반복을 없애주죠. 이번 시간에는 map, filter, reduce에 대해 배워볼건데 이 3가지 함수들은 list를 다루는 함수입니다. 물론 기본 문법에서 배운 것처럼 이 3가지 함수를 사용하지 않아도 코딩하는 것에는 문제가 없습니다. 하지만 저의 경우에는 아래의 3가지 함수를 통해 반복문을 덜 사용하게 되었고, 불필요한 함수를 따로 만들어줄 필요가 없어서 편했습니다.</p>
+	    <p>파이썬의 기본을 한 번 끝낸 후, 조금 더 심화된 파이썬 문법을 필요로 한다면 배워볼 수 있는 문법들입니다. 중급 문법들은 파이썬을 조금 더 쉽게 작성할 수 있도록 도와주고 불필요한 반복을 없애주죠.</p>
+<p>이번 시간에는 <code>map</code>, <code>filter</code>, <code>reduce</code>에 대해 배워볼건데, 이 3가지 함수들은 <code>list</code>를 다루는 함수입니다. 물론 기본 문법에서 배운 것처럼 이 3가지 함수를 사용하지 않아도 코딩하는 것에는 문제가 없습니다. 하지만 저의 경우에는 아래의 3가지 함수를 통해 반복문을 덜 사용하게 되었고, 불필요한 함수를 따로 만들어줄 필요가 없어서 편했습니다.</p>
 <p>자 그러면 시작해볼까요?</p>
+<hr>
 <h2 ref="map" >map</h2><a class="anchor" id="map"></a>
 <p><code>map</code> 은 리스트의 각 요소들을 지정된 함수로 처리하는 기능을 합니다. 쉽게 말하면 A라는 함수가 있고 list B가 있다면 A함수를 B로 수행한 결과를 돌려주는 거라고 할 수 있습니다.</p>
 <p>먼저 <code>for</code> 반복문을 사용하여 정수가 저장된 리스트를 제곱하고 2로 나누어 볼까요?</p>
@@ -481,22 +476,31 @@ result <span style="color:#ff79c6">=</span> []
 
 <span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">map</span>(<span style="color:#ff79c6">lambda</span> x: x<span style="color:#ff79c6">**</span><span style="color:#bd93f9">2</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>, a)))
 </code></pre></div><p>똑같이 4개의 정수를 각 element를 받아 제곱을 해주고 2로 나눠주는 코드입니다. <code>map</code> 함수 앞에서 <code>list</code> 함수를 통해 list 자료형으로 변환하는 이유는 <code>map</code> 함수의 반환이 list가 아니기 때문인데요. <code>Iterator</code> 로 반환하는 값을 list로 변환하는 것입니다.(Iterator에 대해서는 다음에 따로 글을 써보겠습니다.)</p>
+<hr>
 <h2 ref="filter" >filter</h2><a class="anchor" id="filter"></a>
 <p>정의 : 무엇을 걸러내다.</p>
 <p>실제 filter 함수의 쓰임도 정의와 같습니다. <code>filter</code> 은 A라는 함수에 대해 리스트 B의 element 중 참에 해당하는 값을 돌려주는 것이라고 할 수 있습니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">a <span style="color:#ff79c6">=</span> [<span style="color:#ff79c6">-</span><span style="color:#bd93f9">3</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>]
+
 <span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">filter</span>(<span style="color:#ff79c6">lambda</span> x: x<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">0</span>, a)))
 </code></pre></div><p>-3에서 3까지의 정수중에서 0보다 큰 값을 돌려주는 코드입니다. <del>참 쉽죠?</del></p>
-<h3 ref="이-방법이-괜찮은데" >이 방법이 괜찮은데?</h3><a class="anchor" id="이-방법이-괜찮은데"></a>
+<p><span style="
+font-size: 2em;
+font-weight: bold;">
+이 방법이 괜찮은데?
+</span></p>
 <p>하지만 꼭 이 방법만을 써야하는건 아닙니다. 우리에게는 <code>list comprehension</code> 이 있습니다.</p>
 <p>map 함수를 list comprehension으로 구현해 볼까요?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">a <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>]
+
 <span style="color:#ff79c6">print</span>([x<span style="color:#ff79c6">**</span><span style="color:#bd93f9">2</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">for</span> x <span style="color:#ff79c6">in</span> a])
 </code></pre></div><p>오히려 더 간결한 것 같기도 하고..</p>
 <p>filter 함수도 마찬가지입니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">a <span style="color:#ff79c6">=</span> [<span style="color:#ff79c6">-</span><span style="color:#bd93f9">3</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>]
+
 <span style="color:#ff79c6">print</span>([x <span style="color:#ff79c6">for</span> x <span style="color:#ff79c6">in</span> a <span style="color:#ff79c6">if</span> x<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">0</span>])
-</code></pre></div><p>이처럼 방금 배운 map과 filter가 마음에 들지 않으면 list comprehensiond을&hellip;쓸 수도 있습니다.</p>
+</code></pre></div><p>이처럼 방금 배운 map과 filter가 마음에 들지 않으면 list comprehension을&hellip;쓸 수도 있습니다.</p>
+<hr>
 <h2 ref="reduce" >reduce</h2><a class="anchor" id="reduce"></a>
 <p><code>reduce</code> 는 원래는 내장함수였는데 python 3부터 내장함수에서 빠지고 functools에서 가져와야 합니다.</p>
 <p>reduce에 대한 원리는 그림 한장으면 끝납니다.</p>
@@ -507,6 +511,7 @@ result <span style="color:#ff79c6">=</span> []
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> functools <span style="color:#ff79c6">import</span> <span style="color:#8be9fd;font-style:italic">reduce</span>
 
 a <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>]
+
 <span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">reduce</span>(<span style="color:#ff79c6">lambda</span> x, y: x<span style="color:#ff79c6">+</span>y, a))
 </code></pre></div><p><code>reduce</code> 함수의 경우에는 list comprehension로 대체할 수 없습니다. 이유는 reduce 함수는 2 element가 입력으로 들어가게 되는데 list comprehension은 2가지 입력을 받지 못하기 때문입니다.</p>
 
@@ -531,20 +536,21 @@ a <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <s
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/blog/1-extract-google-account-profile-picture/" title="구글 프로필 사진 다운로드하기" style="margin-right: 0px;">
+		<a class="next" href="/blog/8-nas-network-drive-mount-on-ubuntu/" title="우분투에 NAS 마운트" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>구글 프로필 사진 다운로드하기</label>
+                <label>우분투에 NAS 마운트</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
+	
 	
 
       </section>
 
       
       
-      <section class="right-menu post">
+      <section class="right-menu ">
       
 	
 
@@ -564,11 +570,7 @@ a <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <s
     <nav id="TableOfContents">
   <ul>
     <li><a href="#map">map</a></li>
-    <li><a href="#filter">filter</a>
-      <ul>
-        <li><a href="#이-방법이-괜찮은데">이 방법이 괜찮은데?</a></li>
-      </ul>
-    </li>
+    <li><a href="#filter">filter</a></li>
     <li><a href="#reduce">reduce</a></li>
   </ul>
 </nav>
@@ -589,7 +591,7 @@ a <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <s
 		    
 		    <li>
 		    	
-		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/blog/9-python-funtions/index" target="blank">
+		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/blog/9-python-funtions/_index" target="blank">
 		        <i class="fab fa-github"></i>
 		        Improve this page</a>
 		    </li>
