@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	RPKM, FPKM, TPM이 무엇인가? :: Jeong&#39;s Blog
+	🐳 Dockerfile 명령어 RUN, CMD, ENTRYPOINT 차이 :: Jeong&#39;s Blog
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>RPKM, FPKM, TPM이 무엇인가? :: Jeong&#39;s Blog</title>
+<title>🐳 Dockerfile 명령어 RUN, CMD, ENTRYPOINT 차이 :: Jeong&#39;s Blog</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -63,7 +63,7 @@ if (!doNotTrack) {
     
   </head>
 
-  <body data-url="/bioinformatics/02-gene-expression-unit-explained/"
+  <body data-url="/blog/10-docker-run-vs-cmd-vs-entryporint/"
 
   class="">
 
@@ -171,15 +171,14 @@ if (!doNotTrack) {
     </li>
     
 <hr/>
-    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item parent haschildren
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
           <a href="/bioinformatics/">Bioinformatics&nbsp;🧬</a>
@@ -187,7 +186,7 @@ if (!doNotTrack) {
         <ul>
               
 
-    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/02-gene-expression-unit-explained/" class="dd-item parent active
+    <li data-nav-id="https://williamjeong2.github.io/bioinformatics/02-gene-expression-unit-explained/" class="dd-item
         item_level_$level
         ">
 
@@ -234,7 +233,7 @@ if (!doNotTrack) {
     </li>
     
 
-    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item alwaysopen haschildren
+    <li data-nav-id="https://williamjeong2.github.io/blog/" class="dd-item parent alwaysopen haschildren
         item_level_$level
         ">
 
@@ -340,7 +339,7 @@ if (!doNotTrack) {
     </li>
               
 
-    <li data-nav-id="https://williamjeong2.github.io/blog/10-docker-run-vs-cmd-vs-entryporint/" class="dd-item
+    <li data-nav-id="https://williamjeong2.github.io/blog/10-docker-run-vs-cmd-vs-entryporint/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -404,8 +403,8 @@ if (!doNotTrack) {
 	
   
     <li class="">
-      <a class="text-link" href="/bioinformatics/">
-        Bioinformatics
+      <a class="text-link" href="/blog/">
+        Devlog
       </a>
     </li>
 	
@@ -413,7 +412,7 @@ if (!doNotTrack) {
   
     <li class="active">
       
-        RPKM, FPKM, TPM이 무엇인가?
+        🐳 Dockerfile 명령어 RUN, CMD, ENTRYPOINT 차이
       
     </li>
 
@@ -434,7 +433,7 @@ if (!doNotTrack) {
 		
 
 		
-			<h1>RPKM, FPKM, TPM이 무엇인가?</h1>
+			<h1>🐳 Dockerfile 명령어 RUN, CMD, ENTRYPOINT 차이</h1>
         
 
 		
@@ -454,19 +453,10 @@ if (!doNotTrack) {
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#rpkm">RPKM</a></li>
-    <li><a href="#fpkm">FPKM</a></li>
-    <li><a href="#tpm">TPM</a></li>
-    <li><a href="#그래서-이게-뭘-의미하는데">그래서 이게 뭘 의미하는데?</a>
-      <ul>
-        <li><a href="#rpkm-1">RPKM</a></li>
-        <li><a href="#tpm-1">TPM</a></li>
-        <li><a href="#comparison-among-tpms">Comparison among TPMs</a></li>
-        <li><a href="#comparison-among-rpkms">Comparison among RPKMs&hellip;?</a></li>
-      </ul>
-    </li>
-    <li><a href="#따라서">따라서</a></li>
-    <li><a href="#reference">Reference</a></li>
+    <li><a href="#tldr">TL;DR</a></li>
+    <li><a href="#run">RUN</a></li>
+    <li><a href="#cmd">CMD</a></li>
+    <li><a href="#entrypoint">ENTRYPOINT</a></li>
   </ul>
 </nav>
 	</div>
@@ -479,548 +469,84 @@ if (!doNotTrack) {
 
 
 	<div class="content">
-	    <p>생물 정보학에서 굉장히 흔하게 접할 수 있는 용어 중 하나로 <strong>RPKM, FPKM, TPM</strong>이 있습니다.</p>
-<p>RNA-seq의 발현 분석에서 normalized gene expression을 의미하는 것으로 초창기에는 RPKM이 많이 쓰였으나 FPKM을 거쳐 현재에는 TPM을 주로 사용하고 있습니다. (FPKM 또한 많이 사용중)</p>
-<p>따라서 이 3가지 값을 계산하는 방법을 소개하려고 합니다. 아래 순서대로 이해하시면 됩니다.</p>
-<p>먼저 A, B, C, D라는 4개의 gene과 3개의 replicate를 가지고 있는 테이블이 있습니다.
-gene 옆에 있는 kb(kilobase)는 gene의 길이입니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 Counts</th>
-<th>Rep2 Counts</th>
-<th>Rep3 Counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>10</td>
-<td>12</td>
-<td>30</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>20</td>
-<td>25</td>
-<td>60</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>5</td>
-<td>8</td>
-<td>15</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Rep3를 보면 gene에 상관없이 다른 replicate들보다 많은 reads를 가진 것을 알 수 있습니다. 이는 sequencing depth가 다른 replicate들보다 높다는 걸 의미합니다. 이제 이걸 normalize(정규화) 할 것입니다.</p>
-<p>또한 gene B는 gene A에 2배에 해당하는 &lsquo;길이&rsquo;를 가지고 있고, 이건 replicate에 상관없이 2배 많은 reads를 가지고 있다는 것을 설명하는 것일 수도 있습니다. 우리는 이것도 정규화해보려고 합니다.</p>
-<h2 ref="rpkm" >RPKM</h2><a class="anchor" id="rpkm"></a>
-<p>RPKM은 single-end RNA-seq용으로 제작되었습니다.
-먼저 사자성어 풀이하듯 각 알파벳의 의미를 먼저 살펴보겠습니다. <strong>R</strong>eads <strong>P</strong>er <strong>K</strong>ilobase per <strong>M</strong>illions mapped reads</p>
-<p>그러면 이게 무슨 뜻이냐&hellip;하면 전체 유전자의 길이를 Kilobase(=1000 base pair)로 정규화했을 때 전체 reads 중에서 해당 gene에 mapping된 reads들을 말합니다. 그런데 이 수는 너무 적기 때문에 10<sup>6</sup>을 곱해주게 됩니다.</p>
-<p>즉 FPKM은 total (1)reads에서 gene에 매핑된 리드들 나눈 값, (2) gene의 전체 길이를 1000으로 나눈 값, (3)10<sup>6</sup>을 곱해주면 됩니다.</p>
-<p><img src="img/RPKM.png" alt="RPKM"></p>
-<p>즉, gene 단위의 expression입니다.</p>
-<p>이해가 잘 안되신다면 직접 계산해볼까요?</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 Counts</th>
-<th>Rep2 Counts</th>
-<th>Rep3 Counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>10</td>
-<td>12</td>
-<td>30</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>20</td>
-<td>25</td>
-<td>60</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>5</td>
-<td>8</td>
-<td>15</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>먼저, <strong>(1) read depth</strong>를 정규화합니다.</p>
-<ul>
-<li>각각의 replicate들에서 총 reads의 수를 계산합니다.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 Counts</th>
-<th>Rep2 Counts</th>
-<th>Rep3 Counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Total reads</td>
-<td>35</td>
-<td>45</td>
-<td>106</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>이 Total reads를 10<sup>6</sup>으로 나누어야 하는데 보기 쉽게 10으로만 나눠보겠습니다.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 Counts</th>
-<th>Rep2 Counts</th>
-<th>Rep3 Counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Tens of reads</td>
-<td>3.5</td>
-<td>4.5</td>
-<td>10.6</td>
-</tr>
-</tbody>
-</table>
-<p>따라서 이 값들은 각 replicate들에 대한 &ldquo;per million&rdquo; scaling factors입니다. 그러니까 우리는 각 gene의 read counts을 이 값들로 나누어야 합니다. 그러면 우리는 reads per million을 계산할 수 있는데 이를 <strong>RPM</strong>이라고 해보죠.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 RPM</th>
-<th>Rep2 RPM</th>
-<th>Rep3 RPM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>2.86</td>
-<td>2.67</td>
-<td>2.83</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>5.71</td>
-<td>5.56</td>
-<td>5.66</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>1.43</td>
-<td>1.78</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.09</td>
-</tr>
-</tbody>
-</table>
-<p>두 번째 단계는 <strong>(2) gene length로 정규화</strong>하는것입니다. 각 replicate의 counts를 gene length(<strong>K</strong>ilobase)로 나누면 됩니다. 쉽죠? 그러면 아래의 테이블이 나오게 됩니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 RPKM</th>
-<th>Rep2 RPKM</th>
-<th>Rep3 RPKM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>1.43</td>
-<td>1.33</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>1.43</td>
-<td>1.39</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>1.43</td>
-<td>1.78</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.009</td>
-</tr>
-</tbody>
-</table>
-<p>자 그러면 우리는 RPKM을 가지게 되었습니다.</p>
-<p><strong>정리해볼까요?</strong></p>
-<p>우리는 depth와 gene length을 정규화하지 않은 데이터를 가지고 있었습니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 Counts</th>
-<th>Rep2 Counts</th>
-<th>Rep3 Counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>10</td>
-<td>12</td>
-<td>30</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>20</td>
-<td>25</td>
-<td>60</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>5</td>
-<td>8</td>
-<td>15</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>하지만 우리는 이제 각각의 sequencing depth와 각각의 gene length에 대해 정규화해서 각각의 replicate와 각각의 gene에 대한 RPKM 데이터를 가지게 되었습니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 RPKM</th>
-<th>Rep2 RPKM</th>
-<th>Rep3 RPKM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>1.43</td>
-<td>1.33</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>1.43</td>
-<td>1.39</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>1.43</td>
-<td>1.78</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.009</td>
-</tr>
-</tbody>
-</table>
-<h2 ref="fpkm" >FPKM</h2><a class="anchor" id="fpkm"></a>
-<p>RPKM과 유사한 이름을 가지고 있는 FPKM은 <strong>F</strong>ragment <strong>P</strong>er <strong>K</strong>ilobase of transcript per <strong>M</strong>illion mapped reads의 약자입니다. <strong>paired-end</strong>로 RNA-seq을 하면 하나의 fragment에서 2개의 read가 나옵니다. (<em>RPKM의 무조건 2배가 되는건 아닙니다</em>) 이는 transcript 관점의 expression으로 볼 수 있습니다.</p>
-<p><img src="img/FPKM.png" alt=""></p>
-<p>RPKM과 FPKM의 차이점은 FPKM은 두개의 reads가 하나의 fragment에 mapping된다는 점을 고려한다는 것입니다.</p>
-<h2 ref="tpm" >TPM</h2><a class="anchor" id="tpm"></a>
-<p>TPM은 Transcripts Per Million의 약자로 FPKM, RPKM과 유사한 개념이지만 transcript length의 분포까지 포함한 개념이라고 합니다.</p>
-<p>TPM을 계산하는 방법 아래와 같습니다.</p>
-<p>RPKM / Total RPKM * 10^6</p>
-<p>흠.. 같이 봐볼까요?</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 Counts</th>
-<th>Rep2 Counts</th>
-<th>Rep3 Counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>10</td>
-<td>12</td>
-<td>30</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>20</td>
-<td>25</td>
-<td>60</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>5</td>
-<td>8</td>
-<td>15</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>먼저 (1) 각 replicate의 counts를 gene length로 나눕니다. 그러면 아래의 테이블이 나오겠죠? <strong>RPK</strong>는 <strong>R</strong>eads <strong>P</strong>er <strong>K</strong>ilobase라는걸 알 수 있습니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 RPK</th>
-<th>Rep2 RPK</th>
-<th>Rep3 RPK</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>5</td>
-<td>6</td>
-<td>15</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>5</td>
-<td>6.25</td>
-<td>15</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>5</td>
-<td>8</td>
-<td>15</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.1</td>
-</tr>
-</tbody>
-</table>
-<p>두 번째 단계로 (2) sequencing depth로 정규화하는 것입니다. 우리가 gene lengh을 정규화한 것들의 합(각 replicate read counts의 합)과 각 replicate의 RPK 수를 합하고 (원래는 10^6으로 나눠야 하지만) 10으로 나눈 Tens of RPK를 사용할 것입니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 RPK</th>
-<th>Rep2 RPK</th>
-<th>Rep3 RPK</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Total RPK</td>
-<td>15</td>
-<td>20.25</td>
-<td>45.1</td>
-</tr>
-<tr>
-<td>Tens of RPK</td>
-<td>1.5</td>
-<td>2.025</td>
-<td>4.51</td>
-</tr>
-</tbody>
-</table>
-<p>각 replicate의 counts를 Tens of RPK로 나누게 되면 TPM이 완성됩니다.</p>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 TPM</th>
-<th>Rep2 TPM</th>
-<th>Rep3 TPM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>3.33</td>
-<td>2.96</td>
-<td>3.326</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>3.33</td>
-<td>3.09</td>
-<td>3.326</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>3.33</td>
-<td>3.95</td>
-<td>3.326</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.02</td>
-</tr>
-</tbody>
-</table>
-<h2 ref="그래서-이게-뭘-의미하는데" >그래서 이게 뭘 의미하는데?</h2><a class="anchor" id="그래서-이게-뭘-의미하는데"></a>
-<p>그렇죠 계산하는 방법만 알면 다가 아니죠. 이 둘(RPKM과 TPM)이 뭐가 다른지 알아야겠지요. RPKM과 TPM을 비교해봅시다.</p>
-<h3 ref="rpkm-1" >RPKM</h3><a class="anchor" id="rpkm-1"></a>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 RPKM</th>
-<th>Rep2 RPKM</th>
-<th>Rep3 RPKM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>1.43</td>
-<td>1.33</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>1.43</td>
-<td>1.39</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>1.43</td>
-<td>1.78</td>
-<td>1.42</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.009</td>
-</tr>
-<tr>
-<td>Total</td>
-<td>4.29</td>
-<td>4.5</td>
-<td>4.25</td>
-</tr>
-</tbody>
-</table>
-<h3 ref="tpm-1" >TPM</h3><a class="anchor" id="tpm-1"></a>
-<table>
-<thead>
-<tr>
-<th>Gene Name</th>
-<th>Rep1 TPM</th>
-<th>Rep2 TPM</th>
-<th>Rep3 TPM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A (2kb)</td>
-<td>3.33</td>
-<td>2.96</td>
-<td>3.326</td>
-</tr>
-<tr>
-<td>B (4kb)</td>
-<td>3.33</td>
-<td>3.09</td>
-<td>3.326</td>
-</tr>
-<tr>
-<td>C (1kb)</td>
-<td>3.33</td>
-<td>3.95</td>
-<td>3.326</td>
-</tr>
-<tr>
-<td>D (10kb)</td>
-<td>0</td>
-<td>0</td>
-<td>0.02</td>
-</tr>
-<tr>
-<td>Total</td>
-<td>10</td>
-<td>10</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-<p>위 결과들은 같은 데이터에서 나온 RPKM과 TPM 값입니다.  둘 다 gene length와 sequencing depth의 편향(bias)이 일치합니다. 하지만 각 column에 대한 정규화된 총 reads는 매우 다릅니다.</p>
+	    <p><code>Dockerfile</code> 을 작성하다 보면 <code>RUN</code>, <code>CMD</code>, <code>ENTRYPOINT</code> 차이를 알아야 할 경우가 생기게 됩니다. 세 가지 명령어를 잘 모르고 사용하게 된다면 곤란한 상황을 겪게 될수도있습니다.</p>
+<h2 ref="tldr" >TL;DR</h2><a class="anchor" id="tldr"></a>
 <ol>
-<li>RPKM은 각 sample마다 다른 값을 얻었습니다.</li>
-<li>TPM은 각 column마다 같은 값을 얻었습니다.</li>
+<li>
+<p><code>RUN</code></p>
+<p>이미지 생성시 새로운 레이어를 생성하여 명령어를 실행하게 됩니다. 보통 아래와 같은 방식으로 활용하게 됩니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#ff79c6">RUN</span> apt-get install -y curl
+<span style="color:#6272a4"># 또는 </span>
+<span style="color:#ff79c6">RUN</span> chmod -R <span style="color:#bd93f9">777</span> /tmp
+</code></pre></div></li>
+<li>
+<p><code>CMD</code></p>
+<p>default 명령이나 파라미터를 설정할 수 있습니다. 우리가 도커 이미지를 사용하여 <code>docker run</code> 명령어로 컨테이너를 생성할 경우 생성 후에 실행될 커맨드를 입력해주지 않는다면,  <code>CMD</code> 명령어를 사용하여 작성된 커맨드가 기본으로 실행됩니다. 또한 바로 다음에 설명할 <code>ENTRYPOINT</code>의 기본 파라미터를 설정할 수도 있습니다. <strong>즉, <code>CMD</code> 는 컨데이터를 실행할 때 기본으로 사용되는 명령어를 설정하는 것입니다.</strong></p>
+</li>
+<li>
+<p><code>ENTRYPOINT</code></p>
+<p><code>docker run</code> 명령어로 컨테이너를 생성 후 실행되는 명령어입니다.</p>
+</li>
 </ol>
-<p>왜 이 차이가 중요한지 봐봅시다.</p>
-<h3 ref="comparison-among-tpms" >Comparison among TPMs</h3><a class="anchor" id="comparison-among-tpms"></a>
-<p><img src="img/TPM_comp.png" alt=""></p>
-<h3 ref="comparison-among-rpkms" >Comparison among RPKMs&hellip;?</h3><a class="anchor" id="comparison-among-rpkms"></a>
-<p><img src="img/RPKM_comp.png" alt=""></p>
-<p>감이 오시나요?</p>
-<p>TPM은 모든 replicate에 대하여 총 count 수가 보정되었기 때문에 각 gene에 어떤 비율로 reads가 있는지 알 수 있습니다. 예를 들어 Rep1의 gene A는 33%라고 알 수 있습니다. 그리고 이를 통해 Rep2의 gene A와 비교하였을 때 Rep1의 gene A가 Rep2의 gene A보다 약간 크다고 알 수 있습니다. 이는 Rep1의 gene A에 맵핑된 양이 Rep3의 gene A에 맵핑된 양보다 미세하게 더 많다는 걸 알 수 있습니다.</p>
-<p>하지만 RPKM은 각각의 replicate가 다른 total reads를 가지기 때문에 각각의 replicate의 gene을 비교하기 어렵습니다. 이 말은 각각의 gene의 reads 수를 비교하기 어렵다는 말이 됩니다.</p>
-<h2 ref="따라서" >따라서</h2><a class="anchor" id="따라서"></a>
-<p>sample들 안에서 맵핑되는 reads의 비율을 보다 명확하게 말해주는 <strong>TPM</strong>을 사용하기를 추천드립니다.</p>
 <hr>
-<h2 ref="reference" >Reference</h2><a class="anchor" id="reference"></a>
+<h2 ref="run" >RUN</h2><a class="anchor" id="run"></a>
+<p>보통 이미지에 새로운 패키지를 설치하거나 명령어를 실행시킬 경우 사용됩니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> ubuntu:18.04</span>
+<span style="color:#ff79c6">RUN</span> apt-get update
+<span style="color:#ff79c6">RUN</span> apt-get install -y python3 python3-pip wget git less neovim
+<span style="color:#ff79c6">RUN</span> pip3 install pandas
+</code></pre></div><p><code>RUN</code> 명령은 실행할 때마다 레이어가 생성됩니다. 따라서 <code>RUN </code> 명령어 하나에 통합해준다면 보다 깔끔하게 레이어를 관리할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#6272a4"># example</span>
+<span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> ubuntu:18.04</span>
+<span style="color:#ff79c6">RUN</span> apt-get update <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>    <span style="color:#ff79c6">&amp;&amp;</span> apt-get install -y python3 python3-pip wget git less neovim <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>    <span style="color:#ff79c6">&amp;&amp;</span> pip3 install pandas
+</code></pre></div><hr>
+<h2 ref="cmd" >CMD</h2><a class="anchor" id="cmd"></a>
+<p><code>docker run</code> 명령어 실행 시 실행 될 기본 명령어를 설정하거나, 아래에 있는 <code>ENTRYPOINT</code> 의 기본 명령어 파라미터를 설정할 때 사용됩니다. <code>CMD</code> 명령어는 보통 컨테이너를 실행할 때 사용할 기본 명령어를 설정하는 것입니다.</p>
+<ul>
+<li><code>CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]</code> (exec form, preferred)</li>
+<li><code>CMD [&quot;param1&quot;,&quot;param2&quot;]</code> (sets additional default parameters for ENTRYPOINT in <em>exec</em> form)</li>
+<li><code>CMD command param1 param2</code> (shell form)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> ubuntu:18.04</span>
+<span style="color:#ff79c6">CMD</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>
+</code></pre></div><p>위와 같이 작성하여 만들어진 이미지를  <code>docker run (옵션 x)</code> 명령어 실행 시 <code>CMD</code> 명령어가 실행되어 &ldquo;Hello&rdquo; 를 출력하게 됩니다.</p>
+<p>하지만, 두 번째 줄에 작성한 <code>CMD echo &quot;Hello&quot;</code> 와 별개로 <code>docker run -it &lt;image_name&gt; echo &quot;Hello world&quot;</code> 명령어를 주게 되면, <code>dockerfile</code> 에서 작성한 &ldquo;Hello&quot;는 무시되고 &ldquo;hello world&quot;를 출력하게 됩니다.</p>
+<p>CMD는 여러 번 dockerfile에 작성할 수 있지만, 가장 마지막에 작성된 <code>CMD</code> 만이 실행(override)됩니다.</p>
+<hr>
+<h2 ref="entrypoint" >ENTRYPOINT</h2><a class="anchor" id="entrypoint"></a>
+<p><code>docker run</code> 명령어로 컨테이너를 생성 후 실행되는 명령어입니다.</p>
 <ul>
 <li>
-<p><a href="https://www.youtube.com/watch?v=TTUrtCY2k-w">https://www.youtube.com/watch?v=TTUrtCY2k-w</a></p>
+<p>ENTRYPOINT [“executable”, “param1”, “param2”] (exec form, preferred)</p>
 </li>
 <li>
-<p><a href="https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/">https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/</a></p>
-</li>
-<li>
-<p><a href="http://www.incodom.kr/Expression_profiling">http://www.incodom.kr/Expression_profiling</a></p>
+<p>ENTRYPOINT command param1 param2 (shell form)</p>
 </li>
 </ul>
-<hr>
-
+<p><code>CMD</code> 와의 차이를 쉽게 설명하자면, <code>ENTRYPOINT</code> 는 <code>docker run</code> 뒤에 명령어 작성과 무관하게 실행되는 명령어입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> ubuntu:18.04</span>
+<span style="color:#ff79c6">ENTRYPOINT</span> [<span style="color:#f1fa8c">&#34;/bin/echo&#34;</span>, <span style="color:#f1fa8c">&#34;Hi&#34;</span>]
+<span style="color:#ff79c6">CMD</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ docker run -it &lt;image_name&gt;
+Hi Hello
+$ docker run -it &lt;image_name&gt; Mother
+Hi Mother
+</code></pre></div><p>차이를 아시겠나요?</p>
+<br/>
+<br/>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style=";" class="fas fa-chevron-right"></i>
+        <span>그렇다면, 변수를 사용하기 위해서는?</span>
+    </div>
+    <div class="expand-content" style="display: none;"><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> ubuntu:18.04</span>
+<span style="color:#ff79c6">ENTRYPOINT</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$HOME</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">$ docker run -it &lt;image_name&gt;
+/home
+</code></pre></div></div>
+</div>
 		</div>
 	
 	
@@ -1042,10 +568,10 @@ gene 옆에 있는 kb(kilobase)는 gene의 길이입니다.</p>
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/bioinformatics/03-which-reference-genome-should-i-use/" title="어떤 reference genome을 사용해야 할까?" style="margin-right: 0px;">
+		<a class="next" href="/blog/1-extract-google-account-profile-picture/" title="구글 프로필 사진 다운로드하기" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>어떤 reference genome을 사용해야 할까?</label>
+                <label>구글 프로필 사진 다운로드하기</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -1070,24 +596,15 @@ gene 옆에 있는 kb(kilobase)는 gene의 길이입니다.</p>
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
     <nav>
         <ul >
-            <li><a href="/bioinformatics/02-gene-expression-unit-explained/">RPKM, FPKM, TPM이 무엇인가?</a></li>
+            <li><a href="/blog/10-docker-run-vs-cmd-vs-entryporint/">🐳 Dockerfile 명령어 RUN, CMD, ENTRYPOINT 차이</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#rpkm">RPKM</a></li>
-    <li><a href="#fpkm">FPKM</a></li>
-    <li><a href="#tpm">TPM</a></li>
-    <li><a href="#그래서-이게-뭘-의미하는데">그래서 이게 뭘 의미하는데?</a>
-      <ul>
-        <li><a href="#rpkm-1">RPKM</a></li>
-        <li><a href="#tpm-1">TPM</a></li>
-        <li><a href="#comparison-among-tpms">Comparison among TPMs</a></li>
-        <li><a href="#comparison-among-rpkms">Comparison among RPKMs&hellip;?</a></li>
-      </ul>
-    </li>
-    <li><a href="#따라서">따라서</a></li>
-    <li><a href="#reference">Reference</a></li>
+    <li><a href="#tldr">TL;DR</a></li>
+    <li><a href="#run">RUN</a></li>
+    <li><a href="#cmd">CMD</a></li>
+    <li><a href="#entrypoint">ENTRYPOINT</a></li>
   </ul>
 </nav>
 </div>
@@ -1107,18 +624,13 @@ gene 옆에 있는 kb(kilobase)는 gene의 길이입니다.</p>
 		    
 		    <li>
 		    	
-		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/bioinformatics/02-gene-expression-unit-explained/_index" target="blank">
+		        <a href="https://williamjeong2.github.ioadmin/#/collections/pages/entries/blog/10-docker-run-vs-cmd-vs-entryporint/_index" target="blank">
 		        <i class="fab fa-github"></i>
 		        Improve this page</a>
 		    </li>
 		    
 		    
 			
-		      <li>
-		          <i class='fas fa-calendar'></i>
-		          Last update on 16 February 2021
-		      </li>
-		    
 		    
 
     	</ul>
