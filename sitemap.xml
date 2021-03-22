@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://williamjeong2.github.io/bioinformatics/paper-review/01-signatures-of-mutational-processes-in-human-cancer/</loc>
+    <lastmod>2021-03-22T16:09:31+09:00</lastmod>
+  </url><url>
     <loc>https://williamjeong2.github.io/blog/1-extract-google-account-profile-picture/</loc>
     <lastmod>2021-02-18T14:55:31+09:00</lastmod>
   </url><url>
@@ -37,8 +40,11 @@
   </url><url>
     <loc>https://williamjeong2.github.io/blog/10-docker-run-vs-cmd-vs-entryporint/</loc>
   </url><url>
+    <loc>https://williamjeong2.github.io/bioinformatics/paper-review/</loc>
+    <lastmod>2021-03-22T16:02:54+09:00</lastmod>
+  </url><url>
     <loc>https://williamjeong2.github.io/</loc>
-    <lastmod>2021-02-18T14:55:31+09:00</lastmod>
+    <lastmod>2021-03-22T16:09:31+09:00</lastmod>
   </url><url>
     <loc>https://williamjeong2.github.io/404.html</loc>
     <lastmod>2020-09-08T20:40:23+00:00</lastmod>

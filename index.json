@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://williamjeong2.github.io/bioinformatics/paper-review/01-signatures-of-mutational-processes-in-human-cancer/",
+	"title": "Signatures of mutational processes in human cancer",
+	"tags": [],
+	"description": "",
+	"content": "[논문요약]Signatures of mutational processes in human cancer 1. Mutational catalogues somatic mutations(체세포 돌연변이)의 유병률은 암 종류들 내에서 매우 다양하며, megabase(Mb) 당 0.001에서 400까지 다양하다. -\u0026gt;우리가 아는 자외선을 많이 쐬면 피부암 발병률이 높아지고, 흡연을 많이 하면 폐암 발병률이 높다는 것과 같이 만성 돌연변이 유발성 노출과 관련된 암은 가장 높은 유병률을 보여준다.\n2. The landscape of mutational signatures 원칙적으로 모든 종류의 mutations(substitutions, indels, rearrangements)와 모든 accessory matations들의 특성은 mutational signatures가 정의되는 특징들의 집합에 포함될 수 있다.\n염기 치환(base substitution)을 사용해서 mutational signatures을 추출하고 추가적으로 각각의 mutations의 서열 context에 대한 정보를 포함했다. 6가지 종류의 염기 치환(base substitution)-C\u0026gt;A, C\u0026gt;G, C\u0026gt;T, T\u0026gt;A, T\u0026gt;C, T\u0026gt;G-이 있고 5\u0026rsquo;과 3' 염기에 대한 정보를 각 mutation base에 통합하였기 때문에 96개의 mutations 분류가 가능하다. 이 96개의 substitution classification은 \u0026lsquo;동일한 substitution을 유발하지만 다른 서열 context에서 발생하는 mutational signatures을 구별\u0026rsquo;하는데 유용하게 사용한다.\nsubstitution mutation이 가능한 96개의 경우 중 1개 또는 2개만이 두드러지는 특징을 가지는 signatures가 있으며, 이는 mutation types 및 서열 context의 특이성을 보여준다. 대부분의 암 종에서 최소 2개의 mutational signatures가 관찰되었으며, liver, uterus and stomach에서 최대 6개가 관찰됨. 이러한 차이는 부분적으로 signatures 추출 능력의 차이에 원인이 있을수 있지만, 일부 암은 다른 암보다 더 복잡한 돌연변이 과정 레퍼토리를 가지고 있는 것으로 보여진다.\n3. Mutational signatures and age of cancer diagnosis signature 1A/B는 소아 및 성인 암 types의 대부분에서 age와 강한 상관관계를 보였다. 진단 연령과의 상관관계는 암 환자의 일생 동안 암 유전자의 1A/B 기질의 상당 부분이 다른 사람들(normal somatic tissues)과 비슷하게 일정한 비율로 발생된다는 가설과 일치한다.\n연령에 따른 모든 signatures에 대한 일관된 상관관계가 없다는 것은 이러한 signatures와 관련된 mutations이 다른 사람에서 다른 비율로 생성되었음을 시사한다. 아마도 다른 발암물질 노출의 결과 또는 neoplastic change가 시작된 후에 발생할 수 있다.\n4. Thus. numan cancer의 기초가 되는 somatic mutations의 과정의 다양성과 복잡성은 현재 암 genome에 묻혀있는 mutations의 패턴을 통해 밝혀지고 있다. 전체 genome 시퀀싱된 암의 수가 증가하고 분석방법이 더욱 개선됨에 따라 그 특징에 대한 보다 정확한 정의와 함께 더 많은 mutation signatures가 추출 될 가능성이 높다.\n Reference  Signatures of mutational processes in human cancer | Nature   "
+},
+{
 	"uri": "https://williamjeong2.github.io/blog/1-extract-google-account-profile-picture/",
 	"title": "구글 프로필 사진 다운로드하기",
 	"tags": [],
@@ -89,6 +96,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Dockerfile 을 작성하다 보면 RUN, CMD, ENTRYPOINT 차이를 알아야 할 경우가 생기게 됩니다. 세 가지 명령어를 잘 모르고 사용하게 된다면 곤란한 상황을 겪게 될수도있습니다.\nTL;DR   RUN\n이미지 생성시 새로운 레이어를 생성하여 명령어를 실행하게 됩니다. 보통 아래와 같은 방식으로 활용하게 됩니다.\nRUN apt-get install -y curl # 또는  RUN chmod -R 777 /tmp   CMD\ndefault 명령이나 파라미터를 설정할 수 있습니다. 우리가 도커 이미지를 사용하여 docker run 명령어로 컨테이너를 생성할 경우 생성 후에 실행될 커맨드를 입력해주지 않는다면, CMD 명령어를 사용하여 작성된 커맨드가 기본으로 실행됩니다. 또한 바로 다음에 설명할 ENTRYPOINT의 기본 파라미터를 설정할 수도 있습니다. 즉, CMD 는 컨데이터를 실행할 때 기본으로 사용되는 명령어를 설정하는 것입니다.\n  ENTRYPOINT\ndocker run 명령어로 컨테이너를 생성 후 실행되는 명령어입니다.\n   RUN 보통 이미지에 새로운 패키지를 설치하거나 명령어를 실행시킬 경우 사용됩니다.\nFROMubuntu:18.04 RUN apt-get update RUN apt-get install -y python3 python3-pip wget git less neovim RUN pip3 install pandas RUN 명령은 실행할 때마다 레이어가 생성됩니다. 따라서 RUN  명령어 하나에 통합해준다면 보다 깔끔하게 레이어를 관리할 수 있습니다.\n# example FROMubuntu:18.04 RUN apt-get update \\  \u0026amp;\u0026amp; apt-get install -y python3 python3-pip wget git less neovim \\  \u0026amp;\u0026amp; pip3 install pandas  CMD docker run 명령어 실행 시 실행 될 기본 명령어를 설정하거나, 아래에 있는 ENTRYPOINT 의 기본 명령어 파라미터를 설정할 때 사용됩니다. CMD 명령어는 보통 컨테이너를 실행할 때 사용할 기본 명령어를 설정하는 것입니다.\n CMD [\u0026quot;executable\u0026quot;,\u0026quot;param1\u0026quot;,\u0026quot;param2\u0026quot;] (exec form, preferred) CMD [\u0026quot;param1\u0026quot;,\u0026quot;param2\u0026quot;] (sets additional default parameters for ENTRYPOINT in exec form) CMD command param1 param2 (shell form)  FROMubuntu:18.04 CMD echo \u0026#34;Hello\u0026#34; 위와 같이 작성하여 만들어진 이미지를 docker run (옵션 x) 명령어 실행 시 CMD 명령어가 실행되어 \u0026ldquo;Hello\u0026rdquo; 를 출력하게 됩니다.\n하지만, 두 번째 줄에 작성한 CMD echo \u0026quot;Hello\u0026quot; 와 별개로 docker run -it \u0026lt;image_name\u0026gt; echo \u0026quot;Hello world\u0026quot; 명령어를 주게 되면, dockerfile 에서 작성한 \u0026ldquo;Hello\u0026quot;는 무시되고 \u0026ldquo;hello world\u0026quot;를 출력하게 됩니다.\nCMD는 여러 번 dockerfile에 작성할 수 있지만, 가장 마지막에 작성된 CMD 만이 실행(override)됩니다.\n ENTRYPOINT docker run 명령어로 컨테이너를 생성 후 실행되는 명령어입니다.\n  ENTRYPOINT [“executable”, “param1”, “param2”] (exec form, preferred)\n  ENTRYPOINT command param1 param2 (shell form)\n  CMD 와의 차이를 쉽게 설명하자면, ENTRYPOINT 는 docker run 뒤에 명령어 작성과 무관하게 실행되는 명령어입니다.\nFROMubuntu:18.04 ENTRYPOINT [\u0026#34;/bin/echo\u0026#34;, \u0026#34;Hi\u0026#34;] CMD echo \u0026#34;Hello\u0026#34; $ docker run -it \u0026lt;image_name\u0026gt; Hi Hello $ docker run -it \u0026lt;image_name\u0026gt; Mother Hi Mother 차이를 아시겠나요?\n   그렇다면, 변수를 사용하기 위해서는?  FROMubuntu:18.04 ENTRYPOINT echo $HOME $ docker run -it \u0026lt;image_name\u0026gt; /home  "
+},
+{
+	"uri": "https://williamjeong2.github.io/bioinformatics/paper-review/",
+	"title": "Paper Review",
+	"tags": [],
+	"description": "PaperReview",
+	"content": "생물정보학에 관한 논문 리뷰\n"
 },
 {
 	"uri": "https://williamjeong2.github.io/404.html",
